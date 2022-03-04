@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C566ABD2-9851-11F3-F3FA-4C9C0E92A9FD}</ProjectGuid>
+    <ProjectGuid>{DD8C0EA9-BCA8-9E2C-21F0-6281D6318784}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -921,9 +921,6 @@
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Netcode.Adapter.UTP.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Netcode.Adapter.UTP.Editor.dll</HintPath>
     </Reference>
@@ -981,11 +978,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{C546169A-E864-1359-B927-BDE91C40375D}</Project>
+      <Project>{E3202794-9F2F-AF1B-F6FC-FF203311CD3A}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="SimpleRelay.csproj">
-      <Project>{4467AFEF-B8A9-E737-8758-C08184497FAF}</Project>
+      <Project>{AC4AEDA0-9CBE-700A-12A9-882E40360327}</Project>
       <Name>SimpleRelay</Name>
     </ProjectReference>
   </ItemGroup>
