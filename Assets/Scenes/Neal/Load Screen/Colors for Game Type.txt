@@ -1,0 +1,14 @@
+39312F / 5F5647 = ?
+3F5151 = Binary Search Tree
+7294D4 = ?
+C6CDF7 = ?
+E6A0C4 = ?
+EBCC2A = ?
+
+Source:
+https://raw.githubusercontent.com/karthik/wesanderson/master/R/colors.R
+Used Palettes:
+	- Isle of Dogs 1
+	- Isle of Dogs 2
+	- Zissou 1
+	- Bottle Rocket 1
