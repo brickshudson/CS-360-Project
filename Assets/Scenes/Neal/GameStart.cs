@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class GameStart : MonoBehaviour
-{
+public class GameStart : MonoBehaviour{
     public Image Display;
     public TextMeshProUGUI Title;
     public TextMeshProUGUI CountDown;
     public int CountDownDuration = 4;
     public Timer Timer;
+
     // Start is called before the first frame update
     void Start()
     {
