@@ -27,9 +27,9 @@ public class Zombie : MonoBehaviour {
             DontDestroyOnLoad(gameObject);
             created = true;
 
-            CurrentProfileStats = new PlayerStats();
             DiscordController = new DiscordController();
             MiniGameList = new MiniGameLister();
+            CurrentProfileStats = new PlayerStats();
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
