@@ -34,7 +34,7 @@ public class MendTheMenu : MonoBehaviour
     // Sets all variables
     void Awake() {
         ItemList = new TextMeshProUGUI[] {Item1,Item2,Item3,Item4,Item5,Item6,Item7,Item8 };
-        GoalMenu.text = Food.generateItems(8);
+        GoalMenu.text = Food.generateItems(8); 
         string[] Items = GoalMenu.text.Split('\n');
         Items.Shuffle();
         for(int i = 0; i < ItemList.Length; i++) {
