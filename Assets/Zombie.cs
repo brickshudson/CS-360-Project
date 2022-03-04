@@ -23,7 +23,7 @@ public class Zombie : MonoBehaviour {
 
     private void Awake() {
         if (!created) {
-            //    Application.quitting += Quitting;
+            // Application.quitting += Quitting;
             DontDestroyOnLoad(gameObject);
             created = true;
 
