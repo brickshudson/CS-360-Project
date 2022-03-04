@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
     public Button StartGame;
   //  public Button QuitGame;
     public string MiniGame;
-    
+     
     // Start is called before the first frame update
     void Start()
     {
