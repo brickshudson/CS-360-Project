@@ -11,7 +11,7 @@ public class MultiPlayerMenu : MonoBehaviour
     void Start()
     {
         OpenMultiplayerMenu.onClick.AddListener(delegate {
-            SceneManager.LoadScene("relay-sdk-test (UTP)");
+            SceneManager.LoadScene("Multiplayer");
         });
     }
 
