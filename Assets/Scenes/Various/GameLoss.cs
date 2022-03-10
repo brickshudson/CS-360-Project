@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+//Written by The-Architect01
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
