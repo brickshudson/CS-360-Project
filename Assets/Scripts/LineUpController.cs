@@ -4,8 +4,8 @@ using UnityEngine.UI;
 using TMPro;
 using GameLogging;
 
-public class LineUpController : MonoBehaviour
-{
+public class LineUpController : MonoBehaviour {
+
     public GameWin GameWinScreen;
     public GameLoss GameLoss;
     public CountDown CountDown;
@@ -50,9 +50,8 @@ public class LineUpController : MonoBehaviour
         Mouth.sprite = Face.Mouths[(int)CorrectFace[2]];
 
         Characteristics.text = $"Eyes: {CorrectFace[0]}\nNose: {CorrectFace[1]}\n" +
-            $"Mouth: {CorrectFace[2]}\n\nWanted For:\n"+
+            $"Mouth: {CorrectFace[2]}\n\nWanted For:\n" +
             "- Energy Consumption\n- Memory Leakage";
-
     }
 
     public void ChoiceMade(bool Correct) {

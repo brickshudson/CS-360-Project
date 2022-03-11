@@ -20,7 +20,6 @@ public class Composite : MonoBehaviour {
 
     public void Start() {
         Number.text = $"{Random.Range(0, 9999999)}".PadLeft(7,'0');
-
         Eye.sprite = Face.Eyes[(int)EyeShape];
         Nose.sprite = Face.Noses[(int)NoseShape];
         Mouth.sprite = Face.Mouths[(int)MouthShape];
