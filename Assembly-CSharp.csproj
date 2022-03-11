@@ -56,10 +56,13 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/PlayerData.cs" />
     <Compile Include="Assets/Scripts/MiniGameData.cs" />
     <Compile Include="Assets/Scenes/Various/Load Screen/LoadScreen.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/UI/LobbyPlayerState.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/UI/LobbyUI.cs" />
     <Compile Include="Assets/Resources/MiniGameLister.cs" />
     <Compile Include="Assets/Scripts/SaveMe.cs" />
     <Compile Include="Assets/Scripts/GameStart.cs" />
@@ -76,9 +79,12 @@
     <Compile Include="Assets/Scripts/Timer.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
+    <Compile Include="Assets/Scripts/Composite.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/GameNetPortal.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/DisconnectReason.cs" />
     <Compile Include="Assets/Scenes/Various/Board/BoardGraph.cs" />
     <Compile Include="Assets/Scripts/Zombie.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
@@ -94,24 +100,31 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
     <Compile Include="Assets/Scripts/SnapPositions.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/MultiPlayerMenu.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Scripts/MultiPlayerMenu.cs" />
     <Compile Include="Assets/Scenes/Various/Board/Contestant.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
     <Compile Include="Assets/Scripts/Draggable.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/ConnectionPayload.cs" />
     <Compile Include="Assets/Scripts/MainMenu.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/ClientGameNetPortal.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
     <Compile Include="Assets/Scripts/DropCapture.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
     <Compile Include="Assets/Scripts/PlayerStats.cs" />
     <Compile Include="Assets/Scripts/QuitButton.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/ServerGameNetPortal.cs" />
     <Compile Include="Assets/Resources/LoadLevelButton.cs" />
     <Compile Include="Assets/Scenes/Menus/PlayFolder/PlayMenuChange.cs" />
     <Compile Include="Assets/Scripts/MainMenuButton.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/UI/MainMenuUI.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets/Scripts/LineUpController.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/LobbyCreation.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/ConnectStatus.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
     <Compile Include="Assets/Scripts/CountDown.cs" />
     <Compile Include="Assets/Scenes/Audio/MenuMixerController.cs" />
@@ -124,21 +137,10 @@
     <Compile Include="Assets/Scenes/Menus/MainMenu/MainMenu Button/MainMenuButtons.cs" />
     <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/HelloWorldManagers/HelloWorldManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
-    <Compile Include="Assets/Scripts/MendTheMenu.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/DisconnectReason.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/PlayerData.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/GameNetPortal.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/ClientGameNetPortal.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/ConnectionPayload.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/ServerGameNetPortal.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/ConnectStatus.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/UI/LobbyUI.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/UI/MainMenuUI.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/UI/LobbyPlayerState.cs" />
     <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/UI/LobbyPlayerCard.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/LobbyCreation.cs" />
-    <Compile Include="Assets/Scripts/Composite.cs" />
-    <Compile Include="Assets/Scripts/LineUpController.cs" />
+    <Compile Include="Assets/Scripts/MendTheMenu.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Scripts/Back.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/BackScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -411,7 +413,7 @@
       <HintPath>Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.2/Runtime/Newtonsoft.Json.dll</HintPath>
+      <HintPath>Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.1/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library/PackageCache/com.unity.nuget.mono-cecil@1.10.1/Mono.Cecil.dll</HintPath>
