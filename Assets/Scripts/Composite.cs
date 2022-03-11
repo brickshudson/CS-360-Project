@@ -1,8 +1,5 @@
 //Written by The-Architect01
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class Composite : MonoBehaviour {
     
@@ -34,31 +31,33 @@ public class Composite : MonoBehaviour {
         Mouth.sprite = Face.Mouths[(int)mouth];
     }
 
-    public void OnMouseDown() {
+    public void OnPointerDown() {
         if (IsCorrect) {
             Debug.Log("Correct");
         } else {
             Debug.Log("Incorrect");
         }
     }
+
+
 }
 public static class Face {
     public static Sprite[] Eyes = new Sprite[] {
-        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Eyes_Ellip.png"),
-        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Eyes_Rect.png"),
-        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Eyes_Tri.png"),
+        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Eyes_Ellipse.png"),
+        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Eyes_Rectangle.png"),
+        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Eyes_Triangle.png"),
     };
 
     public static Sprite[] Noses = new Sprite[] {
-        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Mouth_Ellip.png"),
-        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Mouth_Rect.png"),
-        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Mouth_Tri.png"),
+        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Mouth_Ellipse.png"),
+        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Mouth_Rectangle.png"),
+        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Mouth_Triangle.png"),
     };
 
     public static Sprite[] Mouths = new Sprite[] {
-        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Nose_Ellip.png"),
-        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Nose_Rect.png"),
-        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Nose_Tri.png"),
+        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Nose_Ellipse.png"),
+        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Nose_Rectangle.png"),
+        Resources.Load<Sprite>("Assets/Resources/Find the Pointer/Nose_Triangle.png"),
     };
 
     public enum Shape {

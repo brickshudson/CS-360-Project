@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+//Written by The-Architect01
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -29,8 +28,8 @@ public class LineUpController : MonoBehaviour
             charge.Populate(Eye, Nose, Mouth, false);
         }
 
-        int CorrectCharge = Random.Range(0, Charges.Length);
-        Charges[CorrectCharge].Populate(CorrectFace[0], CorrectFace[1], CorrectFace[2], true);
+        int CorrectPerson = Random.Range(0, Charges.Length);
+        Charges[CorrectPerson].Populate(CorrectFace[0], CorrectFace[1], CorrectFace[2], true);
 
         Eyes.sprite = Resources.Load<Sprite>($"Assets/Resources/Find the Pointer/Eyes_{CorrectFace[0]}.png");
         Nose.sprite = Resources.Load<Sprite>($"Assets/Resources/Find the Pointer/Nose_{CorrectFace[1]}.png");
@@ -42,7 +41,6 @@ public class LineUpController : MonoBehaviour
         Characteristics.text = $"Eyes: {CorrectFace[0]}\nNose: {CorrectFace[1]}\n" +
             $"Mouth: {CorrectFace[2]}\n\nWanted For:\n"+
             "- Energy Consumption\n- Memory Leakage";
-
     }
 
 }
