@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     {
         StartGame.onClick.AddListener(delegate {
             Zombie.MiniGame = MiniGame;
-            Zombie.isSolo = true;
+            Zombie.IsSolo = true;
             SceneManager.LoadScene("Load Game");
         });
 

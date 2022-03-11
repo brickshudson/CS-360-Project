@@ -4,8 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class Zombie : MonoBehaviour {
 
-    public static bool isSolo { get; set; } = true;
+    public static bool IsSolo { get; set; } = true;
     private static bool created = false;
+    public static bool IsPractice { get; set; } = false;
 
     private static string _mg;
     public static string MiniGame { 

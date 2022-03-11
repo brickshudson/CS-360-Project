@@ -29,7 +29,7 @@ public class GameLoss : MonoBehaviour
     }
 
     private void Start() {
-        if (!Zombie.isSolo) { Retry.enabled = false; Next.transform.position = new Vector3(0f, -250f, 0f); }
+        if (!Zombie.IsSolo) { Retry.enabled = false; Next.transform.position = new Vector3(0f, -250f, 0f); }
         Retry.onClick.AddListener(Retry_OnClick);
         Next.onClick.AddListener(Next_OnClick);
     }

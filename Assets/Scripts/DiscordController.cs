@@ -22,7 +22,7 @@ public class DiscordController{
                 ApplicationId = 939698372485476403,
                 Name = GameName,
                 State = value,
-                Details = Zombie.isSolo ? "Solo Mode" : "Group Mode",
+                Details = Zombie.IsSolo ? "Solo Mode" : "Group Mode",
                 Timestamps = { Start = Unix(DateTime.UtcNow), },
                 Assets = {
                     LargeImage = "logo",

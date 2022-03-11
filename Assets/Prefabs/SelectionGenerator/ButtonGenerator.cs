@@ -44,7 +44,7 @@ public class ButtonGenerator : MonoBehaviour
 
                 // Update Zombie for the chosen minigame and load the next scene
                 Zombie.MiniGame = selection;
-                Zombie.isSolo = true;
+                Zombie.IsSolo = true;
                 SceneManager.LoadScene(NextScene);
             };
         }

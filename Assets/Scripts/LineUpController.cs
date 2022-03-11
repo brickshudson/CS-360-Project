@@ -2,9 +2,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using GameLogging;
 
 public class LineUpController : MonoBehaviour
 {
+    public GameWin GameWinScreen;
+    public CountDown CountDown;
+
     public Image Eyes;
     public Image Nose;
     public Image Mouth;
@@ -13,7 +17,16 @@ public class LineUpController : MonoBehaviour
     public Face.Shape[] CorrectFace;
     public TextMeshProUGUI Characteristics;
 
+    public Log GameLog;
+
     void Awake(){
+
+        GameLog = new Log() {
+            IsTeamGame = !Zombie.IsSolo,
+            IsPractice = Zombie.IsPractice,
+            Score = -1,
+            TurnsUsed = 1,
+        };
 
         CorrectFace = new Face.Shape[] {
             (Face.Shape)Random.Range(0,3),
@@ -28,12 +41,9 @@ public class LineUpController : MonoBehaviour
             charge.Populate(Eye, Nose, Mouth, false);
         }
 
-        int CorrectPerson = Random.Range(0, Charges.Length);
-        Charges[CorrectPerson].Populate(CorrectFace[0], CorrectFace[1], CorrectFace[2], true);
+        int CorrectCharge = Random.Range(0, Charges.Length);
+        Charges[CorrectCharge].Populate(CorrectFace[0], CorrectFace[1], CorrectFace[2], true);
 
-        Eyes.sprite = Resources.Load<Sprite>($"Assets/Resources/Find the Pointer/Eyes_{CorrectFace[0]}.png");
-        Nose.sprite = Resources.Load<Sprite>($"Assets/Resources/Find the Pointer/Nose_{CorrectFace[1]}.png");
-        Mouth.sprite = Resources.Load<Sprite>($"Assets/Resources/Find the Pointer/Mouth_{CorrectFace[2]}.png");
         Eyes.sprite = Face.Eyes[(int)CorrectFace[0]];
         Nose.sprite = Face.Noses[(int)CorrectFace[1]];
         Mouth.sprite = Face.Mouths[(int)CorrectFace[2]];
@@ -41,6 +51,16 @@ public class LineUpController : MonoBehaviour
         Characteristics.text = $"Eyes: {CorrectFace[0]}\nNose: {CorrectFace[1]}\n" +
             $"Mouth: {CorrectFace[2]}\n\nWanted For:\n"+
             "- Energy Consumption\n- Memory Leakage";
+
+    }
+
+    public void ChoiceMade(bool Correct) {
+        GameLog.Win = Correct;
+        GameLog.ErrorsMade = Correct ? 0 : 1;
+        GameLog.TimeTaken = CountDown.TimeElapsed;
+        CountDown.StopTimer();
+        Zombie.CurrentProfileStats.Stats["Pointer"]["Police Line Up"].GameLog.Add(GameLog);
+        GameWinScreen.Show();
     }
 
 }
