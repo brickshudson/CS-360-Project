@@ -486,8 +486,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0812a73772a21e47a446cbf5006b3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameWinScreen: {fileID: 0}
-  CountDown: {fileID: 0}
+  GameWinScreen: {fileID: 595953653}
+  GameLoss: {fileID: 1195393246}
+  CountDown: {fileID: 2139772581}
   Eyes: {fileID: 496853557}
   Nose: {fileID: 1204811791}
   Mouth: {fileID: 2030382444}
@@ -748,7 +749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03c3778c39f70e04cb54c913ada157ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Controller: {fileID: 0}
+  Controller: {fileID: 198408208}
   Eye: {fileID: 115549530}
   Nose: {fileID: 140923306}
   Mouth: {fileID: 1515349587}
@@ -1584,6 +1585,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &595953653 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8194621951398281579, guid: 64ac6049c45d04c4e81e557cf428b69c, type: 3}
+  m_PrefabInstance: {fileID: 523621826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639029b6f35e9b6489d1c9480c7145a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &899542960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,7 +2182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03c3778c39f70e04cb54c913ada157ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Controller: {fileID: 0}
+  Controller: {fileID: 198408208}
   Eye: {fileID: 310498998}
   Nose: {fileID: 1519033234}
   Mouth: {fileID: 1963349568}
@@ -3609,7 +3621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03c3778c39f70e04cb54c913ada157ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Controller: {fileID: 0}
+  Controller: {fileID: 198408208}
   Eye: {fileID: 588194725}
   Nose: {fileID: 1279192584}
   Mouth: {fileID: 1734607339}

@@ -54,24 +54,40 @@ public static class Face {
         Resources.Load<Sprite>("Find the Pointer/Eyes_Ellipse"),
         Resources.Load<Sprite>("Find the Pointer/Eyes_Rectangle"),
         Resources.Load<Sprite>("Find the Pointer/Eyes_Triangle"),
+        Resources.Load<Sprite>("Find the Pointer/Eyes_8bit"),
+        Resources.Load<Sprite>("Find the Pointer/Eyes_Diamonds"),
+        Resources.Load<Sprite>("Find the Pointer/Eyes_Heart"),
+        Resources.Load<Sprite>("Find the Pointer/Eyes_Hexagonal")
     };
 
     public static Sprite[] Mouths = new Sprite[] {
         Resources.Load<Sprite>("Find the Pointer/Mouth_Ellipse"),
         Resources.Load<Sprite>("Find the Pointer/Mouth_Rectangle"),
         Resources.Load<Sprite>("Find the Pointer/Mouth_Triangle"),
+        Resources.Load<Sprite>("Find the Pointer/Mouth_8bit"),
+        Resources.Load<Sprite>("Find the Pointer/Mouth_Diamond"),
+        Resources.Load<Sprite>("Find the Pointer/Mouth_Heart"),
+        Resources.Load<Sprite>("Find the Pointer/Mouth_Hexagonal")
     };
 
     public static Sprite[] Noses = new Sprite[] {
         Resources.Load<Sprite>("Find the Pointer/Nose_Ellipse"),
         Resources.Load<Sprite>("Find the Pointer/Nose_Rectangle"),
         Resources.Load<Sprite>("Find the Pointer/Nose_Triangle"),
+        Resources.Load<Sprite>("Find the Pointer/Nose_8bit"),
+        Resources.Load<Sprite>("Find the Pointer/Nose_Diamond"),
+        Resources.Load<Sprite>("Find the Pointer/Nose_Heart"),
+        Resources.Load<Sprite>("Find the Pointer/Nose_Hexagonal")
     };
 
     public enum Shape {
         Ellipse = 0,
         Rectangle = 1,
         Triangle = 2,
+        Bit = 3,
+        Diamond = 4,
+        Heart = 5,
+        Hexagon = 6
     }
 
 }

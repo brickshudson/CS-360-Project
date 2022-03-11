@@ -7,6 +7,7 @@ using GameLogging;
 public class LineUpController : MonoBehaviour
 {
     public GameWin GameWinScreen;
+    public GameLoss GameLoss;
     public CountDown CountDown;
 
     public Image Eyes;
@@ -18,7 +19,7 @@ public class LineUpController : MonoBehaviour
     public TextMeshProUGUI Characteristics;
 
     public Log GameLog;
-
+    
     void Awake(){
 
         GameLog = new Log() {
@@ -29,15 +30,15 @@ public class LineUpController : MonoBehaviour
         };
 
         CorrectFace = new Face.Shape[] {
-            (Face.Shape)Random.Range(0,3),
-            (Face.Shape)Random.Range(0,3),
-            (Face.Shape)Random.Range(0,3),
+            (Face.Shape)Random.Range(0,7),
+            (Face.Shape)Random.Range(0,7),
+            (Face.Shape)Random.Range(0,7),
         };
 
         foreach (Composite charge in Charges) {
-            Face.Shape Eye = (Face.Shape)Random.Range(0, 3);
-            Face.Shape Nose = (Face.Shape)Random.Range(0, 3);
-            Face.Shape Mouth = (Face.Shape)Random.Range(0, 3);
+            Face.Shape Eye = (Face.Shape)Random.Range(0, 7);
+            Face.Shape Nose = (Face.Shape)Random.Range(0, 7);
+            Face.Shape Mouth = (Face.Shape)Random.Range(0, 7);
             charge.Populate(Eye, Nose, Mouth, false);
         }
 
@@ -55,12 +56,16 @@ public class LineUpController : MonoBehaviour
     }
 
     public void ChoiceMade(bool Correct) {
+        if (!Correct) { GameLog.ErrorsMade++; /*Play Wrong Sound;*/ return; }
+        //Play Correct Sound
         GameLog.Win = Correct;
-        GameLog.ErrorsMade = Correct ? 0 : 1;
         GameLog.TimeTaken = CountDown.TimeElapsed;
         CountDown.StopTimer();
         Zombie.CurrentProfileStats.Stats["Pointer"]["Police Line Up"].GameLog.Add(GameLog);
-        GameWinScreen.Show();
+        if (Correct)
+            GameWinScreen.Show();
+        else
+            GameLoss.Show();
     }
 
 }
