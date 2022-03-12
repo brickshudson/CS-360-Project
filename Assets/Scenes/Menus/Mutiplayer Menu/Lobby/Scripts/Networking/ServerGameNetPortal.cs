@@ -87,7 +87,7 @@ namespace DapperDino.UMT.Lobby.Networking
         {
             gameInProgress = true;
 
-            NetworkManager.Singleton.SceneManager.LoadScene("Scene_Main", LoadSceneMode.Single);
+            NetworkManager.Singleton.SceneManager.LoadScene("Board", LoadSceneMode.Single);
         }
 
         public void EndRound()
