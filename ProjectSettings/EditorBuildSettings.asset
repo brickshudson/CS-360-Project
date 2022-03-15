@@ -34,6 +34,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/Mutiplayer Menu/Multiplayer.unity
     guid: 9dc6528dd2305455182b016e4269247c
   - enabled: 1
+    path: Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scenes/Scene_Menu.unity
+    guid: 8f27666b1a1175e45b9c8ce12eefaf20
+  - enabled: 1
+    path: Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scenes/Scene_Main.unity
+    guid: 173e884d5b705c644b8c3fc18350d029
+  - enabled: 1
+    path: Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scenes/Scene_Lobby.unity
+    guid: 7c2a2b7ae7ff7de4f8a00802fa6e4c64
+  - enabled: 1
     path: Assets/Scenes/Minigames/Stack/Stack - Chips Ahoy.unity
     guid: c2c33c950baae2e429d052922a53eac6
   - enabled: 1

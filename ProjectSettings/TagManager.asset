@@ -45,3 +45,6 @@ TagManager:
   - name: Minigame
     uniqueID: 940569089
     locked: 0
+  - name: New Layer
+    uniqueID: 3705216853
+    locked: 0
