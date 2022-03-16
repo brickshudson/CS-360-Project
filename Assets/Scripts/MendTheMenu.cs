@@ -144,12 +144,12 @@ public static class Food {
     }
 
     //Allows an array to be shuffled.
-    public static void Shuffle(this string[] list) {
+    public static void Shuffle<T>(this T[] list) {
         int n = list.Length;
         while (n > 1) {
             n--;
             int k = Random.Range(0, n + 1);
-            string value = list[k];
+            T value = list[k];
             list[k] = list[n];
             list[n] = value;
         }
