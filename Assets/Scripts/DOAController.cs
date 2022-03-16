@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class DOAController : MonoBehaviour
 {
+    public GameWin GameWin;
+    public GameLoss GameLoss;
+    public CountDown CountDown;
+
     public TMP_InputField Row;
     public TMP_InputField Col;
     public Button SubmitButton;
@@ -21,10 +25,18 @@ public class DOAController : MonoBehaviour
     int[] Numbers;
     Queue<int> NumberQueue = new Queue<int>();
 
-    Log Log = new Log();
+    Log Log;
 
     private void Awake() {
-        
+        Row.Select();
+        Log = new Log() {
+            IsPractice = Zombie.IsPractice,
+            IsTeamGame = !Zombie.IsSolo,
+            ErrorsMade=0,
+            TurnsUsed=0,
+            TimeTaken=0,
+        };
+
         Numbers = new int[16];
 
         int i = 0;
@@ -39,6 +51,7 @@ public class DOAController : MonoBehaviour
 
         for(int j = 0; j < People.Length; j++) {
             People[j].text = Numbers[j].ToString();
+            People[j].gameObject.transform.parent.GetComponent<Image>().sprite = Resources.Load<Sprite>($"DOA/Person{(Numbers[j]%8)+1}");
         }
 
         Numbers.Shuffle();
@@ -47,18 +60,39 @@ public class DOAController : MonoBehaviour
 
         ErrorMessage.gameObject.SetActive(false);
         SubmitButton.onClick.AddListener(Submit);
+        Row.onEndEdit.AddListener(delegate { Col.Select(); });
+        Col.onEndEdit.AddListener(delegate { SubmitButton.Select(); });
     }
+
+    private void Update() {
+        if (GameLoss.gameObject.activeInHierarchy) { 
+            Log.Win = false;
+        } else if (GameWin.gameObject.activeInHierarchy) { 
+            Log.Win = true;
+            Log.TimeTaken = CountDown.TimeElapsed;
+        }
+    }
+
 
     void Submit() {
         if (!string.IsNullOrEmpty(Row.text) && !string.IsNullOrEmpty(Col.text)) {
-            string Coord = $"R{Row.text}C{Col.text}";
+            string Coord = $"R{int.Parse(Row.text)-1}C{int.Parse(Col.text)-1}";
             Debug.Log(Coord);
+            Col.text = "";
+            Row.text = "";
+            Row.Select();
+            Log.TurnsUsed++;
             foreach (TextMeshProUGUI person in People) {
                 if (person.name == Coord) {
                     if (person.text == TVDisplay.text) {
                         person.gameObject.transform.parent.gameObject.SetActive(false);
                         UpdateError(Errors.None);
-                        TVDisplay.text = NumberQueue.Dequeue().ToString();
+                        try {
+                            TVDisplay.text = NumberQueue.Dequeue().ToString();
+                        } catch {
+                            GameWin.Show();
+                            Debug.Log("Win");
+                        }
                         return;
                     } else {
                         Debug.Log(Errors.Invalid_Input);
@@ -67,12 +101,17 @@ public class DOAController : MonoBehaviour
                     }
                 }
             }
+            Log.ErrorsMade++;
             Debug.Log(Errors.Not_Correct);
             UpdateError(Errors.Not_Correct);
-        } else { 
+        } else {
+            Log.ErrorsMade++;
             UpdateError(Errors.No_Input);
             Debug.Log(Errors.No_Input);
         }
+        Col.text = "";
+        Row.text = "";
+        Row.Select();
     }
 
     void UpdateError(Errors error) {
