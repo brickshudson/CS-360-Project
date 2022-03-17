@@ -2,7 +2,7 @@ using System;
 using Unity.Collections;
 using Unity.Netcode;
 
-namespace DapperDino.UMT.Lobby.UI
+namespace LobbyUI
 {
     public struct LobbyPlayerState : INetworkSerializable, IEquatable<LobbyPlayerState>
     {

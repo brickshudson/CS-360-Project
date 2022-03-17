@@ -1,8 +1,8 @@
-using DapperDino.UMT.Lobby.Networking;
+using LobbyNetworking;
 using TMPro;
 using UnityEngine;
 
-namespace DapperDino.UMT.Lobby
+namespace Lobby
 {
     public class MainMenuUI : MonoBehaviour
     {
