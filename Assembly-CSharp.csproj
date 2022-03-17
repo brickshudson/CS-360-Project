@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/Networking/PlayerData.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/DropDownScript.cs" />
     <Compile Include="Assets/Scripts/MiniGameData.cs" />
     <Compile Include="Assets/Scenes/Various/Load Screen/LoadScreen.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
@@ -70,7 +71,6 @@
     <Compile Include="Assets/Scripts/OptionsMenu.cs" />
     <Compile Include="Assets/Scripts/GameWin.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/HelloWorldManagers/HelloWorldPlayer.cs" />
     <Compile Include="Assets/Scripts/GameLoss.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
     <Compile Include="Assets/Scenes/Various/Games/Data Structures/Heap.cs" />
@@ -137,12 +137,10 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
     <Compile Include="Assets/Scenes/Menus/MainMenu/MainMenu Button/MainMenuButtons.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/HelloWorldManagers/HelloWorldManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/Scripts/DOAController.cs" />
     <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/UI/LobbyPlayerCard.cs" />
     <Compile Include="Assets/Scripts/MendTheMenu.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/DropDownScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
