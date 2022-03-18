@@ -56,10 +56,10 @@ public class SetController : MonoBehaviour {
 
                 PlayerSet.text = Last5;
 
-                Debug.Log("Legal");
+                Debug.Log($"Legal {PlayerInput.text}");
             } 
         } else {
-            Debug.Log("Illegal");
+            Debug.Log($"Illegal {PlayerInput.text}");
         }
         float RNG = Random.value;
         if (RNG >= RobbieDifficulty) {
@@ -67,9 +67,11 @@ public class SetController : MonoBehaviour {
             StartCoroutine(RobbieSpeaking(LegalOptions.ElementAt(RandomIndex)));
             IllegalOptions.Add(LegalOptions.ElementAt(RandomIndex));
             LegalOptions.Remove(LegalOptions.ElementAt(RandomIndex));
-            Debug.Log("Legal");
+            Debug.Log($"Legal {LegalOptions.ElementAt(RandomIndex)}");
         } else {
-            Debug.Log("Illegal");
+            int RandomIndex = Random.Range(0, IllegalOptions.Count);
+            StartCoroutine(RobbieSpeaking(IllegalOptions.ElementAt(RandomIndex)));
+            Debug.Log($"Illegal {IllegalOptions.ElementAt(RandomIndex)}");
         }
     }
 
