@@ -6,7 +6,7 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace DapperDino.UMT.Lobby.Networking
+namespace LobbyNetworking
 {
     public class ServerGameNetPortal : MonoBehaviour
     {

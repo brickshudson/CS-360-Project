@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace DapperDino.UMT.Lobby.UI
+namespace LobbyUI
 {
     public class LobbyPlayerCard : MonoBehaviour
     {

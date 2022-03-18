@@ -1,4 +1,4 @@
-namespace DapperDino.UMT.Lobby.Networking
+namespace LobbyNetworking
 {
     public enum ConnectStatus
     {
