@@ -76,7 +76,7 @@ public class DOAController : MonoBehaviour
 
     void Submit() {
         if (!string.IsNullOrEmpty(Row.text) && !string.IsNullOrEmpty(Col.text)) {
-            string Coord = $"R{int.Parse(Row.text)-1}C{int.Parse(Col.text)-1}";
+            string Coord = $"R{int.Parse(Row.text)}C{int.Parse(Col.text)}";
             Debug.Log(Coord);
             Col.text = "";
             Row.text = "";
