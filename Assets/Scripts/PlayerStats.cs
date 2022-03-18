@@ -12,10 +12,10 @@ public class PlayerStats {
     public Dictionary<string, Dictionary<string, Stat>> Stats { get; private set; }
 
     public PlayerStats() {
-        try {
+        /*try {
             Stats = PlayerIO.LoadData().Stats;
             Debug.Log("Player history detected");
-        } catch (NoSaveFileException) {
+        } catch (NoSaveFileException) {*/
             MiniGameLister MGL = Zombie.MiniGameList;
             Stats = new Dictionary<string, Dictionary<string, Stat>>();
             foreach(string Category in MGL.GetListofCategories()) {
@@ -27,7 +27,7 @@ public class PlayerStats {
             }        
             PlayerIO.SaveData(this);
             Debug.Log("New Player Record Created");
-        }
+        //}
     }
 
 }

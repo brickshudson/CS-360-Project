@@ -106,8 +106,8 @@ public class SetController : MonoBehaviour {
 }
 public static class SetItems {
     #region Add Below Me -- Note: All Variables below should be marked as only static!
-    static HashSet<string> Foods_Starting_With_C = new HashSet<string>(){"cabbage","cake","carrots","carne asada","celery","cheese",
-        "chicken","catfish","chips","chocolate","chowder","clams","coffee","cookies","corn","cupcakes","crab","curry","cereal"};
+    static HashSet<string> Foods_Starting_With_C = new HashSet<string>(){"cabbage","cake","carrot","carne asada","celery","cheese",
+        "chicken","catfish","chip","chocolate","chowder","clam","coffee","cookie","corn","cupcakes","crab","curry","cereal"};
     #endregion
     #region Don't Edit
     public static SetArgs SelectSet() {
