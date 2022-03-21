@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Scripts\Networking\PlayerData.cs" />
+    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Scripts\DropDownScript.cs" />
     <Compile Include="Assets\Scripts\MiniGameData.cs" />
     <Compile Include="Assets\Scenes\Various\Load Screen\LoadScreen.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Scripts\UI\MainMenuUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\LineUpController.cs" />
+    <Compile Include="Assets\Scripts\SetController.cs" />
     <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Scripts\LobbyCreation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Scripts\Back.cs" />
@@ -140,8 +142,9 @@
     <Compile Include="Assets\Scripts\DOAController.cs" />
     <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Scripts\UI\LobbyPlayerCard.cs" />
     <Compile Include="Assets\Scripts\MendTheMenu.cs" />
-    <Compile Include="Assets\Scripts\SetController.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Scripts\DropDownScript.cs" />
+    <Compile Include="Assets\Scripts\TowerOfHanoi.cs" />
+    <Compile Include="Assets\Scripts\TowerPart.cs" />
+    <Compile Include="Assets\Scripts\ReturnTower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
