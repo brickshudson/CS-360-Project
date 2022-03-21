@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TOHTower : MonoBehaviour {
 
     public List<TowerPart> Tower = new List<TowerPart>();
     public bool IsCorrect;
+    public static int TurnsTaken = 0;
+    public TextMeshProUGUI TurnsTakenDisplay;
+    public GameWin WinGame;
 
     public void OnClick() {
         if(TowerPart.Selected == null) { return; }
+        TurnsTaken++;
+        TurnsTakenDisplay.text = $"Moves Taken: {TurnsTaken}";
         Tower.Add(TowerPart.Selected);
         int LocationAdded = 0;
         foreach(TowerPart TP in Tower) {
@@ -43,6 +49,7 @@ public class TOHTower : MonoBehaviour {
         if (IsCorrect) {
             if(Tower.Count == 4) {
                 Debug.Log("Correct");
+                WinGame.Show();
             }
         }
     }
