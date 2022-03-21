@@ -142,7 +142,6 @@
     <Compile Include="Assets\Scripts\DOAController.cs" />
     <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Scripts\UI\LobbyPlayerCard.cs" />
     <Compile Include="Assets\Scripts\MendTheMenu.cs" />
-    <Compile Include="Assets\Scripts\TowerOfHanoi.cs" />
     <Compile Include="Assets\Scripts\TowerPart.cs" />
     <Compile Include="Assets\Scripts\TOHTower.cs" />
   </ItemGroup>
