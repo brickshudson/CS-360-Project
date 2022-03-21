@@ -1301,6 +1301,17 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1665353522 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8392964405282914637, guid: 1db3e5791bef125489bec0b4aeedac76, type: 3}
+  m_PrefabInstance: {fileID: 2011292145}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f2fd3c11ef96348aa9fef5391a4562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1691267395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1640,6 +1651,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2069292065}
     m_Modifications:
+    - target: {fileID: 1430275193, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
+      propertyPath: AutoRun
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430275193, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
+      propertyPath: GameLoss
+      value: 
+      objectReference: {fileID: 1665353522}
     - target: {fileID: 1430275193, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
       propertyPath: NumberOfSeconds
       value: 90
