@@ -135,8 +135,8 @@ GameObject:
   - component: {fileID: 17584472}
   - component: {fileID: 17584471}
   - component: {fileID: 17584474}
-  - component: {fileID: 17584470}
   - component: {fileID: 17584473}
+  - component: {fileID: 17584470}
   m_Layer: 5
   m_Name: 3
   m_TagString: Untagged
@@ -163,27 +163,35 @@ RectTransform:
   m_AnchoredPosition: {x: -600, y: -270}
   m_SizeDelta: {x: 300, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!50 &17584470
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &17584470
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17584468}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 17584473}
+          m_TargetAssemblyTypeName: TowerPart, Assembly-CSharp
+          m_MethodName: OnClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &17584471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,9 +243,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: 3
-  LegalObjects:
-  - {fileID: 727881438}
-  - {fileID: 878372153}
+  Tower: {fileID: 2098314857}
+  IsSelectable: 0
   LastLegalLocation: {x: 0, y: 0}
   Transform: {fileID: 17584469}
 --- !u!225 &17584474
@@ -481,10 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dbe083c2466a6d4a9315a5a3e33d69c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tower1: {fileID: 0}
-  Tower2: {fileID: 0}
-  Tower3: {fileID: 0}
-  Tower4: {fileID: 0}
+  SelectedRing: {fileID: 0}
 --- !u!4 &484441801
 Transform:
   m_ObjectHideFlags: 0
@@ -510,6 +514,7 @@ GameObject:
   - component: {fileID: 533500157}
   - component: {fileID: 533500159}
   - component: {fileID: 533500158}
+  - component: {fileID: 533500161}
   - component: {fileID: 533500160}
   m_Layer: 5
   m_Name: Tower2
@@ -575,32 +580,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533500156}
   m_CullTransparentMesh: 1
---- !u!61 &533500160
-BoxCollider2D:
+--- !u!114 &533500160
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533500156}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 533500161}
+          m_TargetAssemblyTypeName: TOHTower, Assembly-CSharp
+          m_MethodName: OnClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &533500161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533500156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc4ba3ea87b1f346b831bb0d6fbeb6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tower: []
+  IsCorrect: 0
 --- !u!1 &567876288
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +660,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.24521181, g: 0.4528302, b: 0.39053974, a: 0}
+  m_BackGroundColor: {r: 0.21189035, g: 0.24266332, b: 0.3018868, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -730,8 +752,8 @@ GameObject:
   - component: {fileID: 727881442}
   - component: {fileID: 727881441}
   - component: {fileID: 727881444}
-  - component: {fileID: 727881440}
   - component: {fileID: 727881443}
+  - component: {fileID: 727881440}
   m_Layer: 5
   m_Name: 1
   m_TagString: Untagged
@@ -758,27 +780,35 @@ RectTransform:
   m_AnchoredPosition: {x: -600, y: -155}
   m_SizeDelta: {x: 100, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!50 &727881440
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &727881440
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727881438}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 727881443}
+          m_TargetAssemblyTypeName: TowerPart, Assembly-CSharp
+          m_MethodName: OnClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &727881441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,7 +860,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: 1
-  LegalObjects: []
+  Tower: {fileID: 2098314857}
+  IsSelectable: 1
   LastLegalLocation: {x: 0, y: 0}
   Transform: {fileID: 727881439}
 --- !u!225 &727881444
@@ -857,8 +888,8 @@ GameObject:
   - component: {fileID: 878372157}
   - component: {fileID: 878372156}
   - component: {fileID: 878372159}
-  - component: {fileID: 878372155}
   - component: {fileID: 878372158}
+  - component: {fileID: 878372155}
   m_Layer: 5
   m_Name: 2
   m_TagString: Untagged
@@ -885,27 +916,35 @@ RectTransform:
   m_AnchoredPosition: {x: -600, y: -210}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!50 &878372155
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &878372155
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878372153}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 878372158}
+          m_TargetAssemblyTypeName: TowerPart, Assembly-CSharp
+          m_MethodName: OnClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &878372156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -957,8 +996,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: 2
-  LegalObjects:
-  - {fileID: 727881438}
+  Tower: {fileID: 2098314857}
+  IsSelectable: 0
   LastLegalLocation: {x: 0, y: 0}
   Transform: {fileID: 878372154}
 --- !u!225 &878372159
@@ -1024,8 +1063,8 @@ GameObject:
   - component: {fileID: 1306042460}
   - component: {fileID: 1306042459}
   - component: {fileID: 1306042462}
-  - component: {fileID: 1306042458}
   - component: {fileID: 1306042461}
+  - component: {fileID: 1306042458}
   m_Layer: 5
   m_Name: 4
   m_TagString: Untagged
@@ -1052,27 +1091,35 @@ RectTransform:
   m_AnchoredPosition: {x: -600, y: -330}
   m_SizeDelta: {x: 400, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!50 &1306042458
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &1306042458
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306042456}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1306042461}
+          m_TargetAssemblyTypeName: TowerPart, Assembly-CSharp
+          m_MethodName: OnClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1306042459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1124,10 +1171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: 4
-  LegalObjects:
-  - {fileID: 727881438}
-  - {fileID: 878372153}
-  - {fileID: 17584468}
+  Tower: {fileID: 2098314857}
+  IsSelectable: 0
   LastLegalLocation: {x: 0, y: 0}
   Transform: {fileID: 1306042457}
 --- !u!225 &1306042462
@@ -1334,7 +1379,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &2069292064
 Canvas:
   m_ObjectHideFlags: 0
@@ -1344,7 +1389,7 @@ Canvas:
   m_GameObject: {fileID: 2069292061}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
+  m_RenderMode: 1
   m_Camera: {fileID: 567876290}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1364,8 +1409,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069292061}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.00925926, y: 0.00925926, z: 0.00925926}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2098314853}
   - {fileID: 533500157}
@@ -1379,8 +1424,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920.0001, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &2098314852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,6 +1437,7 @@ GameObject:
   - component: {fileID: 2098314853}
   - component: {fileID: 2098314855}
   - component: {fileID: 2098314854}
+  - component: {fileID: 2098314857}
   - component: {fileID: 2098314856}
   m_Layer: 5
   m_Name: Tower1
@@ -1457,32 +1503,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098314852}
   m_CullTransparentMesh: 1
---- !u!61 &2098314856
-BoxCollider2D:
+--- !u!114 &2098314856
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098314852}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 500, y: 500}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2098314857}
+          m_TargetAssemblyTypeName: TOHTower, Assembly-CSharp
+          m_MethodName: OnClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &2098314857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098314852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc4ba3ea87b1f346b831bb0d6fbeb6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tower:
+  - {fileID: 1306042461}
+  - {fileID: 17584473}
+  - {fileID: 878372158}
+  - {fileID: 727881443}
+  IsCorrect: 0
 --- !u!1 &2115509185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,6 +1561,7 @@ GameObject:
   - component: {fileID: 2115509186}
   - component: {fileID: 2115509188}
   - component: {fileID: 2115509187}
+  - component: {fileID: 2115509190}
   - component: {fileID: 2115509189}
   m_Layer: 5
   m_Name: Tower3
@@ -1559,29 +1627,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115509185}
   m_CullTransparentMesh: 1
---- !u!61 &2115509189
-BoxCollider2D:
+--- !u!114 &2115509189
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115509185}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2115509190}
+          m_TargetAssemblyTypeName: TOHTower, Assembly-CSharp
+          m_MethodName: OnClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &2115509190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115509185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc4ba3ea87b1f346b831bb0d6fbeb6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tower: []
+  IsCorrect: 1

@@ -1,0 +1,53 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TOHTower : MonoBehaviour {
+
+    public List<TowerPart> Tower = new List<TowerPart>();
+    public bool IsCorrect;
+
+    public void OnClick() {
+        if(TowerPart.Selected == null) { return; }
+        Tower.Add(TowerPart.Selected);
+        int LocationAdded = 0;
+        foreach(TowerPart TP in Tower) {
+            LocationAdded++;
+            if(TP.Rank < TowerPart.Selected.Rank) { TowerPart.Selected = null; ShowError(); return; }
+        }
+        
+        TowerPart.Selected.Tower.Tower.Remove(TowerPart.Selected);
+        
+        try {
+            for (int i = 0; i < TowerPart.Selected.Tower.Tower.Count; i++) {
+                TowerPart.Selected.Tower.Tower[i].IsSelectable = i == TowerPart.Selected.Tower.Tower.Count - 1;
+            }
+        } catch { Debug.Log("Empty Tower");}
+
+        TowerPart.Selected.Tower = this;
+        TowerPart.Selected.GetComponent<RectTransform>().anchoredPosition = new Vector3(GetComponent<RectTransform>().anchoredPosition.x, (-155) - 60 * (4 - LocationAdded), 0);
+        TowerPart.Selected = null;
+        UpdateTree();
+        Check();
+    }
+
+    void UpdateTree() {
+        try {
+            for (int i = 0; i <Tower.Count; i++) {
+                Tower[i].IsSelectable = i == Tower.Count-1;
+            }
+        } catch { Debug.Log("Empty Tower"); }
+    }
+
+    void Check() {
+        if (IsCorrect) {
+            if(Tower.Count == 4) {
+                Debug.Log("Correct");
+            }
+        }
+    }
+
+    void ShowError() {
+        Debug.Log("Illegal");
+    }
+}

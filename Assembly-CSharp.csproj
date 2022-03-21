@@ -144,7 +144,7 @@
     <Compile Include="Assets\Scripts\MendTheMenu.cs" />
     <Compile Include="Assets\Scripts\TowerOfHanoi.cs" />
     <Compile Include="Assets\Scripts\TowerPart.cs" />
-    <Compile Include="Assets\Scripts\ReturnTower.cs" />
+    <Compile Include="Assets\Scripts\TOHTower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

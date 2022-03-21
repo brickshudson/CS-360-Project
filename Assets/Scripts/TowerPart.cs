@@ -1,48 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class TowerPart : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler {
+public class TowerPart : MonoBehaviour {
 
     public int Rank;
-    public GameObject[] LegalObjects;
+    public TOHTower Tower;
+    public bool IsSelectable;
 
     public Vector2 LastLegalLocation;
     public RectTransform Transform;
-
-    public void OnBeginDrag(PointerEventData eventData) {
-        Debug.Log("Drag Start");
-    }
-
-    public void OnDrag(PointerEventData eventData) {
-        Transform.anchoredPosition += eventData.delta;
-    }
-
-    public void OnEndDrag(PointerEventData eventData) {
-        Debug.Log("Drag End");
-    }
-
-    public void Snap() {
-        Transform.anchoredPosition = LastLegalLocation;
-    }
-
-    void OnTriggerEnter2D(Collider2D collision) {
-        foreach (GameObject go in LegalObjects) {
-            if (collision.gameObject == go) { return; }
-        }
-        collision.GetComponent<TowerPart>().Snap();
-    }
+    public static TowerPart Selected;
 
     // Start is called before the first frame update
     void Start()
     {
-        LastLegalLocation = Transform.position;
+        LastLegalLocation = Transform.anchoredPosition;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void OnClick() {
+        if(IsSelectable)
+            Selected = this;
     }
 }
