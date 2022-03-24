@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
     }
 
     public float Time { get; set; }
-    protected bool running;
+    public bool running { get; set; }
 
     public void StopTimer() { running = false; }
     public void StartTimer() { running = true; }
