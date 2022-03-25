@@ -143,6 +143,7 @@
     <Compile Include="Assets\PauseScreen.cs" />
     <Compile Include="Assets\Scenes\Minigames\Queue\QueueItem.cs" />
     <Compile Include="Assets\Scenes\Minigames\Queue\QueueHost.cs" />
+    <Compile Include="Assets\Scenes\Minigames\Binary Search Tree\BSTCon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
