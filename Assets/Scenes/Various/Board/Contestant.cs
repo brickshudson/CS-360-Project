@@ -32,7 +32,6 @@ public class Contestant : MonoBehaviour
         moveLimit = 0;
         eliminated = false;
     }
-
     // Update is called once per frame
     void Update()
     {
