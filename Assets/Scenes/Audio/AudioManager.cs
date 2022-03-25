@@ -21,9 +21,11 @@ public class AudioManager : MonoBehaviour
 
     public void ChangeBGM(AudioClip music)
     {
-        BGM.Stop();
-        BGM.clip = music;
-        BGM.Play();
+        if (BGM.clip.name != music.name) { 
+            BGM.Stop();
+            BGM.clip = music;
+            BGM.Play();
+           }
     }
 
 

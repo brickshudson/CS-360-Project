@@ -12,12 +12,6 @@ public class MenuMixerController : MonoBehaviour
         MenuMixer.SetFloat("MenuVolume", Mathf.Log10(sliderValue) *20);
     }
 
-    /*
-    public double getValue()
-    {
-       return MenuMixer.GetFloat("MenuVolume", out value);
-    }
-    */
      void Awake()
     {
         
