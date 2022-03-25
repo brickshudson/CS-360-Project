@@ -13,6 +13,8 @@ public class Contestant : MonoBehaviour
     int bits;
     GameSpace current;
     public BoardGraph island;
+    private int moveLimit;
+    private bool eliminated;
     //These only exist for ez testing!
     public TextMeshProUGUI here;
     public TextMeshProUGUI bitCoin;
@@ -27,6 +29,8 @@ public class Contestant : MonoBehaviour
         current = island.get(0);
         here.text = ""+ current.getIndex() + " - " + current.getType();
         bitCoin.text = "Bits: " + bits;
+        moveLimit = 0;
+        eliminated = false;
     }
 
     // Update is called once per frame
