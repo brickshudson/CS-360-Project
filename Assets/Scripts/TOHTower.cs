@@ -1,4 +1,4 @@
-using System.Collections;
+//Written by The-Architect01
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -13,10 +13,12 @@ public class TOHTower : MonoBehaviour {
 
     public void OnClick() {
         if(TowerPart.Selected == null) { return; }
+        if (Tower.Contains(TowerPart.Selected)) { return; }
         TurnsTaken++;
         TurnsTakenDisplay.text = $"Moves Taken: {TurnsTaken}";
         Tower.Add(TowerPart.Selected);
         int LocationAdded = 0;
+
         foreach(TowerPart TP in Tower) {
             LocationAdded++;
             if(TP.Rank < TowerPart.Selected.Rank) { TowerPart.Selected = null; ShowError(); return; }
