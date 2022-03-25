@@ -12,24 +12,31 @@ public class BSTCon : MonoBehaviour {
     public TextMeshProUGUI RightText;
     public TextMeshProUGUI CurrentText;
     public TextMeshProUGUI GoalText;
+    public TextMeshProUGUI MovesUsed;
+    public GameWin GameWin;
     public static BinaryTree<int> BinTree;
     public static int Goal;
+
+    int _moves;
+    int Moves { get { return _moves; } set { _moves = value; MovesUsed.text = $"Moves Used: {value}"; } }
 
     public static Node<int> CurrentNode = null;
 
     public bool IsRight = false;
 
     private void Awake() {
+        Moves = 0;
         BinTree = new BinaryTree<int>();
         List<int> Goals = new List<int>();
-        while(BinTree.Count < 100) {
+        while(BinTree.Count < 12) {
             int x = Random.Range(1, 999);
             BinTree.Insert(x);
             Goals.Add(x);
         }
         Goal = Goals[Random.Range(0, Goals.Count)];
-        Debug.Log(BinTree);
-        Debug.Log(Goal);
+        GoalText.text = $"Goal: {Goal}";
+        Moves = 0;
+
         CurrentText.text = BinTree.Root.Data.ToString();
         LeftText.text = BinTree.Root.Left.Data.ToString();
         RightText.text = BinTree.Root.Right.Data.ToString();
@@ -44,12 +51,13 @@ public class BSTCon : MonoBehaviour {
     }
 
     public void OnClick() {
+        Moves++;
         if (IsRight) {
-            if(RightText.text == Goal.ToString()) { Debug.Log("Correct Right"); return; }
+            if(RightText.text == Goal.ToString()) { Debug.Log("Correct Right"); GameWin.Show(); return; }
             if(CurrentNode.Right != null)
                 CurrentNode = CurrentNode.Right;
         } else {
-            if (LeftText.text == Goal.ToString()) { Debug.Log("Correct Left"); return; }
+            if (LeftText.text == Goal.ToString()) { Debug.Log("Correct Left"); GameWin.Show(); return; }
             if (CurrentNode.Left != null)
                 CurrentNode = CurrentNode.Left;
         }
@@ -69,6 +77,10 @@ namespace BinaryTree {
         public T Data { get; set; }
         public Node<T> Left { get; set; }
         public Node<T> Right { get; set; }
+        public bool IsLeaf { get {
+                return Left == null && Right == null;
+            }
+        }
         
         public Node(T data, Node<T> Left, Node<T> Right) {
             Data = data;
@@ -111,7 +123,7 @@ namespace BinaryTree {
         }
 
         string Tostring(Node<T> node) {
-            if(node == null) { return string.Empty; }
+            if(node == null) { return "T"; }
             return Tostring(node.Left) + " " + node.Data.ToString() + " " + Tostring(node.Right);
         } 
 

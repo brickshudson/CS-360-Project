@@ -45,7 +45,7 @@ public class GameWin : MonoBehaviour
         TimeWin.text = Timer is CountDown ? 
             $"Time: {((CountDown)Timer).TimeElapsed}" :
             $"Time: {Timer.TimerLabel.text}";
-
+        Timer.StopTimer();
         float alphacounter = 0f;
         Screen.gameObject.SetActive(true);
         TimeWin.gameObject.SetActive(true);
