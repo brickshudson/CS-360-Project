@@ -21,9 +21,9 @@ public class BoardGraph //Note - for testing purposes this is NOT a monobehavior
     }
     public BoardGraph()
     {
-        routes[0] = new GameSpace(0, "Tyler's Basement", 1, -1, 2, -1);
-        routes[1] = new GameSpace(1, "Neal's Closet", 3, 0, -1, -1);
-        routes[2] = new GameSpace(2, "Eric's Kitchen", -1, -1, 4, 0);
+        routes[0] = new GameSpace(0, "Normal", -1, -1, 1, 2);
+        routes[1] = new GameSpace(1, "Red", 3, -1, 5, 0);
+        routes[2] = new GameSpace(2, "Blue", -1, -1, 0, 4);
         routes[3] = new GameSpace(3, "Bricks' Backyard", -1, 1, -1, -1);
         routes[4] = new GameSpace(4, "Ronit's Living Room", -1, -1, -1, 2);
     }
