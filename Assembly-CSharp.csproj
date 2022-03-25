@@ -145,6 +145,7 @@
     <Compile Include="Assets\Scripts\DOAController.cs" />
     <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Scripts\UI\LobbyPlayerCard.cs" />
     <Compile Include="Assets\Scenes\Audio\AudioManager.cs" />
+    <Compile Include="Assets\Scenes\Audio\SwitchMusicOnLoad.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
