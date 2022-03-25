@@ -1065,6 +1065,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameWIn
       objectReference: {fileID: 0}
+    - target: {fileID: 6412277002021822506, guid: 64ac6049c45d04c4e81e557cf428b69c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8194621951398281579, guid: 64ac6049c45d04c4e81e557cf428b69c, type: 3}
       propertyPath: Timer
       value: 
@@ -1278,6 +1282,10 @@ PrefabInstance:
     - target: {fileID: 8684319797047179658, guid: d109037a306e15f4199e920ad998dd4a, type: 3}
       propertyPath: m_Name
       value: Game Start Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684319797047179658, guid: d109037a306e15f4199e920ad998dd4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8684319797047179662, guid: d109037a306e15f4199e920ad998dd4a, type: 3}
       propertyPath: m_Pivot.x
@@ -1513,6 +1521,10 @@ PrefabInstance:
     - target: {fileID: 3208031182410173410, guid: 1db3e5791bef125489bec0b4aeedac76, type: 3}
       propertyPath: m_Name
       value: GameLose
+      objectReference: {fileID: 0}
+    - target: {fileID: 3208031182410173410, guid: 1db3e5791bef125489bec0b4aeedac76, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4916716374900552097, guid: 1db3e5791bef125489bec0b4aeedac76, type: 3}
       propertyPath: m_Pivot.x
