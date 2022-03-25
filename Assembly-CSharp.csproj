@@ -143,6 +143,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/Scripts/DOAController.cs" />
     <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scripts/UI/LobbyPlayerCard.cs" />
+    <Compile Include="Assets/Scenes/Minigames/Binary Search Tree/BSTCon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
