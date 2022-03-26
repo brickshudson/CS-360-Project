@@ -152,7 +152,7 @@ namespace LobbyUI
 
             if(IsHost)
             {
-                startGameButton.interactable = IsEveryoneReady();
+                startGameButton.interactable = true;
             }
         }
     }

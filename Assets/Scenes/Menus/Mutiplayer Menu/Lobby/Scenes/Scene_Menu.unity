@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 367386268}
   - component: {fileID: 367386267}
   m_Layer: 5
-  m_Name: ClientButton
+  m_Name: PlayerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -490,7 +490,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -20, y: 20}
+  m_AnchoredPosition: {x: -177, y: 5}
   m_SizeDelta: {x: -30, y: 50}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &367386267
@@ -615,7 +615,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803404402}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1085611852}
@@ -624,7 +624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -422, y: -332}
+  m_AnchoredPosition: {x: -728, y: -373}
   m_SizeDelta: {x: 267.5527, y: 94.118}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &803404404
@@ -636,10 +636,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 803404402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2e0b80ffb0714315a9d7563a4f693b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a2efaf167cbd14468a0c770755a1062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BackButton: {fileID: 803404405}
+  OpenMultiplayerMenu: {fileID: 803404405}
 --- !u!114 &803404405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,7 +758,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -20}
+  m_AnchoredPosition: {x: 4, y: -33}
   m_SizeDelta: {x: -40, y: 90}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &934551835
@@ -1137,7 +1137,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180062619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 145966147}
@@ -1146,7 +1146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 20, y: 20}
+  m_AnchoredPosition: {x: -448, y: 133}
   m_SizeDelta: {x: -30, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1180062621
@@ -1475,7 +1475,27 @@ MonoBehaviour:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1750276926}
     PlayerPrefab: {fileID: 0}
-    NetworkPrefabs: []
+    NetworkPrefabs:
+    - Override: 0
+      Prefab: {fileID: 3068522232316313597, guid: ac5b24ade6e124fd1a9aee39e2d68d77, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 8168863877550772760, guid: 5a7765b6447f943f681aeac17b911d9b, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 7345373014189098772, guid: 01d4a8e38ff8545c6b5ba7bd528a3993, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 902538266869315865, guid: 874e3ad26d1fe4acf9757bca7785db50, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
     TickRate: 30
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 1

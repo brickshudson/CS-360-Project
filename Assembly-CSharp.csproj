@@ -58,7 +58,6 @@
   <ItemGroup>
     <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Networking Scripts/Networking/PlayerData.cs" />
     <Compile Include="Assets/Scripts/TowerPart.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/UI Scripts/DropDownScript.cs" />
     <Compile Include="Assets/Scripts/MiniGameData.cs" />
     <Compile Include="Assets/Scenes/Various/Load Screen/LoadScreen.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
@@ -68,7 +67,6 @@
     <Compile Include="Assets/Resources/MiniGameLister.cs" />
     <Compile Include="Assets/Scripts/SaveMe.cs" />
     <Compile Include="Assets/Scripts/GameStart.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/UI Scripts/BackScript.cs" />
     <Compile Include="Assets/Scripts/OptionsMenu.cs" />
     <Compile Include="Assets/Scripts/GameWin.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
@@ -101,7 +99,7 @@
     <Compile Include="Assets/Scenes/Menus/Singleplayer Menu/SinglePlayerMenu.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/UI Scripts/MultiPlayerMenu.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Navigation Scripts/MultiPlayerMenu.cs" />
     <Compile Include="Assets/Scenes/Various/Board/Contestant.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
     <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Networking Scripts/Networking/ConnectionPayload.cs" />
@@ -122,10 +120,10 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
     <Compile Include="Assets/Scripts/LineUpController.cs" />
     <Compile Include="Assets/Scripts/SetController.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/UI Scripts/LobbyCreation.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Navigation Scripts/LobbyCreation.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
     <Compile Include="Assets/Scripts/TOHTower.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/UI Scripts/Back.cs" />
+    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Navigation Scripts/Back.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
     <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Networking Scripts/Networking/ConnectStatus.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
