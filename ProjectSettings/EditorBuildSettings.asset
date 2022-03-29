@@ -21,9 +21,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Minigames/Heap/Heap - Pick the Lock.unity
     guid: 9aeb25cb6cae6224d87a885be94f423b
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menus/PlayFolder/Play Menu.unity
     guid: 6bc3d586e8f7d8b4aac66567cb8da11c
@@ -36,9 +33,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scenes/Scene_Menu.unity
     guid: 8f27666b1a1175e45b9c8ce12eefaf20
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scenes/Scene_Lobby.unity
     guid: 7c2a2b7ae7ff7de4f8a00802fa6e4c64

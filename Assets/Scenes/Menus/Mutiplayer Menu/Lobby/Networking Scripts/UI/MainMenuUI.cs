@@ -1,6 +1,8 @@
 using LobbyNetworking;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 namespace Lobby
 {
@@ -12,17 +14,18 @@ namespace Lobby
         private void Start()
         {
             PlayerPrefs.GetString("PlayerName");
+
         }
 
         public void OnHostClicked()
         {
-            PlayerPrefs.SetString("PlayerName", displayNameInputField.text);
 
             GameNetPortal.Instance.StartHost();
         }
 
         public void OnClientClicked()
         {
+
             PlayerPrefs.SetString("PlayerName", displayNameInputField.text);
 
             ClientGameNetPortal.Instance.StartClient();
