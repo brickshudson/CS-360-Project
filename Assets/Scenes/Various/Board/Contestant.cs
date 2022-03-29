@@ -33,7 +33,6 @@ public class Contestant : MonoBehaviour
         bitCoin.text = "Bits: " + bits;
         moveLimit = 0;
         eliminated = false;
-        test.Set(1.54f, 3.36f);
     }
     // Update is called once per frame
     void Update()
@@ -43,7 +42,6 @@ public class Contestant : MonoBehaviour
         {
             current = island.goUp(current);
             here.text = "" + current.getIndex() + " - " + current.getType();
-            persona.MovePosition(test);
         }
         if(Input.GetKeyDown(KeyCode.S))
         {
