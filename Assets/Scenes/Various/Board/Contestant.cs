@@ -15,6 +15,8 @@ public class Contestant : MonoBehaviour
     public BoardGraph island;
     private int moveLimit;
     private bool eliminated;
+    public Rigidbody2D persona;
+    Vector2 test; 
     //These only exist for ez testing!
     public TextMeshProUGUI here;
     public TextMeshProUGUI bitCoin;
@@ -31,14 +33,17 @@ public class Contestant : MonoBehaviour
         bitCoin.text = "Bits: " + bits;
         moveLimit = 0;
         eliminated = false;
+        test.Set(1.54f, 3.36f);
     }
     // Update is called once per frame
     void Update()
     {
+        persona.MovePosition(current.getLoc());
         if(Input.GetKeyDown(KeyCode.W))
         {
             current = island.goUp(current);
             here.text = "" + current.getIndex() + " - " + current.getType();
+            persona.MovePosition(test);
         }
         if(Input.GetKeyDown(KeyCode.S))
         {

@@ -17,8 +17,11 @@ public class GameSpace
     int index;
     int[] connections = new int[4];
 
-    //Constructor
-    public GameSpace(int i, string t, int u, int d, int l, int r)
+    //This is to streamline the player moving from space to space as much as possible
+    Vector2 location;
+
+    //The world's worst constructor! :D [if any of you can think of a way to make this better, plz do!]
+    public GameSpace(int i, string t, int u, int d, int l, int r, float locX, float locY)
     {
         index = i;
         type = t;
@@ -26,6 +29,7 @@ public class GameSpace
         connections[DOWN] = d;
         connections[LEFT] = l;
         connections[RIGHT] = r;
+        location.Set(locX, locY);
     }
     public int getUp()
     {
@@ -50,6 +54,10 @@ public class GameSpace
     public string getType()
     {
         return type;
+    }
+    public Vector2 getLoc()
+    {
+        return location;
     }
 
     // Start is called before the first frame update

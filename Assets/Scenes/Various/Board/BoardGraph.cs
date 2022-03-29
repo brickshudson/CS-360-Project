@@ -9,23 +9,14 @@ public class BoardGraph //Note - for testing purposes this is NOT a monobehavior
     GameSpace[] routes = new GameSpace[100];
 
     // Note for the connections: If there is no connection on a side, input '-1' for that direction!
-    //Ex: A space with 2 connections, left and right = new GameSpace(20, "Type", -1, -1, 19, 21)
+    //Ex: A space with 2 connections, left and right = new GameSpace(20, "Type", -1, -1, 19, 21, x, y)
     void Start()
-    {
-        //Note that until we have our own finalized gameBoard to work with, this segment won't be complete.
-        routes[0] = new GameSpace(0, "Normal", -1, -1, 1, 2);
-        routes[1] = new GameSpace(1, "Red", 3, -1, 5, 0);
-        routes[2] = new GameSpace(2, "Blue", -1, -1, 0, 4);
-        routes[3] = new GameSpace(3, "Bricks' Backyard", -1, 1, -1, -1);
-        routes[4] = new GameSpace(4, "Ronit's Living Room", -1, -1, -1, 2);
-    }
+    {}//As of now we don't need this method
     public BoardGraph()
     {
-        routes[0] = new GameSpace(0, "Normal", -1, -1, 1, 2);
-        routes[1] = new GameSpace(1, "Red", 3, -1, 5, 0);
-        routes[2] = new GameSpace(2, "Blue", -1, -1, 0, 4);
-        routes[3] = new GameSpace(3, "Bricks' Backyard", -1, 1, -1, -1);
-        routes[4] = new GameSpace(4, "Ronit's Living Room", -1, -1, -1, 2);
+        routes[0] = new GameSpace(0, "Green", -1, -1, 2, 1, 0f, 0f);
+        routes[1] = new GameSpace(1, "Blue" , -1, -1, 0, 3, 3.05f, 0.64f);
+        routes[2] = new GameSpace(2, "Red"  , -1, -1, 4, 0, -3.28f, 1.17f);
     }
     
     public GameSpace get(int i)
