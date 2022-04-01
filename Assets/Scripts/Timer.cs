@@ -2,8 +2,7 @@
 using UnityEngine;
 using TMPro;
 
-public class Timer : MonoBehaviour
-{
+public class Timer : MonoBehaviour {
     /// <summary><c>TextMeshProUGUI</c> the label that will dynamically update.</summary>
     public TextMeshProUGUI TimerLabel;
     public bool AutoRun;

@@ -2115,7 +2115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3126779914820812793, guid: 918cdb2fa2756ab47ac714ab35f05f05, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 918cdb2fa2756ab47ac714ab35f05f05, type: 3}
@@ -2216,7 +2216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6412277002021822506, guid: 64ac6049c45d04c4e81e557cf428b69c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8194621951398281579, guid: 64ac6049c45d04c4e81e557cf428b69c, type: 3}
       propertyPath: Timer
@@ -2252,7 +2252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3208031182410173410, guid: 1db3e5791bef125489bec0b4aeedac76, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4916716374900552097, guid: 1db3e5791bef125489bec0b4aeedac76, type: 3}
       propertyPath: m_Pivot.x
@@ -3174,7 +3174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8684319797047179658, guid: d109037a306e15f4199e920ad998dd4a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8684319797047179662, guid: d109037a306e15f4199e920ad998dd4a, type: 3}
       propertyPath: m_Pivot.x

@@ -1474,6 +1474,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897350596}
   m_CullTransparentMesh: 1
+--- !u!114 &1016206985 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8194621951398281579, guid: 64ac6049c45d04c4e81e557cf428b69c, type: 3}
+  m_PrefabInstance: {fileID: 1586423866}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639029b6f35e9b6489d1c9480c7145a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1043551881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2141,13 +2152,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5f605090418874584c61a6b6c9e3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RobbieDifficulty: 0.1
+  RobbieDifficulty: 0
   PlayerInput: {fileID: 1428419706}
   SetType: {fileID: 175868913}
   PlayerSet: {fileID: 1900763029}
   RobbieSpeak: {fileID: 757424043}
   RobbieTalk: {fileID: 600634439}
   Robbie_Inactive: {fileID: 21300000, guid: bec2d15631096fc4187c6f9411319130, type: 3}
+  Loss: {fileID: 1964910773}
+  Win: {fileID: 1016206985}
+  CountDown: {fileID: 1408163213}
 --- !u!4 &1618202455
 Transform:
   m_ObjectHideFlags: 0

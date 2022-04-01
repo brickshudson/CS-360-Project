@@ -60,7 +60,7 @@ public class LineUpController : MonoBehaviour {
         GameLog.Win = Correct;
         GameLog.TimeTaken = CountDown.TimeElapsed;
         CountDown.StopTimer();
-        Zombie.CurrentProfileStats.Stats["Pointer"]["Police Line Up"].GameLog.Add(GameLog);
+//        Zombie.CurrentProfileStats.Stats["Pointer"]["Police Line Up"].GameLog.Add(GameLog);
         if (Correct)
             GameWinScreen.Show();
         else

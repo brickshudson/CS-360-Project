@@ -23,6 +23,10 @@ public class SetController : MonoBehaviour {
     HashSet<string> LegalOptions;
     List<string> IllegalOptions = new List<string>();
 
+    public GameLoss Loss;
+    public GameWin Win;
+    public CountDown CountDown;
+
     // Start is called before the first frame update
     void Start() {
         RobbieSpeak.enabled = false;
@@ -57,9 +61,12 @@ public class SetController : MonoBehaviour {
                 PlayerSet.text = Last5;
 
                 Debug.Log($"Legal {PlayerInput.text}");
+                PlayerInput.Select();
             } 
         } else {
             Debug.Log($"Illegal {PlayerInput.text}");
+            Loss.Show();
+            CountDown.StopTimer();
         }
         float RNG = Random.value;
         if (RNG >= RobbieDifficulty) {
@@ -72,6 +79,8 @@ public class SetController : MonoBehaviour {
             int RandomIndex = Random.Range(0, IllegalOptions.Count);
             StartCoroutine(RobbieSpeaking(IllegalOptions.ElementAt(RandomIndex)));
             Debug.Log($"Illegal {IllegalOptions.ElementAt(RandomIndex)}");
+            Win.Show();
+            CountDown.StopTimer();
         }
     }
 
