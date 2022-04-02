@@ -11,7 +11,7 @@ namespace LobbyNetworking
     public class ServerGameNetPortal : MonoBehaviour
     {
         [Header("Settings")]
-        [SerializeField] private int maxPlayers = 4;
+        [SerializeField] private int maxPlayers = 8;
 
         public static ServerGameNetPortal Instance => instance;
         private static ServerGameNetPortal instance;

@@ -1,6 +1,10 @@
 using TMPro;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEditor;
 
 namespace LobbyUI
 {
@@ -12,13 +16,14 @@ namespace LobbyUI
 
         [Header("Data Display")]
         [SerializeField] private TMP_Text playerDisplayNameText;
-        [SerializeField] private Image selectedCharacterImage;
         [SerializeField] private Toggle isReadyToggle;
+        [SerializeField] private GameObject selectedCharacterImage;
 
         public void UpdateDisplay(LobbyPlayerState lobbyPlayerState)
         {
             playerDisplayNameText.text = lobbyPlayerState.PlayerName.ToString();
             isReadyToggle.isOn = lobbyPlayerState.IsReady;
+
 
             waitingForPlayerPanel.SetActive(false);
             playerDataPanel.SetActive(true);
