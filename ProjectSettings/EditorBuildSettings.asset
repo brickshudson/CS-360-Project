@@ -8,14 +8,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/MainMenu/Main Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menus/OptionsFolder/Options Menu.unity
     guid: be8deccfd1b4c56478fc6b6c1888546f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Minigames/Binary Search Tree/Binary Search Tree - Search
       Light.unity
     guid: d06781a179276454ca977a317460d1f3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Minigames/Heap/Heap - Pick the Lock.unity
     guid: 9aeb25cb6cae6224d87a885be94f423b
   - enabled: 1
@@ -27,16 +27,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/Mutiplayer Menu/Multiplayer.unity
     guid: 9dc6528dd2305455182b016e4269247c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scenes/Scene_Menu.unity
     guid: 8f27666b1a1175e45b9c8ce12eefaf20
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menus/Mutiplayer Menu/Lobby/Scenes/Scene_Lobby.unity
     guid: 7c2a2b7ae7ff7de4f8a00802fa6e4c64
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Various/Load Screen/Load Game.unity
     guid: d434f2889ba4d664fa068e4d52f25a8c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Minigames/Stack/Stack - Chips Ahoy.unity
     guid: c2c33c950baae2e429d052922a53eac6
   - enabled: 1
