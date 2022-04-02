@@ -19,6 +19,7 @@ namespace Lobby
 
         public void OnHostClicked()
         {
+            PlayerPrefs.SetString("PlayerName", "Host");
 
             GameNetPortal.Instance.StartHost();
         }

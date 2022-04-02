@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad94afee15264f5479af33bf240c41af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlayers: 4
+  maxPlayers: 8
 --- !u!114 &238507413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1475,27 +1475,7 @@ MonoBehaviour:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1750276926}
     PlayerPrefab: {fileID: 0}
-    NetworkPrefabs:
-    - Override: 0
-      Prefab: {fileID: 3068522232316313597, guid: ac5b24ade6e124fd1a9aee39e2d68d77, type: 3}
-      SourcePrefabToOverride: {fileID: 0}
-      SourceHashToOverride: 0
-      OverridingTargetPrefab: {fileID: 0}
-    - Override: 0
-      Prefab: {fileID: 8168863877550772760, guid: 5a7765b6447f943f681aeac17b911d9b, type: 3}
-      SourcePrefabToOverride: {fileID: 0}
-      SourceHashToOverride: 0
-      OverridingTargetPrefab: {fileID: 0}
-    - Override: 0
-      Prefab: {fileID: 7345373014189098772, guid: 01d4a8e38ff8545c6b5ba7bd528a3993, type: 3}
-      SourcePrefabToOverride: {fileID: 0}
-      SourceHashToOverride: 0
-      OverridingTargetPrefab: {fileID: 0}
-    - Override: 0
-      Prefab: {fileID: 902538266869315865, guid: 874e3ad26d1fe4acf9757bca7785db50, type: 3}
-      SourcePrefabToOverride: {fileID: 0}
-      SourceHashToOverride: 0
-      OverridingTargetPrefab: {fileID: 0}
+    NetworkPrefabs: []
     TickRate: 30
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 1

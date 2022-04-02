@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8323598554952957077}
   - component: {fileID: 1646886014050130667}
-  - component: {fileID: 824168773239339228}
+  - component: {fileID: 8798939054678359907}
   m_Layer: 0
   m_Name: Bricks
   m_TagString: Untagged
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &824168773239339228
+--- !u!114 &8798939054678359907
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
