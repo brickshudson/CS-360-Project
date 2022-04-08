@@ -12,7 +12,7 @@ public class MultiPlayerMenu : MonoBehaviour
     void Start()
     {
         OpenMultiplayerMenu.onClick.AddListener(delegate {
-            SceneManager.LoadScene("Multiplayer");
+            SceneManager.LoadScene("mainScene");
         });
     }
 

@@ -15,12 +15,14 @@ public class GameLoss : MonoBehaviour
     public Button Next;
 
     public float DisplayDelay = .02f;
+    public string Message = "Times Up!";
     public bool DetectWin { get; set; } = false;
     #endregion
     private CanvasGroup group;
 
     //Hides the screen
     private void Awake() {
+        LossText.text = Message;
         Screen.gameObject.SetActive(false);
         LossText.gameObject.SetActive(false);
         Loss.gameObject.SetActive(false);

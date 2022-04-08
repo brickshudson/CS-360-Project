@@ -1637,7 +1637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7893596573928634236, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 243.82996
+      value: 275
       objectReference: {fileID: 0}
     - target: {fileID: 7893596573928634236, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1673,7 +1673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7893596573928634236, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -325
+      value: -350
       objectReference: {fileID: 0}
     - target: {fileID: 7893596573928634236, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2152,7 +2152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5f605090418874584c61a6b6c9e3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RobbieDifficulty: 0
+  RobbieDifficulty: 0.05
   PlayerInput: {fileID: 1428419706}
   SetType: {fileID: 175868913}
   PlayerSet: {fileID: 1900763029}
