@@ -13,17 +13,18 @@ public class TOHTower : MonoBehaviour {
 
     public void OnClick() {
         if(TowerPart.Selected == null) { return; }
-        if (Tower.Contains(TowerPart.Selected)) { return; }
+        if (Tower.Contains(TowerPart.Selected)) { TowerPart.Selected = null;  return; }
+
+        int LocationAdded = 1;
+        foreach (TowerPart TP in Tower) {
+            LocationAdded++;
+            if (TP.Rank < TowerPart.Selected.Rank) { TowerPart.Selected = null; ShowError(); return; }
+        }
+
         TurnsTaken++;
         TurnsTakenDisplay.text = $"Moves Taken: {TurnsTaken}";
         Tower.Add(TowerPart.Selected);
-        int LocationAdded = 0;
 
-        foreach(TowerPart TP in Tower) {
-            LocationAdded++;
-            if(TP.Rank < TowerPart.Selected.Rank) { TowerPart.Selected = null; ShowError(); return; }
-        }
-        
         TowerPart.Selected.Tower.Tower.Remove(TowerPart.Selected);
         
         try {
