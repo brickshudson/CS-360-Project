@@ -65,7 +65,7 @@ public class BoardGraph //Note - for testing purposes this is NOT a monobehavior
         routes[43] = new GameSpace(43, "Peak", -1, -1, 42, -1, .49f, 23.66f);
 
         //These are for skull Island
-        routes[44] = new GameSpace(44, "Boat", 45, -1, -1, -1, -10.43f, 18.3f);
+        routes[44] = new GameSpace(44, "Skull Boat", 45, -1, -1, -1, -10.43f, 18.3f);
         routes[45] = new GameSpace(45, "Green", 46, 47, 49, 44, -11.73f, 19.84f);
         routes[46] = new GameSpace(46, "Red", -1, 45, 49, -1, -11.57f, 23.44f);
         routes[47] = new GameSpace(47, "Red", -1, -1, 48, 45, -14.84f, 18.5f);

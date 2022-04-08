@@ -235,7 +235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000022888}
+  m_AnchoredPosition: {x: 0, y: 105}
   m_SizeDelta: {x: 1108.0769, y: 116.128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &352375850
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterDB: {fileID: 11400000, guid: 28920878819e14158b603b8aff84960c, type: 2}
-  spriteRenderer: {fileID: 490771767}
+  spriteRenderer: {fileID: 976007804}
 --- !u!212 &490771767
 SpriteRenderer:
   m_ObjectHideFlags: 0
