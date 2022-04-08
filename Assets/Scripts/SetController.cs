@@ -5,6 +5,7 @@ using UnityEngine;
 using TMPro;
 using System.Linq;
 using UnityEngine.UI;
+using System.Text.RegularExpressions;
 
 public class SetController : MonoBehaviour {
 
@@ -44,13 +45,16 @@ public class SetController : MonoBehaviour {
 
     void PlayerMove() {
         if(string.IsNullOrWhiteSpace(PlayerInput.text) || string.IsNullOrWhiteSpace(PlayerInput.text)) { PlayerInput.text = ""; PlayerInput.Select(); return; }
-        if (LegalOptions.Contains(PlayerInput.text.ToLower())) {
-            if (Player.Add(PlayerInput.text.ToLower())) {
-                LegalOptions.Remove(PlayerInput.text.ToLower());
-                IllegalOptions.Add(PlayerInput.text.ToLower());
+
+        int Location = LegalOptions.ContainsValue(PlayerInput.text.ToLower());
+
+        if (Location != -1) {
+            if (Player.Add(LegalOptions.ElementAt(Location))) {
+                LegalOptions.Remove(LegalOptions.ElementAt(Location));
+                IllegalOptions.Add(LegalOptions.ElementAt(Location));
 
                 string Last5 = "";
-                for(int i = 1; i <= 5; i++) {
+                for (int i = 1; i <= 5; i++) {
                     try {
                         Last5 += $"{i} {Player.ElementAt(Player.Count - i)}\n";
                     } catch {
@@ -62,7 +66,7 @@ public class SetController : MonoBehaviour {
 
                 Debug.Log($"Legal {PlayerInput.text}");
                 PlayerInput.Select();
-            } 
+            }
         } else {
             Debug.Log($"Illegal {PlayerInput.text}");
             Loss.Show();
@@ -122,7 +126,8 @@ public class SetController : MonoBehaviour {
 public static class SetItems {
     
     static List<string> Sets = new List<string>();
-    
+    static Regex RegEx = new Regex("[^a-zA-Z0-9,]");
+
     static SetItems() {
         TextAsset[] Assets = Resources.LoadAll<TextAsset>("Set\\");
         foreach (TextAsset asset in Assets) { Sets.Add(asset.name); }
@@ -131,7 +136,9 @@ public static class SetItems {
         string Item = Sets[Random.Range(0, Sets.Count)];
         string[] LegalItems = Resources.Load<TextAsset>($"Set\\{Item}").text.Split(',');
         HashSet<string> Items = new HashSet<string>();
-        foreach(string Legal in LegalItems) { Items.Add(Legal); }
+        foreach(string Legal in LegalItems) {
+            Items.Add(Legal);
+        }
         return new SetArgs(Item, Items);
     }
 
@@ -139,5 +146,18 @@ public static class SetItems {
         public string Name { get; }
         public HashSet<string> Set { get; }
         public SetArgs(string Name, HashSet<string> Set) { this.Name = Name; this.Set = Set; }
+    }
+
+    public static int ContainsValue(this HashSet<string> Set, string valueCheck) {
+        string CleanedCheck = RegEx.Replace(valueCheck, "");
+
+        int counter = -1;
+        foreach(string Item in Set) {
+            counter++;
+            string cleaned = RegEx.Replace(Item.ToLower(), "");
+            if (cleaned == CleanedCheck)
+                return counter;
+        }
+        return -1;
     }
 }
