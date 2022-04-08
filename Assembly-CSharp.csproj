@@ -56,16 +56,11 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\Networking\PlayerData.cs" />
     <Compile Include="Assets\Scripts\TowerPart.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\Character\CharacterManager.cs" />
     <Compile Include="Assets\Scripts\MiniGameData.cs" />
     <Compile Include="Assets\Scenes\Various\Load Screen\LoadScreen.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\UI\LobbyPlayerState.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\UI\LobbyUI.cs" />
     <Compile Include="Assets\Resources\MiniGameLister.cs" />
     <Compile Include="Assets\Scripts\SaveMe.cs" />
     <Compile Include="Assets\Scripts\GameStart.cs" />
@@ -77,18 +72,14 @@
     <Compile Include="Assets\Scenes\Various\Games\Data Structures\Heap.cs" />
     <Compile Include="Assets\Prefabs\SelectionGenerator\SelectionButtonScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\Character\CharacterDatabase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\Character\Player.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Scripts\Composite.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\Networking\GameNetPortal.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\Networking\DisconnectReason.cs" />
     <Compile Include="Assets\Scenes\Various\Board\BoardGraph.cs" />
     <Compile Include="Assets\Scripts\Zombie.cs" />
     <Compile Include="Assets\Scenes\Audio\SwitchMusicOnLoad.cs" />
@@ -107,34 +98,27 @@
     <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Navigation Scripts\MultiPlayerMenu.cs" />
     <Compile Include="Assets\Scenes\Various\Board\Contestant.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\Networking\ConnectionPayload.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Scenes\Audio\AudioManager.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\Character\Character.cs" />
     <Compile Include="Assets\cameraFollow.cs" />
     <Compile Include="Assets\PauseScreen.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\Networking\ClientGameNetPortal.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\QuitButton.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\Networking\ServerGameNetPortal.cs" />
     <Compile Include="Assets\Resources\LoadLevelButton.cs" />
     <Compile Include="Assets\Scenes\Menus\PlayFolder\PlayMenuChange.cs" />
     <Compile Include="Assets\Scripts\MainMenuButton.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\UI\MainMenuUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Scenes\Minigames\Binary Search Tree\BSTCon.cs" />
     <Compile Include="Assets\Scripts\LineUpController.cs" />
     <Compile Include="Assets\Scripts\SetController.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Navigation Scripts\LobbyCreation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Scripts\TOHTower.cs" />
     <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Navigation Scripts\Back.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\Networking\ConnectStatus.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scenes\Minigames\Queue\QueueItem.cs" />
     <Compile Include="Assets\Scripts\CountDown.cs" />
@@ -149,86 +133,6 @@
     <Compile Include="Assets\Scenes\Menus\MainMenu\MainMenu Button\MainMenuButtons.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\DOAController.cs" />
-    <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Lobby\Networking Scripts\UI\LobbyPlayerCard.cs" />
-=======
-    <Compile Include="Assets/Scripts/TowerPart.cs" />
-    <Compile Include="Assets/Scripts/MiniGameData.cs" />
-    <Compile Include="Assets/Scenes/Various/Load Screen/LoadScreen.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />
-    <Compile Include="Assets/Resources/MiniGameLister.cs" />
-    <Compile Include="Assets/Scripts/SaveMe.cs" />
-    <Compile Include="Assets/Scripts/GameStart.cs" />
-    <Compile Include="Assets/Scripts/OptionsMenu.cs" />
-    <Compile Include="Assets/Scripts/GameWin.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
-    <Compile Include="Assets/Scripts/GameLoss.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
-    <Compile Include="Assets/Scenes/Various/Games/Data Structures/Heap.cs" />
-    <Compile Include="Assets/Prefabs/SelectionGenerator/SelectionButtonScript.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" />
-    <Compile Include="Assets/Scripts/Timer.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
-    <Compile Include="Assets/Scripts/Composite.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs" />
-    <Compile Include="Assets/Scenes/Various/Board/BoardGraph.cs" />
-    <Compile Include="Assets/Scripts/Zombie.cs" />
-    <Compile Include="Assets/Scenes/Audio/SwitchMusicOnLoad.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
-    <Compile Include="Assets/Scenes/Various/Board/GameSpace.cs" />
-    <Compile Include="Assets/Prefabs/SelectionGenerator/ButtonGenerator.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextConsoleSimulator.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
-    <Compile Include="Assets/Scenes/Various/Heap_GameController.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
-    <Compile Include="Assets/Scenes/Menus/Singleplayer Menu/SinglePlayerMenu.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Navigation Scripts/MultiPlayerMenu.cs" />
-    <Compile Include="Assets/Scenes/Various/Board/Contestant.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
-    <Compile Include="Assets/Scripts/MainMenu.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
-    <Compile Include="Assets/Scenes/Audio/AudioManager.cs" />
-    <Compile Include="Assets/cameraFollow.cs" />
-    <Compile Include="Assets/PauseScreen.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
-    <Compile Include="Assets/Scripts/PlayerStats.cs" />
-    <Compile Include="Assets/Scripts/QuitButton.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
-    <Compile Include="Assets/Resources/LoadLevelButton.cs" />
-    <Compile Include="Assets/Scenes/Menus/PlayFolder/PlayMenuChange.cs" />
-    <Compile Include="Assets/Scripts/MainMenuButton.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
-    <Compile Include="Assets/Scenes/Minigames/Binary Search Tree/BSTCon.cs" />
-    <Compile Include="Assets/Scripts/LineUpController.cs" />
-    <Compile Include="Assets/Scripts/SetController.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
-    <Compile Include="Assets/Scripts/TOHTower.cs" />
-    <Compile Include="Assets/Scenes/Menus/Mutiplayer Menu/Navigation Scripts/Back.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
-    <Compile Include="Assets/Scenes/Minigames/Queue/QueueItem.cs" />
-    <Compile Include="Assets/Scripts/CountDown.cs" />
-    <Compile Include="Assets/Scenes/Audio/MenuMixerController.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
-    <Compile Include="Assets/Scripts/DiscordController.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
-    <Compile Include="Assets/Scenes/Minigames/Queue/QueueHost.cs" />
-    <Compile Include="Assets/Scenes/Menus/MainMenu/MainMenu Button/MainMenuButtons.cs" />
-    <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
-    <Compile Include="Assets/Scripts/DOAController.cs" />
->>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -929,36 +833,20 @@
       <HintPath>Library\ScriptAssemblies\Unity.Services.Authentication.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Runtime">
-<<<<<<< Updated upstream
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-=======
-      <HintPath>Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
->>>>>>> Stashed changes
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Netcode.Components">
-<<<<<<< Updated upstream
       <HintPath>Library\ScriptAssemblies\Unity.Netcode.Components.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.CloudSave">
       <HintPath>Library\ScriptAssemblies\Unity.Services.CloudSave.dll</HintPath>
     </Reference>
-=======
-      <HintPath>Library/ScriptAssemblies/Unity.Netcode.Components.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.CloudSave">
-      <HintPath>Library/ScriptAssemblies/Unity.Services.CloudSave.dll</HintPath>
-    </Reference>
->>>>>>> Stashed changes
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
     </Reference>
@@ -1102,6 +990,15 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="VivoxUnity">
+      <HintPath>Library\ScriptAssemblies\VivoxUnity.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Vivox.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Vivox.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Vivox">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Vivox.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
