@@ -173,6 +173,7 @@ MonoBehaviour:
       m_Height: 10
     m_Scale: 1
     m_AtlasIndex: 0
+<<<<<<< Updated upstream
   - m_Index: 25
     m_Metrics:
       m_Width: 43.296875
@@ -868,6 +869,7 @@ MonoBehaviour:
     m_Unicode: 95
     m_GlyphIndex: 67
     m_Scale: 1
+<<<<<<< Updated upstream
   - m_ElementType: 1
     m_Unicode: 53
     m_GlyphIndex: 25
@@ -1078,6 +1080,7 @@ MonoBehaviour:
     m_Y: 0
     m_Width: 60
     m_Height: 29
+<<<<<<< Updated upstream
   - m_X: 135
     m_Y: 0
     m_Width: 63
@@ -1330,6 +1333,20 @@ MonoBehaviour:
   - m_X: 1010
     m_Y: 0
     m_Width: 13
+=======
+  m_FreeGlyphRects:
+  - m_X: 0
+    m_Y: 34
+    m_Width: 1023
+    m_Height: 989
+  - m_X: 75
+    m_Y: 29
+    m_Width: 948
+    m_Height: 994
+  - m_X: 135
+    m_Y: 0
+    m_Width: 888
+>>>>>>> Stashed changes
     m_Height: 1023
   - m_X: 728
     m_Y: 83
