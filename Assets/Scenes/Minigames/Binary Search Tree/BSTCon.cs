@@ -22,7 +22,7 @@ public class BSTCon : MonoBehaviour {
 
     public static Node<int> CurrentNode = null;
 
-    public bool IsRight = false;
+    public Direction Direction;
 
     private void Awake() {
         Moves = 0;
@@ -46,20 +46,25 @@ public class BSTCon : MonoBehaviour {
     public void OnEnter() {
         GetComponent<Image>().color = new Color(255, 255, 255, 255);
     }
+
     public void OnExit() {
         GetComponent<Image>().color = new Color(255, 255, 255, 0);
     }
 
     public void OnClick() {
         Moves++;
-        if (IsRight) {
+        if (Direction == Direction.Right) {
             if(RightText.text == Goal.ToString()) { Debug.Log("Correct Right"); GameWin.Show(); return; }
             if(CurrentNode.Right != null)
                 CurrentNode = CurrentNode.Right;
-        } else {
+        } else if(Direction == Direction.Left) {
             if (LeftText.text == Goal.ToString()) { Debug.Log("Correct Left"); GameWin.Show(); return; }
             if (CurrentNode.Left != null)
                 CurrentNode = CurrentNode.Left;
+        } else if(Direction == Direction.Center) {
+            if (CurrentText.text == Goal.ToString()) { Debug.Log("Correct Center"); GameWin.Show(); return; }
+            if (CurrentNode.Parent != null) 
+                CurrentNode = CurrentNode.Parent;
         }
         CurrentText.text = CurrentNode.Data.ToString();
         try {
@@ -73,19 +78,23 @@ public class BSTCon : MonoBehaviour {
 }
 namespace BinaryTree {
 
+    public enum Direction { Center, Left, Right }
+
     public class Node<T> where T : System.IComparable<T> {
         public T Data { get; set; }
         public Node<T> Left { get; set; }
         public Node<T> Right { get; set; }
+        public Node<T> Parent { get; set; } = null;
         public bool IsLeaf { get {
                 return Left == null && Right == null;
             }
         }
         
-        public Node(T data, Node<T> Left, Node<T> Right) {
+        public Node(T data, Node<T> Left, Node<T> Right, Node<T> Parent = null) {
             Data = data;
             this.Left = Left;
             this.Right = Right;
+            this.Parent = Parent;
         }
     }
 
@@ -102,6 +111,7 @@ namespace BinaryTree {
         }
         
         void InsertSort(Node<T> Base, Node<T> InsertValue) {
+            InsertValue.Parent = Base;
             if(InsertValue.Data.CompareTo(Base.Data) < 0) {
                 if(Base.Left == null) {
                     Base.Left = InsertValue;
