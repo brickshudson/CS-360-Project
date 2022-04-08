@@ -2,7 +2,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class GameWin : MonoBehaviour
 {
@@ -58,7 +57,7 @@ public class GameWin : MonoBehaviour
     }
 
     private void Retry_OnClick() {
-        SceneManager.LoadScene(gameObject.scene.name);
+
     }
     private void Next_OnClick() {
 
