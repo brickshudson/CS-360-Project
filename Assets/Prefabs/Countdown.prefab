@@ -37,7 +37,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736648934484555450, guid: 6dc842661bded2c48acf73769f1111da, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 243.82996
+      value: 275
       objectReference: {fileID: 0}
     - target: {fileID: 3736648934484555450, guid: 6dc842661bded2c48acf73769f1111da, type: 3}
       propertyPath: m_SizeDelta.y
@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736648934484555450, guid: 6dc842661bded2c48acf73769f1111da, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -325
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 3736648934484555450, guid: 6dc842661bded2c48acf73769f1111da, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -93,7 +93,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736648934484555451, guid: 6dc842661bded2c48acf73769f1111da, type: 3}
       propertyPath: m_Name
-      value: Timer
+      value: Countdown
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736648934484555453, guid: 6dc842661bded2c48acf73769f1111da, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736648934484555453, guid: 6dc842661bded2c48acf73769f1111da, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736648934484555453, guid: 6dc842661bded2c48acf73769f1111da, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736648934484555453, guid: 6dc842661bded2c48acf73769f1111da, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736648934723186193, guid: 6dc842661bded2c48acf73769f1111da, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736648934723186193, guid: 6dc842661bded2c48acf73769f1111da, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736648934723186193, guid: 6dc842661bded2c48acf73769f1111da, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736648934723186193, guid: 6dc842661bded2c48acf73769f1111da, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3736648936308956763, guid: 6dc842661bded2c48acf73769f1111da, type: 3}
@@ -127,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimerLabel: {fileID: 7893596574235684823}
-  AutoRun: 1
-  NumberOfSeconds: 20
+  AutoRun: 0
+  NumberOfSeconds: 90
   GameLoss: {fileID: 0}
+  TimeElapsed: 0

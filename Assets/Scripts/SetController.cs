@@ -46,7 +46,7 @@ public class SetController : MonoBehaviour {
     void PlayerMove() {
         if(string.IsNullOrWhiteSpace(PlayerInput.text) || string.IsNullOrWhiteSpace(PlayerInput.text)) { PlayerInput.text = ""; PlayerInput.Select(); return; }
 
-        int Location = LegalOptions.ContainsValue(PlayerInput.text.ToLower());
+        int Location = LegalOptions.ContainsValue(PlayerInput.text);
 
         if (Location != -1) {
             if (Player.Add(LegalOptions.ElementAt(Location))) {
@@ -134,6 +134,7 @@ public static class SetItems {
     }
     public static SetArgs SelectSet() {
         string Item = Sets[Random.Range(0, Sets.Count)];
+        Item = "Classic Video Games";
         string[] LegalItems = Resources.Load<TextAsset>($"Set\\{Item}").text.Split(',');
         HashSet<string> Items = new HashSet<string>();
         foreach(string Legal in LegalItems) {
@@ -149,12 +150,12 @@ public static class SetItems {
     }
 
     public static int ContainsValue(this HashSet<string> Set, string valueCheck) {
-        string CleanedCheck = RegEx.Replace(valueCheck, "");
+        string CleanedCheck = RegEx.Replace(valueCheck.Normalize(System.Text.NormalizationForm.FormKD),"").ToLower();
 
         int counter = -1;
         foreach(string Item in Set) {
             counter++;
-            string cleaned = RegEx.Replace(Item.ToLower(), "");
+            string cleaned = RegEx.Replace(Item.Normalize(System.Text.NormalizationForm.FormKD),"").ToLower();
             if (cleaned == CleanedCheck)
                 return counter;
         }

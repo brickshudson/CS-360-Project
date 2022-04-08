@@ -1,6 +1,5 @@
 //Written by The-Architect01
 using BinaryTree;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,11 +23,11 @@ public class BSTCon : MonoBehaviour {
 
     public Direction Direction;
 
-    private void Awake() {
+    private void Start() {
         Moves = 0;
         BinTree = new BinaryTree<int>();
         List<int> Goals = new List<int>();
-        while(BinTree.Count < 12) {
+        while(BinTree.Count < 25) {
             int x = Random.Range(1, 999);
             BinTree.Insert(x);
             Goals.Add(x);

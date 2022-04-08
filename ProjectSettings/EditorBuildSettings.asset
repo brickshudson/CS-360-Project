@@ -12,8 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/OptionsFolder/Options Menu.unity
     guid: be8deccfd1b4c56478fc6b6c1888546f
   - enabled: 1
-    path: Assets/Scenes/Minigames/Binary Search Tree/Binary Search Tree - Search
-      Light.unity
+    path: Assets/Scenes/Minigames/Binary Search Tree/We Call It Maze.unity
     guid: d06781a179276454ca977a317460d1f3
   - enabled: 1
     path: Assets/Scenes/Minigames/Heap/Heap - Pick the Lock.unity
@@ -43,19 +42,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/SPGameMenu/SPGameMenu.unity
     guid: b593b14ec3fe78245b7e4f993d63c9f6
   - enabled: 1
-    path: Assets/Scenes/Minigames/Pointer/PoliceLine/Pointer - Police Line.unity
+    path: Assets/Scenes/Minigames/Pointer/PoliceLine/Pointer Panic.unity
     guid: f4e428f6cfb984d4f8f5388ffc7c81c3
   - enabled: 1
-    path: Assets/Scenes/Minigames/Set/Set - Memory.unity
+    path: Assets/Scenes/Minigames/Set/Robbie's Revenge.unity
     guid: f87b233a5a4090344a7ad4a91a08c859
   - enabled: 1
-    path: Assets/Scenes/Minigames/Array/Array - DOA.unity
+    path: Assets/Scenes/Minigames/Array/Arrays Run Away.unity
     guid: 46c1e0f7042397942affd2f7a0957961
   - enabled: 1
-    path: Assets/Scenes/Minigames/Stack/Tower of Hanoi/Stack - Towers of Hanoi.unity
+    path: Assets/Scenes/Minigames/Stack/Tower of Hanoi/Tower of Hanoi.unity
     guid: 405ba0cf956f2fd4ab7d45c00950dc38
   - enabled: 1
-    path: Assets/Scenes/Minigames/Queue/Queue - Mend the Menu.unity
+    path: Assets/Scenes/Minigames/Queue/Manic Menus.unity
     guid: 07f2f69fc570d604585797574da7b628
   - enabled: 1
     path: Assets/Scenes/Menus/Mutiplayer Menu/Scenes/mainScene.unity

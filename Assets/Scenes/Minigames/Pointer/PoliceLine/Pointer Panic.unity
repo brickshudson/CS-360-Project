@@ -3248,32 +3248,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 278154300}
     m_Modifications:
     - target: {fileID: 1430275193, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
-      propertyPath: AutoRun
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1430275193, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
       propertyPath: GameLoss
       value: 
       objectReference: {fileID: 1195393246}
     - target: {fileID: 1430275193, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
       propertyPath: NumberOfSeconds
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893596573928634235, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893596573928634235, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893596573928634235, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893596573928634235, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278190080
       objectReference: {fileID: 0}
     - target: {fileID: 7893596573928634236, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
       propertyPath: m_Pivot.x
@@ -3305,7 +3285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7893596573928634236, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 243.82996
+      value: 275
       objectReference: {fileID: 0}
     - target: {fileID: 7893596573928634236, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3362,22 +3342,6 @@ PrefabInstance:
     - target: {fileID: 7893596573928634237, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
       propertyPath: m_Name
       value: Countdown
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893596574235684823, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893596574235684823, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893596574235684823, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893596574235684823, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278190080
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
