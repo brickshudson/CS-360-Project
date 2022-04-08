@@ -23,7 +23,7 @@ public class Zombie : MonoBehaviour {
     public static PlayerStats CurrentProfileStats { get; private set; }
     public static MiniGameLister MiniGameList { get; private set; }
 
-    private void Awake() {
+    private void Awake() { 
         if (!created) {
             // Application.quitting += Quitting;
             DontDestroyOnLoad(gameObject);
