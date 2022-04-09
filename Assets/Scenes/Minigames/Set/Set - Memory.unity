@@ -2152,7 +2152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5f605090418874584c61a6b6c9e3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RobbieDifficulty: 0.05
+  RobbieDifficulty: 0.01
   PlayerInput: {fileID: 1428419706}
   SetType: {fileID: 175868913}
   PlayerSet: {fileID: 1900763029}
