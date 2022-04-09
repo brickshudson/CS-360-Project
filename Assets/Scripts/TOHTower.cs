@@ -34,7 +34,7 @@ public class TOHTower : MonoBehaviour {
         } catch { Debug.Log("Empty Tower");}
 
         TowerPart.Selected.Tower = this;
-        TowerPart.Selected.GetComponent<RectTransform>().anchoredPosition = new Vector3(GetComponent<RectTransform>().anchoredPosition.x, (-155) - 60 * (4 - LocationAdded), 0);
+        TowerPart.Selected.LastLegalLocation = TowerPart.Selected.GetComponent<RectTransform>().anchoredPosition = new Vector3(GetComponent<RectTransform>().anchoredPosition.x, (-155) - 60 * (4 - LocationAdded), 0);
         TowerPart.Selected = null;
         UpdateTree();
         Check();

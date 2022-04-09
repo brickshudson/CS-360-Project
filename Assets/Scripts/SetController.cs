@@ -134,7 +134,6 @@ public static class SetItems {
     }
     public static SetArgs SelectSet() {
         string Item = Sets[Random.Range(0, Sets.Count)];
-        Item = "Classic Video Games";
         string[] LegalItems = Resources.Load<TextAsset>($"Set\\{Item}").text.Split(',');
         HashSet<string> Items = new HashSet<string>();
         foreach(string Legal in LegalItems) {

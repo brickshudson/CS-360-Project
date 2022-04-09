@@ -47,7 +47,7 @@ public class QueueHost : MonoBehaviour
             }
         } catch { Debug.Log("Empty Tower"); }
 
-        QueueItem.Selected.GetComponent<RectTransform>().anchoredPosition = new Vector3(
+        QueueItem.Selected.LastLegalLocation = QueueItem.Selected.GetComponent<RectTransform>().anchoredPosition = new Vector3(
             GetComponent<RectTransform>().anchoredPosition.x + 25, 
             (10) - 60 * (Queue.Count-1), 
             0
@@ -62,7 +62,8 @@ public class QueueHost : MonoBehaviour
         try {
             for (int i = 0; i < Queue.Count; i++) {
                 Queue[i].IsSelectable = i == 0;
-                Queue[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(
+                Queue[i].LastLegalLocation =
+Queue[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(
                     GetComponent<RectTransform>().anchoredPosition.x + 25,
                     (10) - 60 * i,
                     0
