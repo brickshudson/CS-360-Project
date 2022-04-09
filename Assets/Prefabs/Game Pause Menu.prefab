@@ -195,7 +195,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3126779914820812793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faadc965bb7392f46b8bb2438c09c1a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 86e1c25ecbd291c459664581b3e60b58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Timer: {fileID: 0}
@@ -204,7 +204,7 @@ MonoBehaviour:
   MainMenu: {fileID: 3126779915873180711}
   Host: {fileID: 3126779915929145947}
   PauseKey: 27
-  ResumeKey: 9
+  ResumeKey: 32
 --- !u!1 &3126779914825467276
 GameObject:
   m_ObjectHideFlags: 0
