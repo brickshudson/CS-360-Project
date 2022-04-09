@@ -134,6 +134,12 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\DOAController.cs" />
     <Compile Include="Assets\Scenes\Various\Board\Item.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\backupDrive.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\DEight.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\DTen.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\DTwelve.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\DTwenty.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\RAMItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
