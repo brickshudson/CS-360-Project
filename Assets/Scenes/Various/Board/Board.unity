@@ -453,6 +453,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 976007805}
   offSet: {x: 0, y: 0}
+  speedMultiplier: 10
+  speedCap: 25
 --- !u!1 &490771765
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,8 +485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a12882bfc4d4bc8b106e68076941b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterDB: {fileID: 11400000, guid: 28920878819e14158b603b8aff84960c, type: 2}
-  spriteRenderer: {fileID: 976007804}
 --- !u!212 &490771767
 SpriteRenderer:
   m_ObjectHideFlags: 0
