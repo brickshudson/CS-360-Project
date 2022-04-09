@@ -203,8 +203,8 @@ MonoBehaviour:
   Resume: {fileID: 3126779914825467274}
   MainMenu: {fileID: 3126779915873180711}
   Host: {fileID: 3126779915929145947}
-  PauseKey: 0
-  ResumeKey: 0
+  PauseKey: 27
+  ResumeKey: 32
 --- !u!1 &3126779914825467276
 GameObject:
   m_ObjectHideFlags: 0
