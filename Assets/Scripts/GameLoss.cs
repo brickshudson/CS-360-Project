@@ -22,7 +22,7 @@ public class GameLoss : MonoBehaviour
 
     //Hides the screen
     private void Awake() {
-        LossText.text = Message;
+        Loss.text = Message;
         Screen.gameObject.SetActive(false);
         LossText.gameObject.SetActive(false);
         Loss.gameObject.SetActive(false);

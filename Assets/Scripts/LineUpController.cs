@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using GameLogging;
+using System.Collections.Generic;
 
 public class LineUpController : MonoBehaviour {
 
@@ -29,6 +30,10 @@ public class LineUpController : MonoBehaviour {
             TurnsUsed = 1,
         };
 
+        Load();
+    }
+
+    private void Load() {
         CorrectFace = new Face.Shape[] {
             (Face.Shape)Random.Range(0,7),
             (Face.Shape)Random.Range(0,7),
@@ -55,12 +60,24 @@ public class LineUpController : MonoBehaviour {
     }
 
     public void ChoiceMade(bool Correct) {
-        if (!Correct) { GameLog.ErrorsMade++; /*Play Wrong Sound;*/ return; }
-        //Play Correct Sound
+        if (!Correct) { GameLog.ErrorsMade++; Finish(false); return; }
+        if (CountDown.Time < .1f) { Finish(Correct); return; }
+        Load();
+    }
+
+    void Finish(bool Correct) {
         GameLog.Win = Correct;
         GameLog.TimeTaken = CountDown.TimeElapsed;
         CountDown.StopTimer();
-//        Zombie.CurrentProfileStats.Stats["Pointer"]["Police Line Up"].GameLog.Add(GameLog);
+
+        /*try {
+            Zombie.CurrentProfileStats.Stats["Pointer"]["Pointer Panic"].GameLog.Add(GameLog);
+        } catch {
+            Dictionary<string, Stat> NewStat = new Dictionary<string, Stat>();
+            NewStat.Add("Pointer Panic", new Stat());
+            Zombie.CurrentProfileStats.Stats.Add("Pointer", NewStat);
+            Zombie.CurrentProfileStats.Stats["Pointer"]["Pointer Panic"].GameLog.Add(GameLog);
+        }*/
         if (Correct)
             GameWinScreen.Show();
         else
