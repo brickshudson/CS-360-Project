@@ -21,8 +21,7 @@ public class Contestant : MonoBehaviour
     public TextMeshProUGUI here;
     public TextMeshProUGUI bitCoin;
     public System.Random die;
-    
-    //item[] items; <-- we don't have items yet so this will need to wait
+    Item[] items;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +35,7 @@ public class Contestant : MonoBehaviour
         eliminated = false;
         isTurn = true; //Change when we begin testing turn system!!!
         here.text = "" + moveLimit;
+        items = new Item[6];
     }
     // Update is called once per frame
     void Update()
@@ -105,11 +105,11 @@ public class Contestant : MonoBehaviour
     {
         switch(current.getType())
         {
-            case "Blue": bits += 5;
+            case "Blue": bits += 4;
                 break;
-            case "Red": bits -= 5;
+            case "Red": bits -= 4;
                 break;
-            case "Green":
+            case "Green": //This is a neutral space, nothing happens!
                 break;
             case "Volcano":
                 bits -= 20;
