@@ -10,12 +10,11 @@ public class Contestant : MonoBehaviour
     GameSpace current;
     public BoardGraph island;
     private int moveLimit = 0;
-    private bool eliminated;
-    private bool isTurn;
+    public bool eliminated;
+    public bool isTurn;
     public Rigidbody2D persona;
     //These only exist for ez testing!
     public TextMeshProUGUI here;
-    public TextMeshProUGUI bitCoin;
     public System.Random die;
     Item[] items;
 
@@ -26,7 +25,6 @@ public class Contestant : MonoBehaviour
         bits = 0;
         island = new BoardGraph();
         current = island.get(0);
-        bitCoin.text = "Bits: " + bits;
         eliminated = false;
         isTurn = true; //Change when we begin testing turn system!!!
         here.text = "" + moveLimit;
@@ -135,7 +133,6 @@ public class Contestant : MonoBehaviour
     {
         isTurn = true;
         moveLimit = die.Next(7);
-        bitCoin.text = "Bits: " + bits;
         here.text = "" + moveLimit;
     }
 

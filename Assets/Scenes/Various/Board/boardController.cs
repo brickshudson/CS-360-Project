@@ -1,26 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class boardController : MonoBehaviour
 {
+    //2 lists, one for players still in the game, one for the losers! :D
     LinkedList<Contestant> contestants = new LinkedList<Contestant>();
-    bool eliminationRound = false;
+    LinkedList<Contestant> loserParty = new LinkedList<Contestant>();
     LinkedListNode<Contestant> frontRunner;
     int roundCnt;
-    int elimCnt; //this will be equal to however many turns we want to have eliminations on [i.e, every 3 turns]
+    int elimCnt; // minigames will happen on ever xth turn
+    int numPlayers;
+    bool eliminationRound = false;
+    TextMeshPro bitCoin;
 
-    // Start is called before the first frame update
     void Start()
     {
-        /* for(int i=0; i < # of players; i++)
-         * {
-         *    contestents.AddLast(new Contestent());
-         * }
-         */
+        numPlayers = 5;
+         for(int i=0; i < numPlayers; i++)
+         {
+            contestants.AddLast(new Contestant());
+         }
         elimCnt = 3;
         roundCnt = 1;
         frontRunner = contestants.First;
+        bitCoin.text = "0";
     }
 
     // Update is called once per frame
@@ -30,24 +35,26 @@ public class boardController : MonoBehaviour
         {
             eliminationRound = true;
         }
-        /* for(LinkedListNode<Contestant> current = frontRunner; current.Next != null; current = current.Next)
-         * {
-         *      current.turnStart();
-         *      while(current.isTurn)
-         *      {
-         *          wait for current player to finish turn
-         *      }
-         * }
-         */
-        if(eliminationRound)
+         for(LinkedListNode<Contestant> current = frontRunner; current.Next != null; current = current.Next)
+         {
+              current.Value.turnStart();
+              while(current.Value.isTurn)
+              {
+                  
+              }
+              
+         }
+         
+        if (eliminationRound)
         {
             ChallengeTime();
         }
+
         roundCnt++;
     }
 
     public void ChallengeTime()
     {
-        //this will be the method that loads the minigame
+        
     }
 }
