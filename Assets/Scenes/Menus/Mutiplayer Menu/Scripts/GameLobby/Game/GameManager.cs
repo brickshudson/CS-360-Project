@@ -83,7 +83,7 @@ namespace LobbyRelaySample
             m_localUser.ID = Locator.Get.Identity.GetSubIdentity(Auth.IIdentityType.Auth).GetContent("id");
             m_localUser.DisplayName = NameGenerator.GetName(m_localUser.ID);
             m_localLobby.AddPlayer(m_localUser); // The local LobbyUser object will be hooked into UI before the LocalLobby is populated during lobby join, so the LocalLobby must know about it already when that happens.
-            StartVivoxLogin();
+            //StartVivoxLogin();
         }
 
         private void BeginObservers()
@@ -230,7 +230,7 @@ namespace LobbyRelaySample
             if (m_localUser.IsHost)
             {
                 StartRelayConnection();
-                StartVivoxJoin();
+            //    StartVivoxJoin();
             }
             else
             {
@@ -244,7 +244,7 @@ namespace LobbyRelaySample
             LobbyAsyncRequests.Instance.LeaveLobbyAsync(m_localLobby.LobbyID, ResetLocalLobby);
             m_lobbyContentHeartbeat.EndTracking();
             LobbyAsyncRequests.Instance.EndTracking();
-            m_vivoxSetup.LeaveLobbyChannel();
+            //m_vivoxSetup.LeaveLobbyChannel();
 
             if (m_relaySetup != null)
             {   Component.Destroy(m_relaySetup);
@@ -273,7 +273,7 @@ namespace LobbyRelaySample
             SetGameState(GameState.JoinMenu);
         }
 
-        private void StartVivoxLogin()
+/*        private void StartVivoxLogin()
         {
             m_vivoxSetup.Initialize(m_vivoxUserHandlers, OnVivoxLoginComplete);
 
@@ -298,7 +298,7 @@ namespace LobbyRelaySample
                 }
             }
         }
-
+*/
         private void StartRelayConnection()
         {
             if (m_localUser.IsHost)
@@ -338,7 +338,7 @@ namespace LobbyRelaySample
             if (!m_localUser.IsHost && m_localUser.IsApproved)
             {
                 CompleteRelayConnection();
-                StartVivoxJoin();
+              //  StartVivoxJoin();
             }
         }
 

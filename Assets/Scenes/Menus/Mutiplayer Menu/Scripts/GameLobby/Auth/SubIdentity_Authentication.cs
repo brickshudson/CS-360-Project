@@ -39,14 +39,15 @@ namespace LobbyRelaySample.Auth
             AuthenticationService.Instance.SignedOut += OnSignInChange;
 
             try
-            {   if (!AuthenticationService.Instance.IsSignedIn)
-                    await AuthenticationService.Instance.SignInAnonymouslyAsync(); // Don't sign out later, since that changes the anonymous token, which would prevent the player from exiting lobbies they're already in.
-                onSigninComplete?.Invoke();
-            }
-            catch
-            {   UnityEngine.Debug.LogError("Failed to login. Did you remember to set your Project ID under Services > General Settings?");
-            //    throw;
-            }
+             {   if (!AuthenticationService.Instance.IsSignedIn)
+                     await AuthenticationService.Instance.SignInAnonymouslyAsync(); // Don't sign out later, since that changes the anonymous token, which would prevent the player from exiting lobbies they're already in.
+                 onSigninComplete?.Invoke();
+             }
+             catch
+             {   UnityEngine.Debug.LogError("Failed to login. Did you remember to set your Project ID under Services > General Settings?");
+                 throw;
+             }
+            //AuthenticationService.Instance.SignOut();
 
             // Note: If for some reason your login state gets weird, you can comment out the previous block and instead call AuthenticationService.Instance.SignOut().
             // Then, running Play mode will fail to actually function and instead will log out of your previous anonymous account.
