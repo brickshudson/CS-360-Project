@@ -22,14 +22,12 @@ public class LineUpController : MonoBehaviour {
     public Log GameLog;
     
     void Awake(){
-
         GameLog = new Log() {
             IsTeamGame = !Zombie.IsSolo,
             IsPractice = Zombie.IsPractice,
             Score = -1,
             TurnsUsed = 1,
         };
-
         Load();
     }
 
@@ -60,7 +58,7 @@ public class LineUpController : MonoBehaviour {
     }
 
     public void ChoiceMade(bool Correct) {
-        if (!Correct) { GameLog.ErrorsMade++; Finish(false); return; }
+        if (!Correct) { GameLog.ErrorsMade++; GameLoss.Message = "That's Incorrect!"; Finish(false); return; }
         if (CountDown.Time < .1f) { Finish(Correct); return; }
         Load();
     }
@@ -70,18 +68,20 @@ public class LineUpController : MonoBehaviour {
         GameLog.TimeTaken = CountDown.TimeElapsed;
         CountDown.StopTimer();
 
-        /*try {
+        if (Correct)
+            GameWinScreen.Show();
+        else
+            GameLoss.Show();
+
+        try {
             Zombie.CurrentProfileStats.Stats["Pointer"]["Pointer Panic"].GameLog.Add(GameLog);
         } catch {
             Dictionary<string, Stat> NewStat = new Dictionary<string, Stat>();
             NewStat.Add("Pointer Panic", new Stat());
             Zombie.CurrentProfileStats.Stats.Add("Pointer", NewStat);
             Zombie.CurrentProfileStats.Stats["Pointer"]["Pointer Panic"].GameLog.Add(GameLog);
-        }*/
-        if (Correct)
-            GameWinScreen.Show();
-        else
-            GameLoss.Show();
+        }
+        
     }
 
 }

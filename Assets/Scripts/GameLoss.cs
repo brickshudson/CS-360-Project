@@ -15,7 +15,11 @@ public class GameLoss : MonoBehaviour
     public Button Next;
 
     public float DisplayDelay = .02f;
-    public string Message = "Times Up!";
+    string _Message = "Times Up!";
+    public string Message {
+        get { return _Message; }
+        set { _Message = value; Loss.text = Message; }
+    }
     public bool DetectWin { get; set; } = false;
     #endregion
     private CanvasGroup group;
@@ -58,6 +62,7 @@ public class GameLoss : MonoBehaviour
         SceneManager.LoadScene(gameObject.scene.name);
     }
     private void Next_OnClick() {
+        SceneManager.LoadScene("SPCategoryMenu");
         Debug.Log("Next Clicked");
     }
 }

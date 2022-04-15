@@ -61,6 +61,7 @@ public class GameWin : MonoBehaviour
         SceneManager.LoadScene(gameObject.scene.name);
     }
     private void Next_OnClick() {
+        SceneManager.LoadScene("SPCategoryMenu");
         Debug.Log("Next Clicked");
     }
 }
