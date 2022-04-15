@@ -48,7 +48,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Minigames/Set/Robbie's Revenge.unity
     guid: f87b233a5a4090344a7ad4a91a08c859
   - enabled: 1
-    path: Assets/Scenes/Minigames/Array/Arrays Attack.unity
+    path: Assets/Scenes/Minigames/Array/Arrays Attack!.unity
     guid: 46c1e0f7042397942affd2f7a0957961
   - enabled: 1
     path: Assets/Scenes/Minigames/Stack/Tower of Hanoi/Towers of Hanoi.unity
