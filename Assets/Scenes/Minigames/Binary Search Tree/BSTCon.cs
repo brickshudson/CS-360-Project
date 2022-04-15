@@ -16,7 +16,7 @@ public class BSTCon : MonoBehaviour {
     public static BinaryTree<int> BinTree;
     public static int Goal;
 
-    int _moves;
+    static int _moves;
     int Moves { get { return _moves; } set { _moves = value; MovesUsed.text = $"Moves Used: {value}"; } }
 
     public static Node<int> CurrentNode = null;
