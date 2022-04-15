@@ -17,7 +17,17 @@ public class Contestant : MonoBehaviour
     public TextMeshProUGUI here;
     public System.Random die;
     Item[] items;
-
+    public Contestant()
+    {
+        die = new System.Random();
+        bits = 0;
+        island = new BoardGraph();
+        current = island.get(0);
+        eliminated = false;
+        isTurn = true; //Change when we begin testing turn system!!!
+        here.text = "" + moveLimit;
+        items = new Item[6];
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -125,7 +135,6 @@ public class Contestant : MonoBehaviour
         {
             bits = 0;
         }
-        bitCoin.text = "Bits: " + bits;
         isTurn = false;
     }
 
@@ -161,5 +170,9 @@ public class Contestant : MonoBehaviour
     public void setLocation(GameSpace newLocation)
     {
         current = newLocation;
+    }
+    public int getBits()
+    {
+        return bits;
     }
 }
