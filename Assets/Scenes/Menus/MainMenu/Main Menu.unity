@@ -687,7 +687,7 @@ PrefabInstance:
     - target: {fileID: 9156157195482143090, guid: 4ffed53f5a2bdc84bb14c2059afe9035, type: 3}
       propertyPath: newTrack
       value: 
-      objectReference: {fileID: 8300000, guid: 68aaeab815d160b45a2c14400a083303, type: 3}
+      objectReference: {fileID: 8300000, guid: 990781ffcb5ce064aa6f419ec94afd20, type: 3}
     - target: {fileID: 9156157195482143091, guid: 4ffed53f5a2bdc84bb14c2059afe9035, type: 3}
       propertyPath: m_Name
       value: NewMusic
@@ -1147,6 +1147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Source
       objectReference: {fileID: 0}
+    - target: {fileID: 5650598318698420094, guid: eb3cfb3f417012546a909702cb233d6f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 990781ffcb5ce064aa6f419ec94afd20, type: 3}
     - target: {fileID: 5650598318698420095, guid: eb3cfb3f417012546a909702cb233d6f, type: 3}
       propertyPath: m_RootOrder
       value: 3

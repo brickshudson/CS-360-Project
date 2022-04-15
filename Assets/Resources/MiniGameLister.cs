@@ -42,6 +42,7 @@ public class MiniGameLister
 
     // The major type of levels to search
     public string desiredType = "Minigames";
+    private ArrayList desiredTypeList = null;
 
     // All the scenes of the desired type, divided into their subcategories
     private string[] givenCategories = null;
@@ -191,6 +192,7 @@ public class MiniGameLister
         Array.Sort(givenCategories, 0, givenCategories.Length);
 
         // Create the category lists
+        desiredTypeList = new ArrayList();
         categoryLists = new ArrayList[givenCategories.Length];
         for(int i = 0; i < givenCategories.Length; ++i)
             categoryLists[i] = new ArrayList();
@@ -198,12 +200,16 @@ public class MiniGameLister
         // Put each scene in the appropriate categoryList
         foreach(MGLScene s in scenes)
             if(s.type.Equals(desiredType))
+            {
+                desiredTypeList.Add(s.index);
+
                 for(int i = 0; i < givenCategories.Length; ++i)
                     if(s.category.Equals(givenCategories[i]))
                     {
                         categoryLists[i].Add(s.index);
                         break;
                     }
+            }
         
         /*for(int i = 0; i < givenCategories.Length; ++i)
             Debug.Log(givenCategories[i] + ": " + categoryLists[i].Count);*/
@@ -238,5 +244,13 @@ public class MiniGameLister
                 return i;
 
         return -1;
+    }
+
+    public string randomMinigame()
+    {
+        int minigameIndex = UnityEngine.Random.Range(0, desiredTypeList.Count);
+        int sceneIndex = (int)desiredTypeList[minigameIndex];
+
+        return scenes[sceneIndex].name;
     }
 }
