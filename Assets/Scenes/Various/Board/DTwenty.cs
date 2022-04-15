@@ -9,4 +9,9 @@ public class DTwenty : Item
         name = "D20";
         Itemdescription = "A twenty sided die to roll, unlimited power! :D";
     }
+
+    public void use(Contestant c)
+    {
+        c.rollDie(21);
+    }
 }
