@@ -5,10 +5,6 @@ using TMPro;
 
 public class Contestant : MonoBehaviour
 {
-    //This is the player class for the game board. We will need to make one of these for each player in the
-    //game when we get multiplayer implemented. But for now I'm just using this to test the basic functions
-    //of the game board.
-
     //Initializing all variables
     int bits;
     GameSpace current;
@@ -31,7 +27,6 @@ public class Contestant : MonoBehaviour
         island = new BoardGraph();
         current = island.get(0);
         bitCoin.text = "Bits: " + bits;
-        moveLimit = die.Next(7); //will be set by dice roll in final version
         eliminated = false;
         isTurn = true; //Change when we begin testing turn system!!!
         here.text = "" + moveLimit;
@@ -142,5 +137,32 @@ public class Contestant : MonoBehaviour
         moveLimit = die.Next(7);
         bitCoin.text = "Bits: " + bits;
         here.text = "" + moveLimit;
+    }
+
+    public void useItem(Item item)
+    {
+        if(item == null)
+        {
+            return;
+        }
+        if(item.GetType() == typeof(backupDrive))
+        {
+            return;
+        }
+        item.use(this);
+    }
+
+    public void rollDie(int MAX_VALUE)
+    {
+        moveLimit = die.Next(MAX_VALUE);
+    }
+
+    public GameSpace getLocation()
+    {
+        return current;
+    }
+    public void setLocation(GameSpace newLocation)
+    {
+        current = newLocation;
     }
 }

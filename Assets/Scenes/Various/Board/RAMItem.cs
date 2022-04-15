@@ -9,4 +9,10 @@ public class RAMItem : Item
         name = "RAM";
         Itemdescription = "Teleports you to a random point on the island!";
     }
+
+    public void use(Contestant c)
+    {
+        GameSpace e = c.getLocation();
+        e = c.island.get(numPicker.Next());
+    }
 }
