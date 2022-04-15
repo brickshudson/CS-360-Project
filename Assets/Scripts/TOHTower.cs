@@ -11,6 +11,8 @@ public class TOHTower : MonoBehaviour {
     public TextMeshProUGUI TurnsTakenDisplay;
     public GameWin WinGame;
 
+    public void Start() { TurnsTaken = 0; }
+
     public void OnClick() {
         if(TowerPart.Selected == null) { return; }
         if (Tower.Contains(TowerPart.Selected)) { TowerPart.Selected = null;  return; }
