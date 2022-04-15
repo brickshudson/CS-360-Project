@@ -71,8 +71,12 @@ namespace LobbyRelaySample.Auth
             if (prev is Identity)
             {
                 Identity prevIdentity = prev as Identity;
-                foreach (var entry in prevIdentity.m_subIdentities)
-                    m_subIdentities.Add(entry.Key, entry.Value);
+                
+                foreach (var entry in prevIdentity.m_subIdentities) {
+                    try {
+                        m_subIdentities.Add(entry.Key, entry.Value);
+                    } catch (ArgumentException) { continue; }
+                }
             }
         }
 

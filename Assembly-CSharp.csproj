@@ -58,10 +58,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\TowerPart.cs" />
     <Compile Include="Assets\Scripts\MiniGameData.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\DEight.cs" />
     <Compile Include="Assets\Scenes\Various\Load Screen\LoadScreen.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Resources\MiniGameLister.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\RAMItem.cs" />
     <Compile Include="Assets\Scripts\SaveMe.cs" />
     <Compile Include="Assets\Scripts\GameStart.cs" />
     <Compile Include="Assets\Scripts\OptionsMenu.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\backupDrive.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Scripts\Composite.cs" />
@@ -84,7 +87,9 @@
     <Compile Include="Assets\Scripts\Zombie.cs" />
     <Compile Include="Assets\Scenes\Audio\SwitchMusicOnLoad.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\DTwenty.cs" />
     <Compile Include="Assets\Scenes\Various\Board\GameSpace.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\DTwelve.cs" />
     <Compile Include="Assets\Prefabs\SelectionGenerator\ButtonGenerator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -98,6 +103,7 @@
     <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Navigation Scripts\MultiPlayerMenu.cs" />
     <Compile Include="Assets\Scenes\Various\Board\Contestant.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\Item.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Scenes\Audio\AudioManager.cs" />
@@ -119,8 +125,10 @@
     <Compile Include="Assets\Scripts\TOHTower.cs" />
     <Compile Include="Assets\Scenes\Menus\Mutiplayer Menu\Navigation Scripts\Back.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\Scenes\Audio\AudioManagerCheck.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scenes\Minigames\Queue\QueueItem.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\DTen.cs" />
     <Compile Include="Assets\Scripts\CountDown.cs" />
     <Compile Include="Assets\Scenes\Audio\MenuMixerController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
@@ -133,13 +141,8 @@
     <Compile Include="Assets\Scenes\Menus\MainMenu\MainMenu Button\MainMenuButtons.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\DOAController.cs" />
-    <Compile Include="Assets\Scenes\Various\Board\backupDrive.cs" />
-    <Compile Include="Assets\Scenes\Various\Board\DTen.cs" />
-    <Compile Include="Assets\Scenes\Various\Board\RAMItem.cs" />
-    <Compile Include="Assets\Scenes\Various\Board\Item.cs" />
-    <Compile Include="Assets\Scenes\Various\Board\DTwenty.cs" />
-    <Compile Include="Assets\Scenes\Various\Board\DTwelve.cs" />
-    <Compile Include="Assets\Scenes\Various\Board\DEight.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\boardController.cs" />
+    <Compile Include="Assets\Dummy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -775,6 +778,9 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.26f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="VivoxUnity">
+      <HintPath>Library\ScriptAssemblies\VivoxUnity.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
       <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
@@ -841,20 +847,20 @@
     <Reference Include="Unity.Services.Authentication">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Authentication.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.IK.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Netcode.Components">
       <HintPath>Library\ScriptAssemblies\Unity.Netcode.Components.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Services.CloudSave">
       <HintPath>Library\ScriptAssemblies\Unity.Services.CloudSave.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.IK.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
@@ -946,11 +952,17 @@
     <Reference Include="Unity.Netcode.Adapter.UTP.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Netcode.Adapter.UTP.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Services.Vivox.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Vivox.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Netcode.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.Netcode.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Vivox">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Vivox.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
@@ -999,15 +1011,6 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="VivoxUnity">
-      <HintPath>Library\ScriptAssemblies\VivoxUnity.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.Vivox.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Services.Vivox.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.Vivox">
-      <HintPath>Library\ScriptAssemblies\Unity.Services.Vivox.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

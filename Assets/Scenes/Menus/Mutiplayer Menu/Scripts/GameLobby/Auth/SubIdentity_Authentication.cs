@@ -45,7 +45,7 @@ namespace LobbyRelaySample.Auth
             }
             catch
             {   UnityEngine.Debug.LogError("Failed to login. Did you remember to set your Project ID under Services > General Settings?");
-                throw;
+            //    throw;
             }
 
             // Note: If for some reason your login state gets weird, you can comment out the previous block and instead call AuthenticationService.Instance.SignOut().
