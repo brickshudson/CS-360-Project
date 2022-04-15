@@ -13,15 +13,19 @@ public class boardController : MonoBehaviour
     int elimCnt; // minigames will happen on ever xth turn
     int numPlayers;
     bool eliminationRound = false;
-    TextMeshPro bitCoin;
+    public TextMeshPro bitCoin;
+    public TextMeshPro centralText;
+    
 
     void Start()
     {
+        //Get the number of players, then create a new contestent for each one
         numPlayers = 5;
-         for(int i=0; i < numPlayers; i++)
-         {
+        for(int i=0; i < numPlayers; i++)
+        {
             contestants.AddLast(new Contestant());
-         }
+        }
+
         elimCnt = 3;
         roundCnt = 1;
         frontRunner = contestants.First;
@@ -31,18 +35,20 @@ public class boardController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        centralText.text = "Round "+roundCnt;
         if(roundCnt % elimCnt == 0)
         {
             eliminationRound = true;
+            Zombie.MiniGameList.randomMinigame();
         }
          for(LinkedListNode<Contestant> current = frontRunner; current.Next != null; current = current.Next)
          {
-              current.Value.turnStart();
-              while(current.Value.isTurn)
-              {
-                  
-              }
-              
+            bitCoin.text = "" + current.Value.getBits();
+             current.Value.turnStart();
+             while(current.Value.isTurn)
+             {
+                 //I don't know if there's anything to even do here, just wait for the turn to be over! :P 
+             }    
          }
          
         if (eliminationRound)

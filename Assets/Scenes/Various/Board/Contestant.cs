@@ -12,6 +12,7 @@ public class Contestant : MonoBehaviour
     public bool eliminated;
     public bool isTurn;
     public Rigidbody2D persona;
+    public Sprite character;
     //These only exist for ez testing!
     public System.Random die;
     Item[] items;
@@ -24,19 +25,8 @@ public class Contestant : MonoBehaviour
         eliminated = false;
         isTurn = true; //Change when we begin testing turn system!!!
         items = new Item[6];
+        persona = new Rigidbody2D();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        die = new System.Random();
-        bits = 0;
-        island = new BoardGraph();
-        current = island.get(0);
-        eliminated = false;
-        isTurn = true; //Change when we begin testing turn system!!!
-        items = new Item[6];
-    }
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))
