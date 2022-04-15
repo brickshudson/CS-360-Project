@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: ScreenName
       value: Test Board
       objectReference: {fileID: 0}
+    - target: {fileID: 6447911062058894045, guid: f578c07f65157be4cb15e05807b33fc3, type: 3}
+      propertyPath: m_CameraType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7785925065746883724, guid: f578c07f65157be4cb15e05807b33fc3, type: 3}
       propertyPath: m_Name
       value: Camera
@@ -847,7 +851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724521528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.35, y: 11.27, z: 0}
+  m_LocalPosition: {x: -1.35, y: 11.27, z: 1}
   m_LocalScale: {x: 1.129451, y: 1.129451, z: 1.129451}
   m_Children: []
   m_Father: {fileID: 0}
