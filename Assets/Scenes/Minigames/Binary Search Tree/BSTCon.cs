@@ -37,9 +37,10 @@ public class BSTCon : MonoBehaviour {
         Moves = 0;
 
         CurrentText.text = BinTree.Root.Data.ToString();
-        LeftText.text = BinTree.Root.Left.Data.ToString();
-        RightText.text = BinTree.Root.Right.Data.ToString();
+        try { LeftText.text = BinTree.Root.Left.Data.ToString(); } catch { LeftText.text = ""; }
+        try { RightText.text = BinTree.Root.Right.Data.ToString(); } catch { RightText.text = ""; }
         CurrentNode = BinTree.Root;
+        Debug.Log(BinTree);
     }
 
     public void OnEnter() {

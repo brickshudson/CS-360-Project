@@ -11,6 +11,7 @@ public class QueueHost : MonoBehaviour
     public TextMeshProUGUI Correct;
 
     private void Start() {
+        TurnsTaken = 0;
         Correct.text = Food.generateItems(8);
         string[] Foods = Correct.text.Split('\n');
         Foods.Shuffle();

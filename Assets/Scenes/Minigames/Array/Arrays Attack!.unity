@@ -3002,7 +3002,7 @@ PrefabInstance:
     - target: {fileID: 1430275193, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
       propertyPath: GameLoss
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1527618997}
     - target: {fileID: 1430275193, guid: 1a784ec8949273d4795d1b6dc6f7a3a1, type: 3}
       propertyPath: NumberOfSeconds
       value: 90
