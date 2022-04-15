@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class Contestant : MonoBehaviour
 {
@@ -10,15 +9,22 @@ public class Contestant : MonoBehaviour
     GameSpace current;
     public BoardGraph island;
     private int moveLimit = 0;
-    private bool eliminated;
-    private bool isTurn;
+    public bool eliminated;
+    public bool isTurn;
     public Rigidbody2D persona;
     //These only exist for ez testing!
-    public TextMeshProUGUI here;
-    public TextMeshProUGUI bitCoin;
     public System.Random die;
     Item[] items;
-
+    public Contestant()
+    {
+        die = new System.Random();
+        bits = 0;
+        island = new BoardGraph();
+        current = island.get(0);
+        eliminated = false;
+        isTurn = true; //Change when we begin testing turn system!!!
+        items = new Item[6];
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +32,8 @@ public class Contestant : MonoBehaviour
         bits = 0;
         island = new BoardGraph();
         current = island.get(0);
-        bitCoin.text = "Bits: " + bits;
         eliminated = false;
         isTurn = true; //Change when we begin testing turn system!!!
-        here.text = "" + moveLimit;
         items = new Item[6];
     }
     // Update is called once per frame
@@ -64,7 +68,6 @@ public class Contestant : MonoBehaviour
             {
                 moveLimit--;
                 current = island.goUp(current);
-                here.text = "" + moveLimit;
             }
         }
         if (Input.GetKeyDown(KeyCode.S))
@@ -73,7 +76,6 @@ public class Contestant : MonoBehaviour
             {
                 moveLimit--;
                 current = island.goDown(current);
-                here.text = "" + moveLimit;
             }
         }
         if (Input.GetKeyDown(KeyCode.A))
@@ -82,7 +84,6 @@ public class Contestant : MonoBehaviour
             {
                 moveLimit--;
                 current = island.goLeft(current);
-                here.text = "" + moveLimit;
             }
         }
         if (Input.GetKeyDown(KeyCode.D))
@@ -91,7 +92,6 @@ public class Contestant : MonoBehaviour
             {
                 moveLimit--;
                 current = island.goRight(current);
-                here.text = "" + moveLimit;
             }
         }
     }
@@ -127,7 +127,6 @@ public class Contestant : MonoBehaviour
         {
             bits = 0;
         }
-        bitCoin.text = "Bits: " + bits;
         isTurn = false;
     }
 
@@ -135,8 +134,6 @@ public class Contestant : MonoBehaviour
     {
         isTurn = true;
         moveLimit = die.Next(7);
-        bitCoin.text = "Bits: " + bits;
-        here.text = "" + moveLimit;
     }
 
     public void useItem(Item item)
@@ -164,5 +161,9 @@ public class Contestant : MonoBehaviour
     public void setLocation(GameSpace newLocation)
     {
         current = newLocation;
+    }
+    public int getBits()
+    {
+        return bits;
     }
 }
