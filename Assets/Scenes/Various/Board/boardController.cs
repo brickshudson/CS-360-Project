@@ -13,8 +13,8 @@ public class boardController : MonoBehaviour
     int elimCnt; // minigames will happen on ever xth turn
     int numPlayers;
     bool eliminationRound = false;
-    public TextMeshPro bitCoin;
-    public TextMeshPro centralText;
+    public TextMeshProUGUI bitCoin;
+    public TextMeshProUGUI centralText;
     
 
     void Start()
@@ -29,7 +29,7 @@ public class boardController : MonoBehaviour
         elimCnt = 3;
         roundCnt = 1;
         frontRunner = contestants.First;
-        bitCoin.text = "0";
+        bitCoin.text = "Bits: 0";
     }
 
     // Update is called once per frame
