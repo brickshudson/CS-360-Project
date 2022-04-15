@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class Contestant : MonoBehaviour
 {
@@ -14,7 +13,6 @@ public class Contestant : MonoBehaviour
     public bool isTurn;
     public Rigidbody2D persona;
     //These only exist for ez testing!
-    public TextMeshProUGUI here;
     public System.Random die;
     Item[] items;
     public Contestant()
@@ -25,7 +23,6 @@ public class Contestant : MonoBehaviour
         current = island.get(0);
         eliminated = false;
         isTurn = true; //Change when we begin testing turn system!!!
-        here.text = "" + moveLimit;
         items = new Item[6];
     }
     // Start is called before the first frame update
@@ -37,7 +34,6 @@ public class Contestant : MonoBehaviour
         current = island.get(0);
         eliminated = false;
         isTurn = true; //Change when we begin testing turn system!!!
-        here.text = "" + moveLimit;
         items = new Item[6];
     }
     // Update is called once per frame
@@ -72,7 +68,6 @@ public class Contestant : MonoBehaviour
             {
                 moveLimit--;
                 current = island.goUp(current);
-                here.text = "" + moveLimit;
             }
         }
         if (Input.GetKeyDown(KeyCode.S))
@@ -81,7 +76,6 @@ public class Contestant : MonoBehaviour
             {
                 moveLimit--;
                 current = island.goDown(current);
-                here.text = "" + moveLimit;
             }
         }
         if (Input.GetKeyDown(KeyCode.A))
@@ -90,7 +84,6 @@ public class Contestant : MonoBehaviour
             {
                 moveLimit--;
                 current = island.goLeft(current);
-                here.text = "" + moveLimit;
             }
         }
         if (Input.GetKeyDown(KeyCode.D))
@@ -99,7 +92,6 @@ public class Contestant : MonoBehaviour
             {
                 moveLimit--;
                 current = island.goRight(current);
-                here.text = "" + moveLimit;
             }
         }
     }
@@ -142,7 +134,6 @@ public class Contestant : MonoBehaviour
     {
         isTurn = true;
         moveLimit = die.Next(7);
-        here.text = "" + moveLimit;
     }
 
     public void useItem(Item item)
