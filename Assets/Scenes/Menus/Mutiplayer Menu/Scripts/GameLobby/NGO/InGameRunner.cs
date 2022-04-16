@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 namespace LobbyRelaySample.ngo
 {
     /// <summary>
@@ -138,9 +138,11 @@ namespace LobbyRelaySample.ngo
         /// </summary>
         private void BeginGame()
         {
+            Debug.LogError("Load Minigame");
             m_canSpawnInGameObjects = true;
             Locator.Get.Messenger.OnReceiveMessage(MessageType.MinigameBeginning, null);
             m_introOutroRunner.DoIntro();
+            //SceneManager.LoadScene("Board");
         }
 
         public void Update()

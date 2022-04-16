@@ -73,9 +73,11 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scenes\Various\Games\Data Structures\Heap.cs" />
     <Compile Include="Assets\Prefabs\SelectionGenerator\SelectionButtonScript.cs" />
+    <Compile Include="Assets\Scenes\Various\Board\boardController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Dummy.cs" />
     <Compile Include="Assets\Scenes\Various\Board\backupDrive.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
@@ -141,8 +143,6 @@
     <Compile Include="Assets\Scenes\Menus\MainMenu\MainMenu Button\MainMenuButtons.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\DOAController.cs" />
-    <Compile Include="Assets\Scenes\Various\Board\boardController.cs" />
-    <Compile Include="Assets\Dummy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
