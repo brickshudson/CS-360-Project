@@ -8,6 +8,7 @@ public class Dummy : MonoBehaviour {
 
     public static void ShowBoard() {
         Debug.LogWarning($"Test Working");
+        //AsyncOperation Load = SceneManager.LoadSceneAsync("MainMenu");
         //SceneManager.LoadScene("Board");
     }
 
