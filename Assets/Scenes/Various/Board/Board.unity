@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ea4f831e5193740b7ee09f68bb7913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Incog: {fileID: 1199133272}
+  Debugger: {fileID: 1038089816}
   bitCoin: {fileID: 1323270526}
   centralText: {fileID: 559161065}
 --- !u!4 &60885609
@@ -712,6 +714,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034095619}
   m_CullTransparentMesh: 1
+--- !u!1 &1038089816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 828786531203710867, guid: 564790f799ad06d4ba3294bf18bcf8ef, type: 3}
+  m_PrefabInstance: {fileID: 273664511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1199133272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 828786531203710867, guid: 564790f799ad06d4ba3294bf18bcf8ef, type: 3}
+  m_PrefabInstance: {fileID: 828786532112059880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1221632431
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,11 +1260,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 828786531203710869, guid: 564790f799ad06d4ba3294bf18bcf8ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38.31
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 828786531203710869, guid: 564790f799ad06d4ba3294bf18bcf8ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.01
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 828786531203710869, guid: 564790f799ad06d4ba3294bf18bcf8ef, type: 3}
       propertyPath: m_LocalPosition.z
