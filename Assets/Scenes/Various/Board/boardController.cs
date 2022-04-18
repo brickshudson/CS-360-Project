@@ -11,9 +11,9 @@ public class boardController : MonoBehaviour
 
 
     public LinkedList<GameObject> contestants = new LinkedList<GameObject>();
-    LinkedList<Contestant> loserParty = new LinkedList<Contestant>();
+    LinkedList<GameObject> loserParty = new LinkedList<GameObject>();
     BoardGraph island = new BoardGraph();
-    LinkedListNode<Contestant> frontRunner;
+    LinkedListNode<GameObject> frontRunner;
     int roundCnt;
     int elimCnt; // minigames will happen on ever xth turn
     int numPlayers;
@@ -28,7 +28,7 @@ public class boardController : MonoBehaviour
         numPlayers = 5;
         for(int i=0; i < numPlayers; i++)
         {
-            contestants.AddLast(new Contestant());
+            
         }
 
         elimCnt = 3;
@@ -46,10 +46,10 @@ public class boardController : MonoBehaviour
             eliminationRound = true;
             Zombie.MiniGameList.randomMinigame();
         }
-         for(LinkedListNode<Contestant> current = frontRunner; current.Next != null; current = current.Next)
+         for(LinkedListNode<GameObject> current = frontRunner; current.Next != null; current = current.Next)
          {
-            bitCoin.text = "" + current.Value.getBits();
-             current.Value.turnStart();
+            //bitCoin.text = "" + current.Value.getBits();
+             //current.Value.turnStart();
              //while(current.Value.isTurn)
              //{
                  //I don't know if there's anything to even do here, just wait for the turn to be over! :P 
