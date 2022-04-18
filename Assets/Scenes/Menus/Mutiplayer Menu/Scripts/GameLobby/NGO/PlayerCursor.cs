@@ -133,7 +133,8 @@ namespace LobbyRelaySample.ngo
             if (type == MessageType.MinigameBeginning)
             {
                 Debug.LogError("Minigame Beginning");
-                SceneManager.LoadScene("Pointer Panic");
+                SceneManager.LoadScene("Board");
+                //SceneManager.LoadScene("Pointer Panic");
                 m_retrieveName.Invoke(OwnerClientId, SetName_ClientRpc);
                 Locator.Get.Messenger.Unsubscribe(this);
             }
