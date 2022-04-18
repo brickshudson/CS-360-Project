@@ -76,8 +76,7 @@ namespace LobbyRelaySample.Auth
                     try {
                         m_subIdentities.Add(entry.Key, entry.Value);
                     } catch (ArgumentException) {
-                        m_subIdentities[entry.Key] = null;
-                        goto Retry;
+                        m_subIdentities[entry.Key] = null; //NameGenerator.GetName(UnityEngine.Random.Range(0, 12502554).ToString());
                     }
                 }
             }
