@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace LobbyRelaySample.ngo
 {
@@ -38,6 +39,7 @@ namespace LobbyRelaySample.ngo
         /// </summary>
         public override void OnNetworkSpawn()
         {
+            Debug.LogError("Load");
             m_retrieveName = NetworkedDataStore.Instance.GetPlayerData;
             m_mainCamera = GameObject.Find("InGameCamera").GetComponent<Camera>();
             if (IsHost)
@@ -130,6 +132,8 @@ namespace LobbyRelaySample.ngo
         {
             if (type == MessageType.MinigameBeginning)
             {
+                Debug.LogError("Minigame Beginning");
+                SceneManager.LoadScene("Pointer Panic");
                 m_retrieveName.Invoke(OwnerClientId, SetName_ClientRpc);
                 Locator.Get.Messenger.Unsubscribe(this);
             }

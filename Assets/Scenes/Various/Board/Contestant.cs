@@ -12,7 +12,6 @@ public class Contestant : MonoBehaviour
     public bool eliminated;
     public bool isTurn;
     public Rigidbody2D persona;
-    public Sprite character;
     //These only exist for ez testing!
     public System.Random die;
     Item[] items;

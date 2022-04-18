@@ -10,10 +10,6 @@ public class BoardGraph //Note - for testing purposes this is NOT a monobehavior
 
     // Note for the connections: If there is no connection on a side, input '-1' for that direction!
     //Ex: A space with 2 connections, left and right = new GameSpace(20, "Type", -1, -1, 19, 21, x, y)
-    void Start()
-    {}//As of now we don't need this method
-
-    //I lied when I said the GameSpace constructor was the worst, this is MUCH WORSE! >:D
     public BoardGraph()
     {
         //All of this is just constructing the game spaces and building the graph with them.
@@ -120,11 +116,5 @@ public class BoardGraph //Note - for testing purposes this is NOT a monobehavior
         {
             return g;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

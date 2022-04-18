@@ -1,9 +1,11 @@
 ﻿using System;
 using Unity.Netcode;
 using UnityEngine;
+using LobbyRelaySample.ngo;
+using LobbyRelaySample;
 
-namespace LobbyRelaySample.ngo
-{
+//namespace LobbyRelaySample.ngo
+//{
     /// <summary>
     /// Once the local player is in a lobby and that lobby has entered the In-Game state, this will load in whatever is necessary to actually run the game part.
     /// This will exist in the game scene so that it can hold references to scene objects that spawned prefab instances will need.
@@ -25,17 +27,19 @@ namespace LobbyRelaySample.ngo
         private LobbyUser m_localUser;
 
 
-        public void Start()
-        {   Locator.Get.Messenger.Subscribe(this);
+        public void Start()        {
+        Debug.LogError("Start");
+        Locator.Get.Messenger.Subscribe(this);
         }
         public void OnDestroy()
-        {   Locator.Get.Messenger.Unsubscribe(this);
+        {   
+        Locator.Get.Messenger.Unsubscribe(this);
         }
 
-        private void SetMenuVisibility(bool areVisible)
-        {
-            foreach (GameObject go in m_disableWhileInGame)
+        private void SetMenuVisibility(bool areVisible)  {
+            foreach (GameObject go in m_disableWhileInGame) {
                 go.SetActive(areVisible);
+            }
         }
 
         /// <summary>
@@ -54,6 +58,8 @@ namespace LobbyRelaySample.ngo
                 m_inGameManagerObj.AddComponent<RelayUtpNGOSetupHost>().Initialize(this, m_lobby, () => { m_initializeTransport(transport); m_networkManager.StartHost(); });
             else
                 m_inGameManagerObj.AddComponent<RelayUtpNGOSetupClient>().Initialize(this, m_lobby, () => { m_initializeTransport(transport); m_networkManager.StartClient(); });
+            Debug.LogError("Minigame created");
+        
         }
 
         private void OnConnectionVerified()
@@ -116,4 +122,4 @@ namespace LobbyRelaySample.ngo
             }
         }
     }
-}
+//}

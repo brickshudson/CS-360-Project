@@ -1,16 +1,18 @@
 //Written by The-Architect01
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Composite : MonoBehaviour {
 
     public LineUpController Controller;
 
-    public SpriteRenderer Eye;
-    public SpriteRenderer Nose;
-    public SpriteRenderer Mouth;
+    public Image Eye;
+    public Image Nose;
+    public Image Mouth;
 
-    public TextMesh Name;
-    public TextMesh Number;
+    public TextMeshProUGUI Name;
+    public TextMeshProUGUI Number;
 
     public bool IsCorrect = false;
 
