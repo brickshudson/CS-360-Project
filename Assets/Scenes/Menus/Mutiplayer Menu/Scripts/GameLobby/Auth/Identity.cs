@@ -71,13 +71,13 @@ namespace LobbyRelaySample.Auth
             if (prev is Identity)
             {
                 Identity prevIdentity = prev as Identity;
-                Retry:
+                //Retry:
                 foreach (var entry in prevIdentity.m_subIdentities) {
                     try {
                         m_subIdentities.Add(entry.Key, entry.Value);
                     } catch (ArgumentException) {
-                        m_subIdentities[entry.Key] = null;
-                        goto Retry;
+                        m_subIdentities[entry.Key] = entry.Value;
+                  //      goto Retry;
                     }
                 }
             }

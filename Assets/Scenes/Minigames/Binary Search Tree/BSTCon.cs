@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class BSTCon : MonoBehaviour {
 
@@ -13,22 +14,25 @@ public class BSTCon : MonoBehaviour {
     public TextMeshProUGUI GoalText;
     public TextMeshProUGUI MovesUsed;
     public GameWin GameWin;
-    public static BinaryTree<int> BinTree;
-    public static int Goal;
+    public static BinaryTree<string> BinTree;
+    public static string Goal;
 
     static int _moves;
     int Moves { get { return _moves; } set { _moves = value; MovesUsed.text = $"Moves Used: {value}"; } }
 
-    public static Node<int> CurrentNode = null;
+    public static Node<string> CurrentNode = null;
 
     public Direction Direction;
 
     private void Start() {
         Moves = 0;
-        BinTree = new BinaryTree<int>();
-        List<int> Goals = new List<int>();
-        while(BinTree.Count < 25) {
-            int x = Random.Range(1, 999);
+        BinTree = new BinaryTree<string>();
+        List<string> Goals = new List<string>();
+        SetItems.SetArgs args = SetItems.SelectSet();
+        while(BinTree.Count < 25) { 
+            string x = args.Set.ElementAt(Random.Range(0, args.Set.Count));
+            args.Set.Remove(x);
+            //int x = Random.Range(1, 999);
             BinTree.Insert(x);
             Goals.Add(x);
         }
