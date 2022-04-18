@@ -7,7 +7,6 @@ public class Contestant : MonoBehaviour
     //Initializing all variables
     int bits;
     GameSpace current;
-    public BoardGraph island;
     private int moveLimit = 0;
     public bool eliminated;
     public bool isTurn;
@@ -19,8 +18,6 @@ public class Contestant : MonoBehaviour
     {
         die = new System.Random();
         bits = 0;
-        island = new BoardGraph();
-        current = island.get(0);
         eliminated = false;
         isTurn = true; //Change when we begin testing turn system!!!
         items = new Item[6];
@@ -49,7 +46,7 @@ public class Contestant : MonoBehaviour
         }
     }
 
-    public void movement()
+    public void movement(BoardGraph island)
     {
         if (Input.GetKeyDown(KeyCode.W))
         {

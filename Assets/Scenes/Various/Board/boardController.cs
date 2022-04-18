@@ -6,8 +6,13 @@ using TMPro;
 public class boardController : MonoBehaviour
 {
     //2 lists, one for players still in the game, one for the losers! :D
-    LinkedList<Contestant> contestants = new LinkedList<Contestant>();
+    public GameObject Incog;
+    public GameObject Debugger;
+
+
+    public LinkedList<GameObject> contestants = new LinkedList<GameObject>();
     LinkedList<Contestant> loserParty = new LinkedList<Contestant>();
+    BoardGraph island = new BoardGraph();
     LinkedListNode<Contestant> frontRunner;
     int roundCnt;
     int elimCnt; // minigames will happen on ever xth turn
@@ -45,10 +50,10 @@ public class boardController : MonoBehaviour
          {
             bitCoin.text = "" + current.Value.getBits();
              current.Value.turnStart();
-             while(current.Value.isTurn)
-             {
+             //while(current.Value.isTurn)
+             //{
                  //I don't know if there's anything to even do here, just wait for the turn to be over! :P 
-             }    
+             //}    
          }
          
         if (eliminationRound)
