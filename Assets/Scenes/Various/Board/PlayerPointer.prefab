@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 828786531203710870}
   - component: {fileID: 828786531203710871}
   m_Layer: 0
-  m_Name: Contestent
+  m_Name: PlayerPointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

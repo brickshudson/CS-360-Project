@@ -8,6 +8,7 @@ public class boardController : MonoBehaviour
     //2 lists, one for players still in the game, one for the losers! :D
     public GameObject Incog;
     public GameObject Debugger;
+    public GameObject Dipsy;
 
 
     public LinkedList<GameObject> contestants = new LinkedList<GameObject>();
