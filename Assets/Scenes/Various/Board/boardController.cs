@@ -45,10 +45,10 @@ public class boardController : MonoBehaviour
          {
             bitCoin.text = "" + current.Value.getBits();
              current.Value.turnStart();
-             while(current.Value.isTurn)
-             {
+         //    while(current.Value.isTurn)
+         //    {
                  //I don't know if there's anything to even do here, just wait for the turn to be over! :P 
-             }    
+          //   }    
          }
          
         if (eliminationRound)
