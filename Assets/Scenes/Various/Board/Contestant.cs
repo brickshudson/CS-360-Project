@@ -28,6 +28,17 @@ public class Contestant : MonoBehaviour
         persona = new Rigidbody2D();
         island = board;
     }
+    void Start()
+    {
+        die = new System.Random();
+        maxRoll = 7;
+        bits = 0;
+        eliminated = false;
+        isTurn = true; //Change when we begin testing turn system!!!
+        items = new Item[6];
+        persona = new Rigidbody2D();
+        island = board;
+    }
     void Update()
     {
         if(!eliminated)
