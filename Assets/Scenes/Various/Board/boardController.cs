@@ -6,10 +6,10 @@ using TMPro;
 public class boardController : MonoBehaviour
 {
     //2 lists, one for players still in the game, one for the losers! :D
+    Vector3 start = new Vector3(0f, 0f, 0f);
     public GameObject Incog;
     public GameObject Debugger;
     public GameObject Dipsy;
-
 
     public LinkedList<GameObject> contestants = new LinkedList<GameObject>();
     LinkedList<GameObject> loserParty = new LinkedList<GameObject>();
@@ -25,6 +25,7 @@ public class boardController : MonoBehaviour
 
     void Start()
     {
+        Incog = Instantiate(PlayerPointer, start, Quaternion.identity);
         //Get the number of players, then create a new contestent for each one
         numPlayers = 5;
         for(int i=0; i < numPlayers; i++)

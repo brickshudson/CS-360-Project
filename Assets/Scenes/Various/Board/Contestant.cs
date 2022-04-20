@@ -12,12 +12,15 @@ public class Contestant : MonoBehaviour
     public bool eliminated;
     public bool isTurn;
     public Rigidbody2D persona;
+    private int maxRoll;
+
     //These only exist for ez testing!
     public System.Random die;
     Item[] items;
     public Contestant(BoardGraph board)
     {
         die = new System.Random();
+        maxRoll = 7;
         bits = 0;
         eliminated = false;
         isTurn = true; //Change when we begin testing turn system!!!
@@ -110,6 +113,11 @@ public class Contestant : MonoBehaviour
     {
         isTurn = true;
         moveLimit = die.Next(7);
+    }
+
+    public void endTurn()
+    {
+        isTurn = false;
     }
 
     public void useItem(Item item)
