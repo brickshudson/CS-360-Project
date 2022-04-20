@@ -6,8 +6,8 @@ public class Contestant : MonoBehaviour
 {
     //Initializing all variables
     int bits;
-    GameSpace current;
     public BoardGraph island;
+    GameSpace current;
     private int moveLimit = 0;
     public bool eliminated;
     public bool isTurn;
@@ -15,36 +15,23 @@ public class Contestant : MonoBehaviour
     //These only exist for ez testing!
     public System.Random die;
     Item[] items;
-    public Contestant()
+    public Contestant(BoardGraph board)
     {
         die = new System.Random();
         bits = 0;
-        island = new BoardGraph();
-        current = island.get(0);
         eliminated = false;
         isTurn = true; //Change when we begin testing turn system!!!
         items = new Item[6];
         persona = new Rigidbody2D();
+        island = board;
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            turnStart();
-        }
         if(!eliminated)
         {
-            persona.MovePosition(current.getLoc());
             if (isTurn)
             {
-                if (moveLimit > 0)
-                {
-                    movement();
-                }
-                else
-                {
-                    spaceEffect();
-                }
+
             }
         }
     }
