@@ -493,6 +493,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1151039768}
     m_Modifications:
+    - target: {fileID: 3803998287302317540, guid: 12f886d0e70101148acb55d0f8a76471, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3803998287302317546, guid: 12f886d0e70101148acb55d0f8a76471, type: 3}
       propertyPath: m_text
       value: Multiplayer
@@ -598,8 +602,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3803998288387089283, guid: 12f886d0e70101148acb55d0f8a76471, type: 3}
-      propertyPath: m_Interactable
+      propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803998288387089283, guid: 12f886d0e70101148acb55d0f8a76471, type: 3}
+      propertyPath: m_Interactable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3803998288387089283, guid: 12f886d0e70101148acb55d0f8a76471, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -632,6 +640,10 @@ PrefabInstance:
     - target: {fileID: 3803998288387089405, guid: 12f886d0e70101148acb55d0f8a76471, type: 3}
       propertyPath: m_Name
       value: MultiPlayerButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803998288387089405, guid: 12f886d0e70101148acb55d0f8a76471, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12f886d0e70101148acb55d0f8a76471, type: 3}
