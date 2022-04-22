@@ -13,7 +13,17 @@ public class PauseScreen : MonoBehaviour
     public GameObject Host;
 
     public KeyCode PauseKey;
-    public KeyCode ResumeKey;
+
+    private enum PauseState : ushort
+    {
+        NotPaused,
+        StartPause,
+        Paused,
+        EndPause,
+        EPS_StateCount
+    }
+
+    private PauseState currentPauseState = PauseState.NotPaused;
 
     private void Awake() {
         Restart.onClick.AddListener(delegate { Debug.Log("Restart Clicked"); });
@@ -21,21 +31,47 @@ public class PauseScreen : MonoBehaviour
         MainMenu.onClick.AddListener(delegate { Debug.Log("Main Menu Clicked"); });
     }
 
+    public void ResumePressed()
+    {
+        currentPauseState = PauseState.EndPause;
+        UpdatePauseMenu();
+    }
+
     // Update is called once per frame
     void Update() {
-        if (PauseKey == ResumeKey) {
-            if (Timer.running) { Timer.StopTimer(); }else { Timer.StartTimer(); }
-            Host.SetActive(!gameObject.activeInHierarchy);
-        } else {
-            if (Input.GetKeyDown(PauseKey)) {
+        
+        //  If the key is PRESSED, and was NOT pressed last frame -> Update State
+        // If the key is RELEASED, and was     pressed last frame -> Update State
+
+        //      How this if statement was reduced:
+        // if((Input.GetKeyDown(PauseKey) && currentPauseState % 2 == 0) || (!Input.GetKeyDown(PauseKey)  && currentPauseState % 2 != 0))
+        // if(Input.GetKeyDown(PauseKey) ? currentPauseState % 2 == 0 : currentPauseState % 2 != 0)
+        if(Input.GetKeyDown(PauseKey) == ((int)currentPauseState % 2 == 0))
+        {
+            currentPauseState = (PauseState)(((int)currentPauseState + 1) % (int)PauseState.EPS_StateCount);
+
+            UpdatePauseMenu();
+        }
+    }
+
+    private void UpdatePauseMenu()
+    {
+        switch(currentPauseState)
+        {
+            // When the pause starts, show the pause screen and stop the countdown timer
+            case PauseState.StartPause:
                 Timer.StopTimer();
                 Host.SetActive(true);
-                return;
-            } else if (Input.GetKeyDown(ResumeKey)) {
+                break;
+                
+            // When the pause ends, disable the pause overlay and start the timer from where it was
+            case PauseState.EndPause:
                 Timer.StartTimer();
                 Host.SetActive(false);
-                return;
-            }
+                break;
+
+            default:
+                break;
         }
     }
 }
