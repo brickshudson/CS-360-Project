@@ -5808,6 +5808,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3339661886286081747, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
+      propertyPath: Game
+      value: 
+      objectReference: {fileID: 377265592660578564}
+    - target: {fileID: 3339661886286081747, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
       propertyPath: Timer
       value: 
       objectReference: {fileID: 2139772581}
@@ -5829,3 +5833,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
+--- !u!1 &377265592660578564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9059192782628124528, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
+  m_PrefabInstance: {fileID: 377265592660578563}
+  m_PrefabAsset: {fileID: 0}

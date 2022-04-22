@@ -27,8 +27,8 @@ namespace LobbyRelaySample.UI
         [SerializeField]
         Sprite[] m_EmoteIcons;
 
-        [SerializeField]
-        vivox.VivoxUserHandler m_vivoxUserHandler;
+        //[SerializeField]
+        //vivox.VivoxUserHandler m_vivoxUserHandler;
 
         public bool IsAssigned => UserId != null;
 
@@ -42,7 +42,7 @@ namespace LobbyRelaySample.UI
                 m_observer = GetComponent<LobbyUserObserver>();
             m_observer.BeginObserving(myLobbyUser);
             UserId = myLobbyUser.ID;
-            m_vivoxUserHandler.SetId(UserId);
+        //    m_vivoxUserHandler.SetId(UserId);
         }
 
         public void OnUserLeft()

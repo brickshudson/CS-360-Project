@@ -12,23 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/OptionsFolder/Options Menu.unity
     guid: be8deccfd1b4c56478fc6b6c1888546f
   - enabled: 1
-    path: Assets/Scenes/Minigames/Binary Search Tree/We Call It Maze/We Call It Maze.unity
-    guid: d06781a179276454ca977a317460d1f3
-  - enabled: 0
-    path: Assets/Scenes/Minigames/Heap/Heap - Pick the Lock.unity
-    guid: 9aeb25cb6cae6224d87a885be94f423b
-  - enabled: 1
     path: Assets/Scenes/Menus/PlayFolder/Play Menu.unity
     guid: 6bc3d586e8f7d8b4aac66567cb8da11c
   - enabled: 1
-    path: Assets/Scenes/Menus/Singleplayer Menu/Singleplayer Menu.unity
-    guid: 75299e3d8fc66884ea44557381f710f4
-  - enabled: 1
     path: Assets/Scenes/Various/Load Screen/Load Game.unity
     guid: d434f2889ba4d664fa068e4d52f25a8c
-  - enabled: 0
-    path: Assets/Scenes/Minigames/Stack/Stack - Chips Ahoy.unity
-    guid: c2c33c950baae2e429d052922a53eac6
+  - enabled: 1
+    path: Assets/Scenes/Menus/SPCategoryMenu/SPCategoryMenu.unity
+    guid: 816d4d777ee478d409f3bcb83b0d3334
+  - enabled: 1
+    path: Assets/Scenes/Menus/SPGameMenu/SPGameMenu.unity
+    guid: b593b14ec3fe78245b7e4f993d63c9f6
   - enabled: 1
     path: Assets/Scenes/Various/Board/Board.unity
     guid: bbdf311a658b05a4790e70b5ec80e9f1
@@ -36,11 +30,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Various/Start Game/Create Game.unity
     guid: 9e7c73443ce693d4cb61900d0f586041
   - enabled: 1
-    path: Assets/Scenes/Menus/SPCategoryMenu/SPCategoryMenu.unity
-    guid: 816d4d777ee478d409f3bcb83b0d3334
-  - enabled: 1
-    path: Assets/Scenes/Menus/SPGameMenu/SPGameMenu.unity
-    guid: b593b14ec3fe78245b7e4f993d63c9f6
+    path: Assets/Scenes/Minigames/Binary Search Tree/We Call It Maze/We Call It Maze.unity
+    guid: d06781a179276454ca977a317460d1f3
   - enabled: 1
     path: Assets/Scenes/Minigames/Pointer/PoliceLine/Pointer Panic.unity
     guid: f4e428f6cfb984d4f8f5388ffc7c81c3
@@ -56,7 +47,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Queue/Manic Menus/Manic Menus.unity
     guid: 07f2f69fc570d604585797574da7b628
-  - enabled: 1
+  - enabled: 0
+    path: Assets/Scenes/Menus/Singleplayer Menu/Singleplayer Menu.unity
+    guid: 75299e3d8fc66884ea44557381f710f4
+  - enabled: 0
+    path: Assets/Scenes/Minigames/Heap/Heap - Pick the Lock.unity
+    guid: 9aeb25cb6cae6224d87a885be94f423b
+  - enabled: 0
+    path: Assets/Scenes/Minigames/Stack/Stack - Chips Ahoy.unity
+    guid: c2c33c950baae2e429d052922a53eac6
+  - enabled: 0
     path: Assets/Scenes/Menus/Mutiplayer Menu/Scenes/mainScene.unity
     guid: ac99f707ce93cff419a804de3a2cc937
   m_configObjects: {}
