@@ -708,6 +708,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8684319797047179662, guid: d109037a306e15f4199e920ad998dd4a, type: 3}
   m_PrefabInstance: {fileID: 298333406}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &298333408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8684319797970285962, guid: d109037a306e15f4199e920ad998dd4a, type: 3}
+  m_PrefabInstance: {fileID: 298333406}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &362124941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -777,6 +782,7 @@ GameObject:
   - component: {fileID: 381263426}
   - component: {fileID: 381263425}
   - component: {fileID: 381263428}
+  - component: {fileID: 381263429}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -882,6 +888,23 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &381263429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381263424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e97ee9189a251845ae80cd390c35b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataStructureInfo: 'A data structure where you cannot have duplicate values. [i.e:
+    A set of numbers cannot have multiple slots with the #7]'
+  HowToPlay: Our good pal Robbie the robot will give you a topic, you must both list
+    off items that belong in that topic until one of you guesses wrong, or there
+    are no more items in the topic!
 --- !u!1 &428213764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2757,6 +2780,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3126779914820812792, guid: 918cdb2fa2756ab47ac714ab35f05f05, type: 3}
+      propertyPath: Game
+      value: 
+      objectReference: {fileID: 298333408}
     - target: {fileID: 3126779914820812792, guid: 918cdb2fa2756ab47ac714ab35f05f05, type: 3}
       propertyPath: Timer
       value: 

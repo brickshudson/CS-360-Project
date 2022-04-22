@@ -4460,11 +4460,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6216869665535508632, guid: f578c07f65157be4cb15e05807b33fc3, type: 3}
       propertyPath: HowToPlay
-      value: test
+      value: Officer, we have a lineup of suspects for you! Click on the suspect
+        that matches the visual description given by our witness!
       objectReference: {fileID: 0}
     - target: {fileID: 6216869665535508632, guid: f578c07f65157be4cb15e05807b33fc3, type: 3}
       propertyPath: DataStructureInfo
-      value: test
+      value: This data structure is dedicated to pointing at things!
       objectReference: {fileID: 0}
     - target: {fileID: 7785925065746883724, guid: f578c07f65157be4cb15e05807b33fc3, type: 3}
       propertyPath: m_Name
@@ -5808,6 +5809,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3339661886286081747, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
+      propertyPath: Game
+      value: 
+      objectReference: {fileID: 377265592660578564}
+    - target: {fileID: 3339661886286081747, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
       propertyPath: Timer
       value: 
       objectReference: {fileID: 2139772581}
@@ -5829,3 +5834,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
+--- !u!1 &377265592660578564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9059192782628124528, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
+  m_PrefabInstance: {fileID: 377265592660578563}
+  m_PrefabAsset: {fileID: 0}
