@@ -1028,7 +1028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e911c38a69aa973469c8fe50832fa90b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MiniGame: Queue - Mend the Menu
+  MiniGame: Manic Menus
   GameName: {fileID: 1015280004}
   DataStructure: {fileID: 1068338995}
   HowTo: {fileID: 1534597490}
