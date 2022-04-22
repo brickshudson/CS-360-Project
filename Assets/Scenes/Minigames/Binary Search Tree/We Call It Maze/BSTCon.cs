@@ -16,6 +16,7 @@ public class BSTCon : MonoBehaviour {
     public GameWin GameWin;
     public static BinaryTree<string> BinTree;
     public static string Goal;
+    public CountDown Timer;
 
     static int _moves;
     int Moves { get { return _moves; } set { _moves = value; MovesUsed.text = $"Moves Used: {value}"; } }
@@ -23,18 +24,34 @@ public class BSTCon : MonoBehaviour {
     public static Node<string> CurrentNode = null;
 
     public Direction Direction;
+    GameLogging.Log Log;
 
     private void Start() {
+        Log = new GameLogging.Log() {
+            IsPractice = Zombie.IsPractice,
+            IsTeamGame = !Zombie.IsSolo,
+            ErrorsMade = -1,
+            TurnsUsed = 0,
+            TimeTaken = 0,
+        };
+
         Moves = 0;
         BinTree = new BinaryTree<string>();
         List<string> Goals = new List<string>();
-        SetItems.SetArgs args = SetItems.SelectSet();
-        while(BinTree.Count < 25) { 
-            string x = args.Set.ElementAt(Random.Range(0, args.Set.Count));
-            args.Set.Remove(x);
-            //int x = Random.Range(1, 999);
-            BinTree.Insert(x);
-            Goals.Add(x);
+
+        SetItems.SetArgs args = null;
+        if (Random.value > .5f) { args = SetItems.SelectSet(); }
+        while (BinTree.Count < 25) {
+            if(args != null) { 
+                string x = args.Set.ElementAt(Random.Range(0, args.Set.Count));
+                args.Set.Remove(x);
+                BinTree.Insert(x);
+                Goals.Add(x);
+            } else {
+                string x = Random.Range(1, 999).ToString();
+                BinTree.Insert(x);
+                Goals.Add(x);
+            }
         }
         Goal = Goals[Random.Range(0, Goals.Count)];
         GoalText.text = $"Goal: {Goal}";
@@ -57,16 +74,35 @@ public class BSTCon : MonoBehaviour {
 
     public void OnClick() {
         Moves++;
+        Log.TurnsUsed++;
         if (Direction == Direction.Right) {
-            if(RightText.text == Goal.ToString()) { Debug.Log("Correct Right"); GameWin.Show(); return; }
+            if(RightText.text == Goal.ToString()) { 
+                Debug.Log("Correct Right"); 
+                GameWin.Show();
+                Log.TimeTaken = Timer.TimeElapsed;
+                Zombie.CurrentProfileStats.Stats["Binary Search Tree"]["We Call It Maze"].GameLog.Add(Log);
+                return;
+            }
             if(CurrentNode.Right != null)
                 CurrentNode = CurrentNode.Right;
         } else if(Direction == Direction.Left) {
-            if (LeftText.text == Goal.ToString()) { Debug.Log("Correct Left"); GameWin.Show(); return; }
+            if (LeftText.text == Goal.ToString()) {
+                Debug.Log("Correct Left"); 
+                GameWin.Show();
+                Log.TimeTaken = Timer.TimeElapsed;
+                Zombie.CurrentProfileStats.Stats["Binary Search Tree"]["We Call It Maze"].GameLog.Add(Log);
+                return;
+            }
             if (CurrentNode.Left != null)
                 CurrentNode = CurrentNode.Left;
         } else if(Direction == Direction.Center) {
-            if (CurrentText.text == Goal.ToString()) { Debug.Log("Correct Center"); GameWin.Show(); return; }
+            if (CurrentText.text == Goal.ToString()) { 
+                Debug.Log("Correct Center"); 
+                GameWin.Show();
+                Log.TimeTaken = Timer.TimeElapsed;
+                Zombie.CurrentProfileStats.Stats["Binary Search Tree"]["We Call It Maze"].GameLog.Add(Log);
+                return; 
+            }
             if (CurrentNode.Parent != null) 
                 CurrentNode = CurrentNode.Parent;
         }

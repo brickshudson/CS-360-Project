@@ -904,6 +904,7 @@ MonoBehaviour:
   GoalText: {fileID: 872716823}
   MovesUsed: {fileID: 691808916}
   GameWin: {fileID: 364915740}
+  Timer: {fileID: 146796512}
   Direction: 1
 --- !u!114 &627258002
 MonoBehaviour:
@@ -1703,6 +1704,7 @@ GameObject:
   - component: {fileID: 1002381166}
   - component: {fileID: 1002381165}
   - component: {fileID: 1002381164}
+  - component: {fileID: 1002381168}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1808,6 +1810,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1002381168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002381163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e97ee9189a251845ae80cd390c35b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataStructureInfo: A BST is a type of tree data structure where each node has two
+    children, with one side always having values larger than the parent, the other
+    having lower values (for example, all right children would be lower than the
+    parent, while all left would be greater)
+  HowToPlay: Navigate to the target value in our BST maze using the principles of
+    BSTs!
 --- !u!1 &1084503342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,6 +1946,7 @@ MonoBehaviour:
   GoalText: {fileID: 872716823}
   MovesUsed: {fileID: 691808916}
   GameWin: {fileID: 364915740}
+  Timer: {fileID: 146796512}
   Direction: 0
 --- !u!114 &1084503346
 MonoBehaviour:
@@ -2060,6 +2081,7 @@ MonoBehaviour:
   GoalText: {fileID: 872716823}
   MovesUsed: {fileID: 691808916}
   GameWin: {fileID: 364915740}
+  Timer: {fileID: 146796512}
   Direction: 2
 --- !u!114 &1111919085
 MonoBehaviour:

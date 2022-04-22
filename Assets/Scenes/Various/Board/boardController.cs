@@ -33,7 +33,6 @@ public class boardController : MonoBehaviour
         contestants.AddLast(Dipsy);
         contestants.AddLast(Brick);
 
-
         elimCnt = 3;
         roundCnt = 1;
         frontRunner = contestants.First;
