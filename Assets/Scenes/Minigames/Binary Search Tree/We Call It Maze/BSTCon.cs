@@ -16,6 +16,7 @@ public class BSTCon : MonoBehaviour {
     public GameWin GameWin;
     public static BinaryTree<string> BinTree;
     public static string Goal;
+    public CountDown Timer;
 
     static int _moves;
     int Moves { get { return _moves; } set { _moves = value; MovesUsed.text = $"Moves Used: {value}"; } }
@@ -29,7 +30,7 @@ public class BSTCon : MonoBehaviour {
         Log = new GameLogging.Log() {
             IsPractice = Zombie.IsPractice,
             IsTeamGame = !Zombie.IsSolo,
-            ErrorsMade = 0,
+            ErrorsMade = -1,
             TurnsUsed = 0,
             TimeTaken = 0,
         };
@@ -41,13 +42,14 @@ public class BSTCon : MonoBehaviour {
         SetItems.SetArgs args = null;
         if (Random.value > .5f) { args = SetItems.SelectSet(); }
         while (BinTree.Count < 25) {
-            try {
+            if(args != null) { 
                 string x = args.Set.ElementAt(Random.Range(0, args.Set.Count));
                 args.Set.Remove(x);
                 BinTree.Insert(x);
                 Goals.Add(x);
-            } catch {
+            } else {
                 string x = Random.Range(1, 999).ToString();
+                BinTree.Insert(x);
                 Goals.Add(x);
             }
         }
@@ -72,10 +74,12 @@ public class BSTCon : MonoBehaviour {
 
     public void OnClick() {
         Moves++;
+        Log.TurnsUsed++;
         if (Direction == Direction.Right) {
             if(RightText.text == Goal.ToString()) { 
                 Debug.Log("Correct Right"); 
                 GameWin.Show();
+                Log.TimeTaken = Timer.TimeElapsed;
                 Zombie.CurrentProfileStats.Stats["Binary Search Tree"]["We Call It Maze"].GameLog.Add(Log);
                 return;
             }
@@ -85,6 +89,7 @@ public class BSTCon : MonoBehaviour {
             if (LeftText.text == Goal.ToString()) {
                 Debug.Log("Correct Left"); 
                 GameWin.Show();
+                Log.TimeTaken = Timer.TimeElapsed;
                 Zombie.CurrentProfileStats.Stats["Binary Search Tree"]["We Call It Maze"].GameLog.Add(Log);
                 return;
             }
@@ -94,6 +99,7 @@ public class BSTCon : MonoBehaviour {
             if (CurrentText.text == Goal.ToString()) { 
                 Debug.Log("Correct Center"); 
                 GameWin.Show();
+                Log.TimeTaken = Timer.TimeElapsed;
                 Zombie.CurrentProfileStats.Stats["Binary Search Tree"]["We Call It Maze"].GameLog.Add(Log);
                 return; 
             }
