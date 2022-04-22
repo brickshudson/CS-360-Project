@@ -2078,7 +2078,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8396244836956603818, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
   m_PrefabInstance: {fileID: 377265592660578563}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 377265592660578566}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 639029b6f35e9b6489d1c9480c7145a7, type: 3}
@@ -3557,7 +3557,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8162103236617064595, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
   m_PrefabInstance: {fileID: 377265592660578563}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 377265592660578565}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3f2fd3c11ef96348aa9fef5391a4562, type: 3}
@@ -5816,6 +5816,14 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 2139772581}
+    - target: {fileID: 3339661886286081747, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
+      propertyPath: WinScreen
+      value: 
+      objectReference: {fileID: 377265592660578566}
+    - target: {fileID: 3339661886286081747, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
+      propertyPath: LoseScreen
+      value: 
+      objectReference: {fileID: 377265592660578565}
     - target: {fileID: 6755587437971236075, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -5837,5 +5845,15 @@ PrefabInstance:
 --- !u!1 &377265592660578564 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9059192782628124528, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
+  m_PrefabInstance: {fileID: 377265592660578563}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &377265592660578565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 71134662867663743, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
+  m_PrefabInstance: {fileID: 377265592660578563}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &377265592660578566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8396244836956603816, guid: 9c8267ac0046b1f4a8ef36a88eb2ef60, type: 3}
   m_PrefabInstance: {fileID: 377265592660578563}
   m_PrefabAsset: {fileID: 0}

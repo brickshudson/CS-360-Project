@@ -1639,7 +1639,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8194621951398281579, guid: 64ac6049c45d04c4e81e557cf428b69c, type: 3}
   m_PrefabInstance: {fileID: 1586423866}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1586423868}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 639029b6f35e9b6489d1c9480c7145a7, type: 3}
@@ -2323,6 +2323,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3477451635713546857, guid: 64ac6049c45d04c4e81e557cf428b69c, type: 3}
   m_PrefabInstance: {fileID: 1586423866}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1586423868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8194621951398281577, guid: 64ac6049c45d04c4e81e557cf428b69c, type: 3}
+  m_PrefabInstance: {fileID: 1586423866}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1618202453
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,7 +2723,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8392964405282914637, guid: 1db3e5791bef125489bec0b4aeedac76, type: 3}
   m_PrefabInstance: {fileID: 1964910772}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1964910775}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3f2fd3c11ef96348aa9fef5391a4562, type: 3}
@@ -2727,6 +2732,11 @@ MonoBehaviour:
 --- !u!224 &1964910774 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4916716374900552097, guid: 1db3e5791bef125489bec0b4aeedac76, type: 3}
+  m_PrefabInstance: {fileID: 1964910772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1964910775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 414588004035930785, guid: 1db3e5791bef125489bec0b4aeedac76, type: 3}
   m_PrefabInstance: {fileID: 1964910772}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2015375728
@@ -2788,6 +2798,14 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 1408163213}
+    - target: {fileID: 3126779914820812792, guid: 918cdb2fa2756ab47ac714ab35f05f05, type: 3}
+      propertyPath: WinScreen
+      value: 
+      objectReference: {fileID: 1586423868}
+    - target: {fileID: 3126779914820812792, guid: 918cdb2fa2756ab47ac714ab35f05f05, type: 3}
+      propertyPath: LoseScreen
+      value: 
+      objectReference: {fileID: 1964910775}
     - target: {fileID: 3126779914820812793, guid: 918cdb2fa2756ab47ac714ab35f05f05, type: 3}
       propertyPath: m_Name
       value: Game Pause Menu

@@ -10,6 +10,8 @@ public class PauseScreen : MonoBehaviour {
 
     public GameObject Host;
     public GameObject Game;
+    public GameObject WinScreen;
+    public GameObject LoseScreen;
 
     public KeyCode PauseKey;
 
@@ -45,7 +47,7 @@ public class PauseScreen : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        if (Game.activeInHierarchy) { return; }
+        if (Game.activeInHierarchy || WinScreen.activeInHierarchy || LoseScreen.activeInHierarchy) { return; }
 
         // If the key is PRESSED, and was NOT pressed last frame -> Update State
         // If the key is RELEASED, and was pressed last frame -> Update State
