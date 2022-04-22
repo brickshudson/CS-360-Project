@@ -13,8 +13,7 @@ public class TowerPart : MonoBehaviour {
     public static TowerPart Selected;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() { 
         LastLegalLocation = Transform.anchoredPosition;
     }
 

@@ -17,6 +17,7 @@ public class SetController : MonoBehaviour {
 
     public Animator RobbieSpeak;
     public TextMeshProUGUI RobbieTalk;
+    bool RobbieFinished = false;
     public Sprite Robbie_Inactive;
 
     HashSet<string> Player = new HashSet<string>();
@@ -92,8 +93,6 @@ public class SetController : MonoBehaviour {
             CountDown.StopTimer();
         }
     }
-
-    bool RobbieFinished = false;
 
     private void Update() {
         if(Input.GetKey(KeyCode.Return) && RobbieFinished) {

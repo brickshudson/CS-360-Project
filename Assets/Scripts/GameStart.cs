@@ -13,8 +13,7 @@ public class GameStart : MonoBehaviour{
     public Timer Timer;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         CountDown.text = CountDownDuration.ToString();
         StartCoroutine(CountDownFire());
     }
