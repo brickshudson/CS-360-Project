@@ -1502,6 +1502,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8684319797047179662, guid: d109037a306e15f4199e920ad998dd4a, type: 3}
   m_PrefabInstance: {fileID: 1691267395}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1691267397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8684319797970285962, guid: d109037a306e15f4199e920ad998dd4a, type: 3}
+  m_PrefabInstance: {fileID: 1691267395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1744113939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1553,6 +1558,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3126779914820812792, guid: 918cdb2fa2756ab47ac714ab35f05f05, type: 3}
+      propertyPath: Game
+      value: 
+      objectReference: {fileID: 1691267397}
     - target: {fileID: 3126779914820812792, guid: 918cdb2fa2756ab47ac714ab35f05f05, type: 3}
       propertyPath: Timer
       value: 
