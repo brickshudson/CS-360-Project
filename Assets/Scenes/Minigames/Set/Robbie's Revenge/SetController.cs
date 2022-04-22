@@ -28,9 +28,17 @@ public class SetController : MonoBehaviour {
     public GameLoss Loss;
     public GameWin Win;
     public CountDown CountDown;
+    GameLogging.Log Log;
 
     // Start is called before the first frame update
     void Start() {
+        Log = new GameLogging.Log() {
+            IsPractice = Zombie.IsPractice,
+            IsTeamGame = !Zombie.IsSolo,
+            ErrorsMade = 0,
+            TurnsUsed = 0,
+        };
+
         RobbieSpeak.enabled = false;
         SetItems.SetArgs GameLoad = SetItems.SelectSet();
         LegalOptions = GameLoad.Set;
@@ -46,9 +54,10 @@ public class SetController : MonoBehaviour {
 
     void PlayerMove() {
         if(string.IsNullOrWhiteSpace(PlayerInput.text) || string.IsNullOrWhiteSpace(PlayerInput.text)) { PlayerInput.text = ""; PlayerInput.Select(); return; }
-
+        
+        Log.TurnsUsed++;
         int Location = LegalOptions.ContainsValue(PlayerInput.text);
-
+        
         if (Location != -1) {
             if (Player.Add(LegalOptions.ElementAt(Location))) {
                 LegalOptions.Remove(LegalOptions.ElementAt(Location));
@@ -62,14 +71,16 @@ public class SetController : MonoBehaviour {
                         Last5 += "\n";
                     }
                 }
-
+     
                 PlayerSet.text = Last5;
 
                 Debug.Log($"Legal {PlayerInput.text}");
                 PlayerInput.Select();
             }
         } else {
+            Log.ErrorsMade++;
             Debug.Log($"Illegal {PlayerInput.text}");
+            Zombie.CurrentProfileStats.Stats["Set"]["Robbie's Revenge"].GameLog.Add(Log);
             Loss.Show();
             CountDown.StopTimer();
         }
@@ -82,6 +93,7 @@ public class SetController : MonoBehaviour {
                 LegalOptions.Remove(LegalOptions.ElementAt(RandomIndex));
                 Debug.Log($"Legal {LegalOptions.ElementAt(RandomIndex)}");
             } catch {
+                Zombie.CurrentProfileStats.Stats["Set"]["Robbie's Revenge"].GameLog.Add(Log);
                 Win.Show();
                 CountDown.StopTimer();
             }
@@ -89,6 +101,7 @@ public class SetController : MonoBehaviour {
             int RandomIndex = Random.Range(0, IllegalOptions.Count-1);
             StartCoroutine(RobbieSpeaking(IllegalOptions.ElementAt(RandomIndex)));
             Debug.Log($"Illegal {IllegalOptions.ElementAt(RandomIndex)}");
+            Zombie.CurrentProfileStats.Stats["Set"]["Robbie's Revenge"].GameLog.Add(Log);
             Win.Show();
             CountDown.StopTimer();
         }
