@@ -37,7 +37,7 @@ public class Contestant : MonoBehaviour
         isTurn = true; //Change when we begin testing turn system!!!
         items = new Item[6];
         persona = new Rigidbody2D();
-        island = board;
+        island = null;
     }
     void Update()
     {
