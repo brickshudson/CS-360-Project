@@ -778,9 +778,6 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.26f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="VivoxUnity">
-      <HintPath>Library\ScriptAssemblies\VivoxUnity.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
       <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
@@ -952,17 +949,11 @@
     <Reference Include="Unity.Netcode.Adapter.UTP.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Netcode.Adapter.UTP.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Services.Vivox.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Services.Vivox.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Netcode.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.Netcode.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.Vivox">
-      <HintPath>Library\ScriptAssemblies\Unity.Services.Vivox.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
