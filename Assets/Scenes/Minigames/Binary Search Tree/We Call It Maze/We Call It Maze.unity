@@ -1821,10 +1821,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e97ee9189a251845ae80cd390c35b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DataStructureInfo: A BST is a type of tree data structure where each node has two
-    children, with one side always having values larger than the parent, the other
-    having lower values (for example, all right children would be lower than the
-    parent, while all left would be greater)
+  DataStructureInfo: A Binary Search Tree (BST) is a type of tree data structure
+    where each node has two children, with one side always having values larger than
+    the parent, the other having lower values (for example, all right children would
+    be lower than the parent, while all left would be greater)
   HowToPlay: Navigate to the target value in our BST maze using the principles of
     BSTs!
 --- !u!1 &1084503342
