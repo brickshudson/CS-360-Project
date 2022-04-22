@@ -8,8 +8,7 @@ public class Timer : MonoBehaviour {
     public bool AutoRun;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         TimerLabel.text = "00:00.000";
         if (AutoRun) { running = true; }
     }
@@ -21,8 +20,7 @@ public class Timer : MonoBehaviour {
     public void StartTimer() { running = true; }
     // Update is called once per frame
     /// <summary>Updates the timer element.</summary>
-    protected virtual void Update()
-    {
+    protected virtual void Update() {
         if (running) {
             try {
                 Time += UnityEngine.Time.deltaTime;
