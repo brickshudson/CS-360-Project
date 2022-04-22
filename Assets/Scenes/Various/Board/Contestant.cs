@@ -33,7 +33,10 @@ public class Contestant : MonoBehaviour
         {
             if (isTurn)
             {
-
+                while(moveLimit != 0)
+                {
+                    movement();
+                }
             }
         }
     }
