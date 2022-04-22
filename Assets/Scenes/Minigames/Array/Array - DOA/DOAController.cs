@@ -67,9 +67,11 @@ public class DOAController : MonoBehaviour
     private void Update() {
         if (GameLoss.gameObject.activeInHierarchy) { 
             Log.Win = false;
+            Log.TimeTaken = CountDown.TimeElapsed;
         } else if (GameWin.gameObject.activeInHierarchy) { 
             Log.Win = true;
             Log.TimeTaken = CountDown.TimeElapsed;
+            Zombie.CurrentProfileStats.Stats["Array"]["Arrays Attack"].GameLog.Add(Log);
         }
     }
 
