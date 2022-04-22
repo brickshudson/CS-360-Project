@@ -593,6 +593,7 @@ GameObject:
   - component: {fileID: 567876290}
   - component: {fileID: 567876289}
   - component: {fileID: 567876292}
+  - component: {fileID: 567876293}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -698,6 +699,24 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &567876293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567876288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e97ee9189a251845ae80cd390c35b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataStructureInfo: A structure based on a FILO (First in, Last out) system, the
+    only value in a stack you can directly access is the last on put in, or the one
+    on 'top' (think like a pringles can)
+  HowToPlay: You must move the pyramid of rounded blocks from the left pole to the
+    right, only being able to move one level at a time, and at no point can a larger
+    layer be placed on top of a smaller one!
 --- !u!1 &727881438
 GameObject:
   m_ObjectHideFlags: 0
