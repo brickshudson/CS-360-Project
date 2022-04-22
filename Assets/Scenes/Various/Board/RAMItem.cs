@@ -12,7 +12,7 @@ public class RAMItem : Item
 
     public void use(Contestant c)
     {
-        GameSpace e = c.getLocation();
-        e = c.island.get(numPicker.Next());
+        GameSpace newLocation = c.getLocation();
+        newLocation = c.island.get(numPicker.Next());
     }
 }
