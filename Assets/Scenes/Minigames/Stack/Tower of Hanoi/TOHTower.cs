@@ -11,7 +11,18 @@ public class TOHTower : MonoBehaviour {
     public TextMeshProUGUI TurnsTakenDisplay;
     public GameWin WinGame;
 
-    public void Start() { TurnsTaken = 0; }
+    GameLogging.Log Log;
+
+    public void Start() {
+        Log = new GameLogging.Log() {
+            IsPractice = Zombie.IsPractice,
+            IsTeamGame = !Zombie.IsSolo,
+            ErrorsMade = 0,
+            TurnsUsed = 0,
+        };
+
+        TurnsTaken = 0; 
+    }
 
     public void OnClick() {
         if(TowerPart.Selected == null) { return; }
@@ -24,6 +35,7 @@ public class TOHTower : MonoBehaviour {
         }
 
         TurnsTaken++;
+        Log.TurnsUsed++;
         TurnsTakenDisplay.text = $"Moves Taken: {TurnsTaken}";
         Tower.Add(TowerPart.Selected);
 
@@ -54,6 +66,7 @@ public class TOHTower : MonoBehaviour {
         if (IsCorrect) {
             if(Tower.Count == 4) {
                 Debug.Log("Correct");
+                Zombie.CurrentProfileStats.Stats["Stack"]["Towers of Hanoi"].GameLog.Add(Log);
                 WinGame.Show();
             }
         }

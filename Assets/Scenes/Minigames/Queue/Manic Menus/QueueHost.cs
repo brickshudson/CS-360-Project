@@ -10,7 +10,15 @@ public class QueueHost : MonoBehaviour
     public GameWin WinGame;
     public TextMeshProUGUI Correct;
 
+    GameLogging.Log Log;
+
     private void Start() {
+        Log = new GameLogging.Log() {
+            IsPractice = Zombie.IsPractice,
+            IsTeamGame = !Zombie.IsSolo,
+            TurnsUsed = 0,
+        };
+
         TurnsTaken = 0;
         Correct.text = Food.generateItems(8);
         string[] Foods = Correct.text.Split('\n');
@@ -28,6 +36,7 @@ public class QueueHost : MonoBehaviour
         if (QueueItem.Selected == null) { return; }
         if (Queue.Contains(QueueItem.Selected)) { return; }
         TurnsTaken++;
+        Log.TurnsUsed++;
         Queue.Add(QueueItem.Selected);
         int LocationAdded = 0;
 
@@ -79,7 +88,10 @@ Queue[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(
         foreach(QueueItem item in Queue) {
             Answer += item.GetComponent<TextMeshProUGUI>().text + "\n";
         }
-        if(Answer.Replace("\n",string.Empty) == Correct.text.Replace("\n",string.Empty)) { WinGame.Show(); }
+        if(Answer.Replace("\n",string.Empty) == Correct.text.Replace("\n",string.Empty)) {
+            Zombie.CurrentProfileStats.Stats["Queue"]["Manic Menus"].GameLog.Add(Log);
+            WinGame.Show();
+        }
     }
 
 }
