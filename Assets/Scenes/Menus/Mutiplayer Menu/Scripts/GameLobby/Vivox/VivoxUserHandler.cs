@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using Unity.Services.Vivox;
+/*using Unity.Services.Vivox;
 using VivoxUnity;
 
 namespace LobbyRelaySample.vivox
@@ -177,3 +177,4 @@ namespace LobbyRelaySample.vivox
         }
     }
 }
+*/

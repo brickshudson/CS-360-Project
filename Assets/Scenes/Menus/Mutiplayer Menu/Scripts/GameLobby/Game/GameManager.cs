@@ -43,9 +43,9 @@ namespace LobbyRelaySample
         private RelayUtpSetup m_relaySetup;
         private RelayUtpClient m_relayClient;
 
-        private vivox.VivoxSetup m_vivoxSetup = new vivox.VivoxSetup();
-        [SerializeField]
-        private List<vivox.VivoxUserHandler> m_vivoxUserHandlers;
+        //private vivox.VivoxSetup m_vivoxSetup = new vivox.VivoxSetup();
+        //[SerializeField]
+        //private List<vivox.VivoxUserHandler> m_vivoxUserHandlers;
 
         /// <summary>Rather than a setter, this is usable in-editor. It won't accept an enum, however.</summary>
         public void SetLobbyColorFilter(int color)

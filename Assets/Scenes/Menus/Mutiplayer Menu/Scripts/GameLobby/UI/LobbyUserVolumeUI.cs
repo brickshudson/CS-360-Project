@@ -29,7 +29,7 @@ namespace LobbyRelaySample.UI
         public void EnableVoice(bool shouldResetUi)
         {
             if (shouldResetUi)
-            {   m_volumeSlider.SetValueWithoutNotify(vivox.VivoxUserHandler.NormalizedVolumeDefault);
+            {//   m_volumeSlider.SetValueWithoutNotify(vivox.VivoxUserHandler.NormalizedVolumeDefault);
                 m_muteToggle.SetIsOnWithoutNotify(false);
             }
 
@@ -56,7 +56,7 @@ namespace LobbyRelaySample.UI
         public void DisableVoice(bool shouldResetUi)
         {
             if (shouldResetUi)
-            {   m_volumeSlider.value = vivox.VivoxUserHandler.NormalizedVolumeDefault;
+            {//   m_volumeSlider.value = vivox.VivoxUserHandler.NormalizedVolumeDefault;
                 m_muteToggle.isOn = false;
             }
 
