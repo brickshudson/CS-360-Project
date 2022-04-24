@@ -14,14 +14,14 @@ public class BSTCon : MonoBehaviour {
     public TextMeshProUGUI GoalText;
     public TextMeshProUGUI MovesUsed;
     public GameWin GameWin;
-    public static BinaryTree<int> BinTree;
+    public static BinaryTree<string> BinTree;
     public static string Goal;
     public CountDown Timer;
 
     static int _moves;
     int Moves { get { return _moves; } set { _moves = value; MovesUsed.text = $"Moves Used: {value}"; } }
 
-    public static Node<int> CurrentNode = null;
+    public static Node<string> CurrentNode = null;
 
     public Direction Direction;
     GameLogging.Log Log;
@@ -36,8 +36,8 @@ public class BSTCon : MonoBehaviour {
         };
 
         Moves = 0;
-        BinTree = new BinaryTree<int>();
-        List<object> Goals = new List<object>();
+        BinTree = new BinaryTree<string>();
+        List<string> Goals = new List<string>();
 
         SetItems.SetArgs args = SetItems.SetArgs.Empty;
         if (Random.value > .5f) { args = SetItems.SelectSet(); }
@@ -45,7 +45,7 @@ public class BSTCon : MonoBehaviour {
             if(args.Equals(SetItems.SetArgs.Empty)) { 
                 string x = args.Set.ElementAt(Random.Range(0, args.Set.Count));
                 args.Set.Remove(x);
-                BinTree.Insert(1);
+                BinTree.Insert(x);
                 Goals.Add(x);
             } else {
                 int oV = Random.Range(1, 999);
