@@ -154,7 +154,8 @@ public static class SetItems {
         return new SetArgs(Item, Items);
     }
 
-    public class SetArgs {
+    public struct SetArgs {
+        public static SetArgs Empty { get; } = new SetArgs("Null", new HashSet<string>());
         public string Name { get; }
         public HashSet<string> Set { get; }
         public SetArgs(string Name, HashSet<string> Set) { this.Name = Name; this.Set = Set; }

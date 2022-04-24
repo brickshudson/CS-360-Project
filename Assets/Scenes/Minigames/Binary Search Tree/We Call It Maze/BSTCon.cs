@@ -14,14 +14,14 @@ public class BSTCon : MonoBehaviour {
     public TextMeshProUGUI GoalText;
     public TextMeshProUGUI MovesUsed;
     public GameWin GameWin;
-    public static BinaryTree<string> BinTree;
+    public static BinaryTree<int> BinTree;
     public static string Goal;
     public CountDown Timer;
 
     static int _moves;
     int Moves { get { return _moves; } set { _moves = value; MovesUsed.text = $"Moves Used: {value}"; } }
 
-    public static Node<string> CurrentNode = null;
+    public static Node<int> CurrentNode = null;
 
     public Direction Direction;
     GameLogging.Log Log;
@@ -36,24 +36,24 @@ public class BSTCon : MonoBehaviour {
         };
 
         Moves = 0;
-        BinTree = new BinaryTree<string>();
-        List<string> Goals = new List<string>();
+        BinTree = new BinaryTree<int>();
+        List<object> Goals = new List<object>();
 
-        SetItems.SetArgs args = null;
+        SetItems.SetArgs args = SetItems.SetArgs.Empty;
         if (Random.value > .5f) { args = SetItems.SelectSet(); }
         while (BinTree.Count < 25) {
-            if(args != null) { 
+            if(args.Equals(SetItems.SetArgs.Empty)) { 
                 string x = args.Set.ElementAt(Random.Range(0, args.Set.Count));
                 args.Set.Remove(x);
-                BinTree.Insert(x);
+                BinTree.Insert(1);
                 Goals.Add(x);
             } else {
-                string x = Random.Range(1, 999).ToString();
+                int x = Random.Range(1, 999);
                 BinTree.Insert(x);
                 Goals.Add(x);
             }
         }
-        Goal = Goals[Random.Range(0, Goals.Count)];
+        Goal = Goals[Random.Range(0, Goals.Count)].ToString();
         GoalText.text = $"Goal: {Goal}";
         Moves = 0;
 
@@ -152,14 +152,14 @@ namespace BinaryTree {
         
         void InsertSort(Node<T> Base, Node<T> InsertValue) {
             InsertValue.Parent = Base;
-            if(InsertValue.Data.CompareTo(Base.Data) < 0) {
-                if(Base.Left == null) {
+            if (InsertValue.Data.CompareTo(Base.Data) < 0) {
+                if (Base.Left == null) {
                     Base.Left = InsertValue;
                 } else {
                     InsertSort(Base.Left, InsertValue);
                 }
-            } else { 
-                if(Base.Right == null) {
+            } else {
+                if (Base.Right == null) {
                     Base.Right = InsertValue;
                 } else {
                     InsertSort(Base.Right, InsertValue);

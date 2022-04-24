@@ -12,8 +12,10 @@ public class MultiPlayerMenu : MonoBehaviour
     void Start()
     {
         OpenMultiplayerMenu.onClick.AddListener(delegate {
-            SceneManager.LoadScene("mainScene",LoadSceneMode.Single);
+            SceneManager.LoadScene("Main Menu");
+            //    SceneManager.LoadScene("mainScene",LoadSceneMode.Single);
         });
+
     }
 
     // Update is called once per frame
