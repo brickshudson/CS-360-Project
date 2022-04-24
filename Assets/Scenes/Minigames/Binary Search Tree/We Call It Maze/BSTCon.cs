@@ -48,8 +48,9 @@ public class BSTCon : MonoBehaviour {
                 BinTree.Insert(x);
                 Goals.Add(x);
             } else {
-                string x = Random.Range(1, 999).ToString();
-                BinTree.Insert(x);
+                int oV = Random.Range(1, 999);
+                string x = oV.ToString();
+                BinTree.Insert(x, oV);
                 Goals.Add(x);
             }
         }
@@ -122,6 +123,7 @@ namespace BinaryTree {
 
     public class Node<T> where T : System.IComparable<T> {
         public T Data { get; set; }
+        public int orderingValue{ get; set; } = 0;
         public Node<T> Left { get; set; }
         public Node<T> Right { get; set; }
         public Node<T> Parent { get; set; } = null;
@@ -130,11 +132,21 @@ namespace BinaryTree {
             }
         }
         
-        public Node(T data, Node<T> Left, Node<T> Right, Node<T> Parent = null) {
+        public int CompareTo(Node<T> other)
+        {
+            if(orderingValue == 0 && other.orderingValue == 0)
+                return Data.CompareTo(other.Data);
+            else
+                return orderingValue.CompareTo(other.orderingValue);
+        }
+
+        public Node(T data, int? oV, Node<T> Left, Node<T> Right, Node<T> Parent = null) {
             Data = data;
             this.Left = Left;
             this.Right = Right;
             this.Parent = Parent;
+            if(oV != null)
+                orderingValue = (int)oV;
         }
     }
 
@@ -142,17 +154,17 @@ namespace BinaryTree {
         public Node<T> Root { get; private set; } = null;
         public int Count { get { return CountNodes(Root); } }
 
-        public void Insert(T data) {
+        public void Insert(T data, int? oV = null) {
             if(Root == null) {
-                Root = new Node<T>(data, null, null);
+                Root = new Node<T>(data, oV, null, null);
             } else {
-                InsertSort(Root, new Node<T>(data,null,null));
+                InsertSort(Root, new Node<T>(data, oV, null, null));
             }
         }
         
         void InsertSort(Node<T> Base, Node<T> InsertValue) {
             InsertValue.Parent = Base;
-            if(InsertValue.Data.CompareTo(Base.Data) < 0) {
+            if(InsertValue.CompareTo(Base) < 0) {
                 if(Base.Left == null) {
                     Base.Left = InsertValue;
                 } else {
