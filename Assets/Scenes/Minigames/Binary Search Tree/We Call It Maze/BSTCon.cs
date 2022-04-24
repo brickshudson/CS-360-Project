@@ -42,8 +42,8 @@ public class BSTCon : MonoBehaviour {
         SetItems.SetArgs args = SetItems.SetArgs.Empty;
         if (Random.value > .5f) { args = SetItems.SelectSet(); }
         while (BinTree.Count < 25) {
-            if(args.Equals(SetItems.SetArgs.Empty)) { 
-                string x = args.Set.ElementAt(Random.Range(0, args.Set.Count));
+            if(!args.Equals(SetItems.SetArgs.Empty)) { 
+                string x = args.Set.ElementAt(Random.Range(0, args.Set.Count-1));
                 args.Set.Remove(x);
                 BinTree.Insert(x);
                 Goals.Add(x);
@@ -54,7 +54,7 @@ public class BSTCon : MonoBehaviour {
                 Goals.Add(x);
             }
         }
-        Goal = Goals[Random.Range(0, Goals.Count)].ToString();
+        Goal = Goals[Random.Range(0, Goals.Count-1)].ToString();
         GoalText.text = $"Goal: {Goal}";
         Moves = 0;
 
@@ -123,7 +123,7 @@ namespace BinaryTree {
 
     public class Node<T> where T : System.IComparable<T> {
         public T Data { get; set; }
-        public int orderingValue{ get; set; } = 0;
+        public int OrderingValue { get; set; } = 0;
         public Node<T> Left { get; set; }
         public Node<T> Right { get; set; }
         public Node<T> Parent { get; set; } = null;
@@ -131,13 +131,12 @@ namespace BinaryTree {
                 return Left == null && Right == null;
             }
         }
-        
-        public int CompareTo(Node<T> other)
-        {
-            if(orderingValue == 0 && other.orderingValue == 0)
+
+        public int CompareTo(Node<T> other) {
+            if(OrderingValue == 0 && other.OrderingValue == 0)
                 return Data.CompareTo(other.Data);
             else
-                return orderingValue.CompareTo(other.orderingValue);
+                return OrderingValue.CompareTo(other.OrderingValue);
         }
 
         public Node(T data, int? oV, Node<T> Left, Node<T> Right, Node<T> Parent = null) {
@@ -146,7 +145,7 @@ namespace BinaryTree {
             this.Right = Right;
             this.Parent = Parent;
             if(oV != null)
-                orderingValue = (int)oV;
+               OrderingValue = (int)oV;
         }
     }
 

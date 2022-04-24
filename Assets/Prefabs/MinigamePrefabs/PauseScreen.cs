@@ -32,6 +32,7 @@ public class PauseScreen : MonoBehaviour {
         });
         Resume.onClick.AddListener(delegate {
             Debug.Log("Resume Clicked");
+            ResumePressed();
         });
         MainMenu.onClick.AddListener(delegate {
             Debug.Log("Main Menu Clicked");
