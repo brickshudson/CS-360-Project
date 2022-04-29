@@ -48,9 +48,8 @@ public class BSTCon : MonoBehaviour {
                 BinTree.Insert(x);
                 Goals.Add(x);
             } else {
-                int oV = Random.Range(1, 999);
-                string x = oV.ToString();
-                BinTree.Insert(x, oV);
+                string x = Random.Range(1, 999).ToString();
+                BinTree.Insert(x, x.Length);
                 Goals.Add(x);
             }
         }
@@ -123,7 +122,7 @@ namespace BinaryTree {
 
     public class Node<T> where T : System.IComparable<T> {
         public T Data { get; set; }
-        public int OrderingValue { get; set; } = 0;
+        public int numberLength { get; set; }
         public Node<T> Left { get; set; }
         public Node<T> Right { get; set; }
         public Node<T> Parent { get; set; } = null;
@@ -133,19 +132,18 @@ namespace BinaryTree {
         }
 
         public int CompareTo(Node<T> other) {
-            if(OrderingValue == 0 && other.OrderingValue == 0)
-                return Data.CompareTo(other.Data);
+            if(numberLength != other.numberLength)
+                return numberLength - other.numberLength;
             else
-                return OrderingValue.CompareTo(other.OrderingValue);
+                return Data.CompareTo(other.Data);
         }
 
-        public Node(T data, int? oV, Node<T> Left, Node<T> Right, Node<T> Parent = null) {
+        public Node(T data, int numberLength, Node<T> Left, Node<T> Right, Node<T> Parent = null) {
             Data = data;
             this.Left = Left;
             this.Right = Right;
             this.Parent = Parent;
-            if(oV != null)
-               OrderingValue = (int)oV;
+            this.numberLength = numberLength;
         }
     }
 
@@ -153,11 +151,11 @@ namespace BinaryTree {
         public Node<T> Root { get; private set; } = null;
         public int Count { get { return CountNodes(Root); } }
 
-        public void Insert(T data, int? oV = null) {
+        public void Insert(T data, int numberLength = 0) {
             if(Root == null) {
-                Root = new Node<T>(data, oV, null, null);
+                Root = new Node<T>(data, numberLength, null, null);
             } else {
-                InsertSort(Root, new Node<T>(data, oV, null, null));
+                InsertSort(Root, new Node<T>(data, numberLength, null, null));
             }
         }
         
