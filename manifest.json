@@ -1,6 +1,0 @@
-{
-  "name": "GitHub Host",
-  "host_permissions": [
-    "https://raw.githubusercontent.com/SuddenDeath42/CS-360-Project/main/CS%20360%20Project.loader.js"
-  ],
-}
