@@ -102,7 +102,7 @@ This project is distributed to consumers in three different formats: Windows exe
             
             #unity-build-title { float: left; margin-right: 10px; line-height: 38px; font-family: Roboto; font-size: 18px }
 #### Deployment
-1.	Upload the folder to GitHub.
+1.	Upload the folder to GitHub.  
 **NOTE:** If a build already exists on GitHub, you will need to add the contents of the folder Build of the output of the build process to the Build folder on GitHub. You will then need to replace index.html with the modified output file. This should properly update the hosted build. 
 2.	Wait for GitHub pages to register changes and rebuild or create the website.
 3.	Enjoy the game.
